@@ -71,7 +71,6 @@ namespace Dootbot2
             var lettero2 = DiscordEmoji.FromName(Client, ":o2:");
             var letterT = DiscordEmoji.FromName(Client, ":regional_indicator_t:");
             var vomit = DiscordEmoji.FromName(Client, ":face_vomiting:");
- 
 
             Client.MessageCreated += async (s, e) =>
             {
@@ -83,12 +82,12 @@ namespace Dootbot2
                 if (e.Message.Content.ToLower().Contains("doot"))
                 {
                     await e.Message.RespondAsync("Doot").ConfigureAwait(false);
-                    return;
 
                     //await e.Message.CreateReactionAsync(letterD);
                     //await e.Message.CreateReactionAsync(letterO);
                     //await e.Message.CreateReactionAsync(lettero2);
                     //await e.Message.CreateReactionAsync(letterT);
+
                 }
 
             };
@@ -141,9 +140,7 @@ namespace Dootbot2
             };
 
             Voice = Client.UseVoiceNext();
-
-            CommandsNextExtension commandsNextExtension = Client.UseCommandsNext(commandsConfig);
-            Commands = commandsNextExtension;
+            Commands = Client.UseCommandsNext(commandsConfig);
 
             Commands.RegisterCommands<FunCommands>();
             Commands.RegisterCommands<VoiceCommands>();

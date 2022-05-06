@@ -27,7 +27,7 @@ namespace DootBot2.Commands
         [Description("Displays porn")]
         public async Task Porn(CommandContext ctx)
         {
-            await ctx.Channel.SendMessageAsync("Degenerates like you, belong on a cross").ConfigureAwait(false);
+            await ctx.RespondAsync("Degenerates like you, belong on a cross").ConfigureAwait(false);
             Console.WriteLine("Command worked");
         }
 

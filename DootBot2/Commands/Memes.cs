@@ -233,7 +233,7 @@ namespace DootBot2.Commands
             int index = random.Next(meamea.Count);
 
             await ctx.Channel.SendMessageAsync(meamea[index]).ConfigureAwait(false);
-            Console.WriteLine("Meme sendt successfully");
+            Console.WriteLine("Command worked");
         }
 
         [Command("memecount")]
