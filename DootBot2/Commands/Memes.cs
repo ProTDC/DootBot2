@@ -223,12 +223,6 @@ namespace DootBot2.Commands
        "https://cdn.discordapp.com/attachments/967031855985590383/971830322696183808/IMG_1510.mp4",
        "https://media.discordapp.net/attachments/956994953727336448/971818648136187914/IMG_4102.jpg?width=378&height=669",
        "https://cdn.discordapp.com/attachments/764315477626454056/971549512596344853/redditsave.com_duck_runs_in_a_marathon_and_gets_a_medal-i9d9xaazjix81.mp4",
-       "",
-       "",
-       "",
-       "",
-       "",
-       ""
         };
 
         [Command("Memes")]
@@ -238,14 +232,15 @@ namespace DootBot2.Commands
             var random = new Random();
             int index = random.Next(meamea.Count);
 
-            await ctx.RespondAsync(meamea[index]).ConfigureAwait(false);
+            await ctx.Channel.SendMessageAsync(meamea[index]).ConfigureAwait(false);
+            Console.WriteLine("Meme sendt successfully");
         }
 
         [Command("memecount")]
         [Description("Displays the amount of memes saved to this bot")]
         public async Task MemeCount(CommandContext ctx) 
         {
-            await ctx.RespondAsync("There are " + meamea.Count + " memes saved");
+            await ctx.Channel.SendMessageAsync("There are " + meamea.Count + " memes saved").ConfigureAwait(false);
         }
 
 

@@ -58,7 +58,9 @@ namespace Dootbot2
                 StringPrefixes = new string[] { configJson.Prefix },
                 EnableDms = false,
                 EnableMentionPrefix = true,
-                DmHelp = false
+                DmHelp = false,
+                IgnoreExtraArguments = false,
+                UseDefaultCommandHandler = true
             };
 
             var flagBritish = DiscordEmoji.FromName(Client, ":flag_gb:");
@@ -69,12 +71,20 @@ namespace Dootbot2
             var lettero2 = DiscordEmoji.FromName(Client, ":o2:");
             var letterT = DiscordEmoji.FromName(Client, ":regional_indicator_t:");
             var vomit = DiscordEmoji.FromName(Client, ":face_vomiting:");
+ 
 
             Client.MessageCreated += async (s, e) =>
             {
-                if (e.Message.Content.Contains("doot"))
+                if (e.Message.Author.IsBot)
                 {
-                    await e.Message.RespondAsync("Doot");
+                    return;
+                }
+
+                if (e.Message.Content.ToLower().Contains("doot"))
+                {
+                    await e.Message.RespondAsync("Doot").ConfigureAwait(false);
+                    return;
+
                     //await e.Message.CreateReactionAsync(letterD);
                     //await e.Message.CreateReactionAsync(letterO);
                     //await e.Message.CreateReactionAsync(lettero2);
@@ -87,9 +97,8 @@ namespace Dootbot2
             {
                 if (e.Message.Content.Contains("Fuck you"))
                 {
-                    await e.Message.RespondAsync("fuck you too");
+                    await e.Message.RespondAsync("fuck you too").ConfigureAwait(false);
                 }
-
             };
 
             Client.MessageCreated += async (s, e) =>
@@ -103,7 +112,7 @@ namespace Dootbot2
 
             Client.MessageCreated += async (s, e) =>
             {
-                if (e.Message.Content.Contains("british") || e.Message.Content.Contains("bri'ish") || e.Message.Content.Contains("briish"))
+                if (e.Message.Content.ToLower().Contains("british") || e.Message.Content.Contains("bri'ish") || e.Message.Content.Contains("briish"))
                 {
                     await e.Message.RespondAsync("BRi'ISH! ??!");
                     //await e.Message.CreateReactionAsync(flagBritish);
@@ -120,7 +129,7 @@ namespace Dootbot2
 
             Client.MessageCreated += async (s, e) =>
             {
-                if (e.Message.Content.Contains("brunost") || e.Message.Content.Contains("Brunost") & e.Message.Content.Contains("brun ost") || e.Message.Content.Contains("Brun ost"))
+                if (e.Message.Content.ToLower().Contains("brunost") || e.Message.Content.ToLower().Contains("brun ost"))
                 {
                     await e.Message.RespondAsync("https://tenor.com/view/norway-brown-cheese-cheese-norwegian-brown-cheese-ragnarocka-gif-23473349");
                 }
@@ -131,17 +140,21 @@ namespace Dootbot2
                 await e.Message.RespondAsync(e.Message.Author.Mention + " https://tenor.com/view/delete-i-saw-that-i-saw-delete-message-i-see-gif-22475145");
             };
 
-            Commands = Client.UseCommandsNext(commandsConfig);
+            Voice = Client.UseVoiceNext();
+
+            CommandsNextExtension commandsNextExtension = Client.UseCommandsNext(commandsConfig);
+            Commands = commandsNextExtension;
 
             Commands.RegisterCommands<FunCommands>();
             Commands.RegisterCommands<VoiceCommands>();
             Commands.RegisterCommands<Memes>();
-
-            //Voice = Client.UseVoiceNext();
+            Console.WriteLine("Commands loaded");
 
             await Client.ConnectAsync();
             await Task.Delay(-1);
         }
+
+
 
         private Task OnClientReady(object sender, ReadyEventArgs e)
         {
