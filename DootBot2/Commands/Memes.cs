@@ -1,15 +1,9 @@
 ﻿using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Attributes;
-using DSharpPlus.Interactivity.Extensions;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using Discord.Audio;
-using DSharpPlus.Entities;
-using DSharpPlus.EventArgs;
-using DSharpPlus.VoiceNext;
+
 
 namespace DootBot2.Commands
 {

@@ -1,19 +1,10 @@
 ﻿using DSharpPlus.CommandsNext;
-using DSharpPlus.CommandsNext.Exceptions;
 using DSharpPlus.CommandsNext.Attributes;
 using DSharpPlus.Entities;
-using DSharpPlus.EventArgs;
-using DSharpPlus.Interactivity;
-using DSharpPlus.Interactivity.Extensions;
 using DSharpPlus.VoiceNext;
-using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace DootBot2.Commands

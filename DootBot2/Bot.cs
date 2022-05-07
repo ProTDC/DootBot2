@@ -5,7 +5,6 @@ using DSharpPlus.EventArgs;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,7 +12,6 @@ using DSharpPlus.Interactivity;
 using DSharpPlus.Interactivity.Extensions;
 using DSharpPlus.VoiceNext;
 using DootBot2;
-using Discord.Audio;
 using DSharpPlus.Entities;
 
 namespace Dootbot2
@@ -87,7 +85,6 @@ namespace Dootbot2
                     //await e.Message.CreateReactionAsync(letterO);
                     //await e.Message.CreateReactionAsync(lettero2);
                     //await e.Message.CreateReactionAsync(letterT);
-
                 }
 
             };
@@ -140,6 +137,7 @@ namespace Dootbot2
             };
 
             Voice = Client.UseVoiceNext();
+
             Commands = Client.UseCommandsNext(commandsConfig);
 
             Commands.RegisterCommands<FunCommands>();

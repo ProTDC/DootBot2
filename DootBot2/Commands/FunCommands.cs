@@ -1,21 +1,11 @@
 ﻿using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Attributes;
+using DSharpPlus.Entities;
 using DSharpPlus.Interactivity.Extensions;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using Discord.Audio;
-using DSharpPlus.Entities;
-using DSharpPlus.EventArgs;
-using DSharpPlus.VoiceNext;
-using Discord.WebSocket;
-using DSharpPlus;
-using Emzi0767.Utilities;
-using DSharpPlus.Net.WebSocket;
-using System.Threading.Channels;
-using DSharpPlus.Interactivity.Enums;
+
 
 namespace DootBot2.Commands
 
@@ -47,33 +37,35 @@ namespace DootBot2.Commands
             Console.WriteLine("Command worked");
         }
 
-        //[Command("Poll")]
-        //public async Task Poll(CommandContext ctx, TimeSpan duration, params DiscordEmoji[] emojiOptions) 
-        //{
-        //    var interactivity = ctx.Client.GetInteractivity();
-        //    var options = emojiOptions.Select(x => x.ToString());
+        [Command("Poll")]
+        public async Task Poll(CommandContext ctx, TimeSpan duration, params DiscordEmoji[] emojiOptions)
+        {
+            var interactivity = ctx.Client.GetInteractivity();
+            var options = emojiOptions.Select(x => x.ToString());
 
-        //    var embed = new DiscordEmbedBuilder
-        //    {
-        //        Title = "Poll",
-        //        Description = string.Join("", options)
-        //    };
+            var embed = new DiscordEmbedBuilder
+            {
+                Title = "Poll",
+                Description = string.Join("", options)
+            };
 
-        //    var pollMessage = await ctx.Channel.SendMessageAsync(embed: embed).ConfigureAwait(false);
+            var pollMessage = await ctx.Channel.SendMessageAsync(embed: embed).ConfigureAwait(false);
 
-        //    foreach(var option in emojiOptions) 
-        //    {
-        //        await pollMessage.CreateReactionAsync(option).ConfigureAwait(false);
-        //    }
+            foreach (DiscordEmoji option in emojiOptions)
+            {
+                await pollMessage.CreateReactionAsync(option).ConfigureAwait(false);
+                return;
+            }
 
-        //    var result = await interactivity.CollectReactionsAsync(pollMessage, duration).ConfigureAwait(false);
-        //    var distinctResult = result.Distinct();
-        //    var results = distinctResult.Select(x => $"{x.Emoji}: {x.Total}");
+            var result = await interactivity.CollectReactionsAsync(pollMessage, duration).ConfigureAwait(false);
+            var distinctResult = result.Distinct();
+            var results = distinctResult.Select(x => $"{x.Emoji}: {x.Total}");
 
 
-        //    await ctx.Channel.SendMessageAsync(string.Join("\n", results)).ConfigureAwait(false);
-        //}
+            await ctx.Channel.SendMessageAsync(string.Join("\n", results)).ConfigureAwait(false);
+            return;
+        }
     }
-    
+
 }
 
