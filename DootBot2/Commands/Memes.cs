@@ -217,6 +217,21 @@ namespace DootBot2.Commands
        "https://cdn.discordapp.com/attachments/967031855985590383/971830322696183808/IMG_1510.mp4",
        "https://media.discordapp.net/attachments/956994953727336448/971818648136187914/IMG_4102.jpg?width=378&height=669",
        "https://cdn.discordapp.com/attachments/764315477626454056/971549512596344853/redditsave.com_duck_runs_in_a_marathon_and_gets_a_medal-i9d9xaazjix81.mp4",
+       "https://cdn.discordapp.com/attachments/967031855985590383/972636251175940127/IMG_1522.jpg",
+       "https://cdn.discordapp.com/attachments/967031855985590383/972636313465520138/IMG_1519.jpg",
+       "https://cdn.discordapp.com/attachments/967031855985590383/972636312538587147/IMG_1520.jpg",
+       "https://cdn.discordapp.com/attachments/967031855985590383/972216993883238431/unknown.png",
+       "https://cdn.discordapp.com/attachments/967031855985590383/972217990265319435/IMG_1517.jpg",
+       "https://cdn.discordapp.com/attachments/967031855985590383/972636584371445770/IMG_1509.mp4",
+       "https://cdn.discordapp.com/attachments/967031855985590383/972636752588210186/IMG_1506.png",
+       "https://media.discordapp.net/attachments/967031855985590383/972636751296344074/IMG_1508.png?width=473&height=679",
+       "https://cdn.discordapp.com/attachments/967031855985590383/972636837380255764/IMG_1500.jpg",
+       "https://cdn.discordapp.com/attachments/967031855985590383/972636939700293632/IMG_1487.mp4",
+       "https://cdn.discordapp.com/attachments/967031855985590383/972636940174237787/IMG_1486.mp4",
+       "https://cdn.discordapp.com/attachments/967031855985590383/972636939264069673/IMG_1489.jpg",
+       "https://cdn.discordapp.com/attachments/967031855985590383/972636837153738852/IMG_1501.jpg",
+       "https://cdn.discordapp.com/attachments/967031855985590383/972637203001921576/IMG_1479.jpg",
+       "https://cdn.discordapp.com/attachments/967031855985590383/972637497597247588/trim.7C04D337-5A36-490F-95B9-83166C0B724D.mov"
         };
 
         [Command("Memes")]
@@ -226,7 +241,7 @@ namespace DootBot2.Commands
             var random = new Random();
             int index = random.Next(meamea.Count);
 
-            await ctx.Channel.SendMessageAsync(meamea[index]).ConfigureAwait(false);
+            await ctx.RespondAsync(meamea[index]).ConfigureAwait(false);
             Console.WriteLine("Command worked");
         }
 

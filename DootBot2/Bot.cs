@@ -61,6 +61,8 @@ namespace Dootbot2
                 UseDefaultCommandHandler = true
             };
 
+            Commands = Client.UseCommandsNext(commandsConfig);
+
             var flagBritish = DiscordEmoji.FromName(Client, ":flag_gb:");
             var skull = DiscordEmoji.FromName(Client, ":skull:");
             var trumpet = DiscordEmoji.FromName(Client, ":trumpet:");
@@ -137,8 +139,6 @@ namespace Dootbot2
             };
 
             Voice = Client.UseVoiceNext();
-
-            Commands = Client.UseCommandsNext(commandsConfig);
 
             Commands.RegisterCommands<FunCommands>();
             Commands.RegisterCommands<VoiceCommands>();

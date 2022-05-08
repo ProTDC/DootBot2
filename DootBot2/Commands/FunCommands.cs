@@ -1,9 +1,6 @@
 ﻿using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Attributes;
-using DSharpPlus.Entities;
-using DSharpPlus.Interactivity.Extensions;
 using System;
-using System.Linq;
 using System.Threading.Tasks;
 
 
@@ -25,8 +22,15 @@ namespace DootBot2.Commands
         [Description("Displays motivation to keep on going")]
         public async Task Motivation(CommandContext ctx)
         {
-            await ctx.Channel.SendMessageAsync("https://cdn.discordapp.com/attachments/424874562082045962/811358442786390056/Motivational_Lizard.mp4").ConfigureAwait(false);
             Console.WriteLine("Command worked");
+
+            Random rand = new Random();
+
+            if (rand.Next(0, 1) == 0)
+                await ctx.Channel.SendMessageAsync("https://cdn.discordapp.com/attachments/424874562082045962/811358442786390056/Motivational_Lizard.mp4").ConfigureAwait(false);
+            else
+                await ctx.Channel.SendMessageAsync("https://cdn.discordapp.com/attachments/967031855985590383/971717012978036796/kys.mov").ConfigureAwait(false);
+
         }
 
         [Command("Celebrate")]
@@ -37,34 +41,32 @@ namespace DootBot2.Commands
             Console.WriteLine("Command worked");
         }
 
-        [Command("Poll")]
-        public async Task Poll(CommandContext ctx, TimeSpan duration, params DiscordEmoji[] emojiOptions)
-        {
-            var interactivity = ctx.Client.GetInteractivity();
-            var options = emojiOptions.Select(x => x.ToString());
+        //[Command("Poll")]
+        //public async Task Poll(CommandContext ctx, TimeSpan duration, params DiscordEmoji[] emojiOptions)
+        //{
+        //    var interactivity = ctx.Client.GetInteractivity();
+        //    var options = emojiOptions.Select(x => x.ToString());
 
-            var embed = new DiscordEmbedBuilder
-            {
-                Title = "Poll",
-                Description = string.Join("", options)
-            };
+        //    var embed = new DiscordEmbedBuilder
+        //    {
+        //        Title = "Poll",
+        //        Description = string.Join("", options)
+        //    };
 
-            var pollMessage = await ctx.Channel.SendMessageAsync(embed: embed).ConfigureAwait(false);
+        //    var pollMessage = await ctx.Channel.SendMessageAsync(embed: embed).ConfigureAwait(false);
 
-            foreach (DiscordEmoji option in emojiOptions)
-            {
-                await pollMessage.CreateReactionAsync(option).ConfigureAwait(false);
-                return;
-            }
+        //    foreach (DiscordEmoji option in emojiOptions)
+        //    {
+        //        await pollMessage.CreateReactionAsync(option).ConfigureAwait(false);
+        //    }
 
-            var result = await interactivity.CollectReactionsAsync(pollMessage, duration).ConfigureAwait(false);
-            var distinctResult = result.Distinct();
-            var results = distinctResult.Select(x => $"{x.Emoji}: {x.Total}");
+        //    var result = await interactivity.CollectReactionsAsync(pollMessage, duration).ConfigureAwait(false);
+        //    var distinctResult = result.Distinct();
+        //    var results = distinctResult.Select(x => $"{x.Emoji}: {x.Total}");
 
 
-            await ctx.Channel.SendMessageAsync(string.Join("\n", results)).ConfigureAwait(false);
-            return;
-        }
+        //    await ctx.Channel.SendMessageAsync(string.Join("\n", results)).ConfigureAwait(false);
+        //}
     }
 
 }
