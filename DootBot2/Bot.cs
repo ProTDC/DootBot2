@@ -106,7 +106,7 @@ namespace Dootbot2
 
             Client.MessageCreated += async (s, e) =>
             {
-                if (e.Message.Author.IsBot)
+                if (e.Message.Author.Id.Equals(813186418553520128))
                 {
                     return;
                 }
@@ -144,7 +144,7 @@ namespace Dootbot2
                     await e.Message.RespondAsync("stfu tom").ConfigureAwait(false);
                 }
             };
-
+            
             //Client.MessageCreated += async (s, e) =>
             //{
             //    if (e.Message.Content.Contains("fortnite") || e.Message.Content.Contains("valorant") & e.Message.Content.Contains("overwatch") || e.Message.Content.Contains("genshin"))
