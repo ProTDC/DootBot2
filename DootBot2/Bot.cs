@@ -20,7 +20,7 @@ namespace Dootbot2
     public class Bot
     {
         public DiscordClient Client { get; private set; }
-        public CommandsNextExtension Commands { get; private set; } 
+        public CommandsNextExtension Commands { get; private set; }
         public VoiceNextExtension Voice { get; set; }
 
 
@@ -74,7 +74,8 @@ namespace Dootbot2
 
             Client.MessageCreated += async (s, e) =>
             {
-                if (e.Message.Author.IsBot)
+
+                if (e.Message.Author.IsCurrent)
                 {
                     return;
                 }
@@ -89,45 +90,24 @@ namespace Dootbot2
                     //await e.Message.CreateReactionAsync(letterT);
                 }
 
-            };
-
-            Client.MessageCreated += async (s, e) =>
-            {
-                if (e.Message.Content.Contains("Fuck you"))
+                if (e.Message.Content.ToLower().Contains("fuck you"))
                 {
                     await e.Message.RespondAsync("fuck you too").ConfigureAwait(false);
                 }
-            };
-
-            Client.MessageCreated += async (s, e) =>
-            {
-                if (e.Message.Content.Contains("bitch"))
+                if (e.Message.Content.ToLower().Contains("bitch"))
                 {
                     await e.Message.RespondAsync("Bitch");
                 }
 
-            };
-
-            Client.MessageCreated += async (s, e) =>
-            {
-                if (e.Message.Content.ToLower().Contains("british") || e.Message.Content.Contains("bri'ish") || e.Message.Content.Contains("briish"))
+                if (message.content.ToLower().Split("bri")[1].Contains("ish"))
                 {
                     await e.Message.RespondAsync("BRi'ISH! ??!");
-                    //await e.Message.CreateReactionAsync(flagBritish);
                 }
-            };
-
-            //Client.MessageCreated += async (s, e) =>
-            //{
-            //    if (e.Message.Content.Contains("fortnite") || e.Message.Content.Contains("valorant") & e.Message.Content.Contains("overwatch") || e.Message.Content.Contains("genshin"))
-            //    {
-            //        await e.Message.CreateReactionAsync(vomit);
-            //    }
-            //};
-
-            Client.MessageCreated += async (s, e) =>
-            {
-                if (e.Message.Content.ToLower().Contains("brunost") || e.Message.Content.ToLower().Contains("brun ost"))
+                //    if (e.Message.Content.ToLower().Contains("fortnite") || e.Message.Content.ToLower().Contains("valorant") & e.Message.Content.ToLower().Contains("overwatch") || e.Message.Content.ToLower().Contains("genshin"))
+                //    {
+                //        await e.Message.CreateReactionAsync(vomit);
+                //    }
+                if (e.Message.Content.ToLower().Split("brun")[1].Contains("ost"))
                 {
                     await e.Message.RespondAsync("https://tenor.com/view/norway-brown-cheese-cheese-norwegian-brown-cheese-ragnarocka-gif-23473349");
                 }
