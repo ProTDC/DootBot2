@@ -26,7 +26,7 @@ namespace DootBot2.Commands
 
             Random rand = new Random();
 
-            if (rand.Next(0, 1) == 0)
+            if (rand.Next() > (Int32.MaxValue / 2))
                 await ctx.Channel.SendMessageAsync("https://cdn.discordapp.com/attachments/424874562082045962/811358442786390056/Motivational_Lizard.mp4").ConfigureAwait(false);
             else
                 await ctx.Channel.SendMessageAsync("https://cdn.discordapp.com/attachments/967031855985590383/971717012978036796/kys.mov").ConfigureAwait(false);

@@ -231,7 +231,12 @@ namespace DootBot2.Commands
        "https://cdn.discordapp.com/attachments/967031855985590383/972636939264069673/IMG_1489.jpg",
        "https://cdn.discordapp.com/attachments/967031855985590383/972636837153738852/IMG_1501.jpg",
        "https://cdn.discordapp.com/attachments/967031855985590383/972637203001921576/IMG_1479.jpg",
-       "https://cdn.discordapp.com/attachments/967031855985590383/972637497597247588/trim.7C04D337-5A36-490F-95B9-83166C0B724D.mov"
+       "https://cdn.discordapp.com/attachments/967031855985590383/972637497597247588/trim.7C04D337-5A36-490F-95B9-83166C0B724D.mov",
+       "https://cdn.discordapp.com/attachments/800687255471390761/972567416053837854/unknown-9-1.jpg",
+       "https://cdn.discordapp.com/attachments/967031855985590383/973097878115467284/IMG_1529.jpg",
+       "https://cdn.discordapp.com/attachments/967031855985590383/973097867256410122/IMG_1533.jpg",
+       "https://cdn.discordapp.com/attachments/967031855985590383/973097867520655430/IMG_1532.jpg"
+
         };
 
         [Command("Memes")]
