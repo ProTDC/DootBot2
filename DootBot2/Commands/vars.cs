@@ -1,4 +1,4 @@
-namespace memelist
+namespace vars
 {
     public class memelist
     {
