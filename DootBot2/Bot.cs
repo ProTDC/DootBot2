@@ -89,7 +89,6 @@ namespace Dootbot2
                     //await e.Message.CreateReactionAsync(letterT);
                     return;
                 }
-                return;
 
             };
 
