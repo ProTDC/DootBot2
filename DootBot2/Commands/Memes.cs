@@ -3,14 +3,15 @@ using DSharpPlus.CommandsNext.Attributes;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using vars;
 
+using vars;
 namespace DootBot2.Commands
 {
     class Memes : BaseCommandModule
     {
         memelist memz = new memelist();
         List<string> meamea = memz.getMemes();
+
         [Command("Memes")]
         [Description("Posts a random meme")]
         public async Task Meme(CommandContext ctx)
