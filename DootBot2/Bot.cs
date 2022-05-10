@@ -74,12 +74,10 @@ namespace Dootbot2
 
             Client.MessageCreated += async (s, e) =>
             {
-
                 if (e.Message.Author.IsCurrent)
                 {
                     return;
                 }
-
                 if (e.Message.Content.ToLower().Contains("doot"))
                 {
                     await e.Message.RespondAsync("Doot").ConfigureAwait(false);
@@ -89,7 +87,6 @@ namespace Dootbot2
                     //await e.Message.CreateReactionAsync(lettero2);
                     //await e.Message.CreateReactionAsync(letterT);
                 }
-
                 if (e.Message.Content.ToLower().Contains("fuck you"))
                 {
                     await e.Message.RespondAsync("fuck you too").ConfigureAwait(false);
@@ -111,6 +108,7 @@ namespace Dootbot2
                 {
                     await e.Message.RespondAsync("https://tenor.com/view/norway-brown-cheese-cheese-norwegian-brown-cheese-ragnarocka-gif-23473349");
                 }
+                return;
             };
 
             Client.MessageDeleted += async (s, e) =>
