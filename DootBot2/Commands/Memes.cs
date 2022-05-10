@@ -248,6 +248,7 @@ namespace DootBot2.Commands
 
             await ctx.RespondAsync(meamea[index]).ConfigureAwait(false);
             Console.WriteLine("Command worked");
+            return;
         }
 
         [Command("memecount")]
@@ -255,8 +256,8 @@ namespace DootBot2.Commands
         public async Task MemeCount(CommandContext ctx) 
         {
             await ctx.Channel.SendMessageAsync("There are " + meamea.Count + " memes saved").ConfigureAwait(false);
+            return;
         }
-
 
 
     }

@@ -87,7 +87,9 @@ namespace Dootbot2
                     //await e.Message.CreateReactionAsync(letterO);
                     //await e.Message.CreateReactionAsync(lettero2);
                     //await e.Message.CreateReactionAsync(letterT);
+                    return;
                 }
+                return;
 
             };
 
@@ -98,9 +100,10 @@ namespace Dootbot2
                     return;
                 }
 
-                if (e.Message.Content.ToLower().Contains("fuck you"))
+                if (e.Message.Content.ToLower().Contains("Fuckyou"))
                 {
                     await e.Message.RespondAsync("fuck you too").ConfigureAwait(false);
+                    return;
                 }
             };
 
@@ -114,6 +117,7 @@ namespace Dootbot2
                 if (e.Message.Content.ToLower().Contains("bitch"))
                 {
                     await e.Message.RespondAsync("Bitch").ConfigureAwait(false);
+                    return;
                 }
 
             };
@@ -125,10 +129,11 @@ namespace Dootbot2
                     return;
                 }
 
-                if (e.Message.Content.ToLower().Contains("british") || e.Message.Content.Contains("bri'ish") || e.Message.Content.Contains("briish"))
+                if (e.Message.Content.ToLower().Contains("british") || e.Message.Content.ToLower().Contains("bri'ish") || e.Message.Content.ToLower().Contains("briish"))
                 {
                     await e.Message.RespondAsync("BRi'ISH! ??!").ConfigureAwait(false);
                     //await e.Message.CreateReactionAsync(flagBritish);
+                    return;
                 }
             };
 
@@ -142,9 +147,10 @@ namespace Dootbot2
                 if (e.Message.Author.Id.Equals(373135474119933955))
                 {
                     await e.Message.RespondAsync("stfu tom").ConfigureAwait(false);
+                    return;
                 }
             };
-            
+
             //Client.MessageCreated += async (s, e) =>
             //{
             //    if (e.Message.Content.Contains("fortnite") || e.Message.Content.Contains("valorant") & e.Message.Content.Contains("overwatch") || e.Message.Content.Contains("genshin"))
@@ -158,12 +164,14 @@ namespace Dootbot2
                 if (e.Message.Content.ToLower().Contains("brunost") || e.Message.Content.ToLower().Contains("brun ost"))
                 {
                     await e.Message.RespondAsync("https://tenor.com/view/norway-brown-cheese-cheese-norwegian-brown-cheese-ragnarocka-gif-23473349").ConfigureAwait(false);
+                    return;
                 }
             };
 
             Client.MessageDeleted += async (s, e) =>
             {
                 await e.Message.RespondAsync(e.Message.Author.Mention + " https://tenor.com/view/delete-i-saw-that-i-saw-delete-message-i-see-gif-22475145").ConfigureAwait(false);
+                return;
             };
 
             Voice = Client.UseVoiceNext();

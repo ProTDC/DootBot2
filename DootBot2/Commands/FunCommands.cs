@@ -17,6 +17,7 @@ namespace DootBot2.Commands
         {
             await ctx.RespondAsync("Degenerates like you, belong on a cross").ConfigureAwait(false);
             Console.WriteLine("Command worked");
+            return;
         }
 
         [Command("Motivation")]
@@ -31,6 +32,7 @@ namespace DootBot2.Commands
                 await ctx.Channel.SendMessageAsync("https://cdn.discordapp.com/attachments/424874562082045962/811358442786390056/Motivational_Lizard.mp4").ConfigureAwait(false);
             else
                 await ctx.Channel.SendMessageAsync("https://cdn.discordapp.com/attachments/967031855985590383/971717012978036796/kys.mov").ConfigureAwait(false);
+            return;
 
         }
 
@@ -39,6 +41,7 @@ namespace DootBot2.Commands
         public async Task Bitches(CommandContext ctx)
         {
             await ctx.Channel.SendMessageAsync(ctx.Member.DisplayName + " you currently have 0 bitches").ConfigureAwait(false);
+            return;
         }
 
         [Command("Celebrate")]
@@ -47,6 +50,7 @@ namespace DootBot2.Commands
         {
             await ctx.Channel.SendMessageAsync("https://cdn.discordapp.com/attachments/634063767466147840/971711431902908496/trim.E9946223-78D6-454C-867F-627BBF29429B.mov").ConfigureAwait(false);
             Console.WriteLine("Command worked");
+            return;
         }
 
         [Command("RPS")]
@@ -68,22 +72,26 @@ namespace DootBot2.Commands
                 {
                     await ctx.Channel.SendMessageAsync("i chose Rock");
                     await ctx.Channel.SendMessageAsync("its a tie");
+                    return;
                 }
 
                 else if (message.Result.Content.Contains("Paper"))
                 {
                     await ctx.Channel.SendMessageAsync("i chose Paper");
                     await ctx.Channel.SendMessageAsync("Its a tie ");
+                    return;
 
                 }
                 else if (message.Result.Content.Contains("Scissors"))
                 {
                     await ctx.Channel.SendMessageAsync("i chose Scissors");
                     await ctx.Channel.SendMessageAsync("Its is a tie ");
+                    return;
                 }
                 else
                 {
                     await ctx.Channel.SendMessageAsync("You must choose rock,paper or scissors!");
+                    return;
                 }
             }
 
@@ -93,22 +101,26 @@ namespace DootBot2.Commands
                 {
                     await ctx.Channel.SendMessageAsync("i chose Paper");
                     await ctx.Channel.SendMessageAsync("You lose dumbass");
+                    return;
                 }
 
                 else if (message.Result.Content.Contains("Paper"))
                 {
                     await ctx.Channel.SendMessageAsync("i chose Scissors");
                     await ctx.Channel.SendMessageAsync("You lose dumbass");
+                    return;
 
                 }
                 else if (message.Result.Content.Contains("Scissors"))
                 {
                     await ctx.Channel.SendMessageAsync("i chose Rock");
                     await ctx.Channel.SendMessageAsync("you lose dumbass");
+                    return;
                 }
                 else
                 {
-                    await ctx.Channel.SendMessageAsync("You must choose rock,paper or scissors!");
+                    await ctx.Channel.SendMessageAsync("You must choose rock, paper or scissors!");
+                    return;
                 }
             }
 
@@ -118,22 +130,27 @@ namespace DootBot2.Commands
                 {
                     await ctx.Channel.SendMessageAsync("i chose Scissors");
                     await ctx.Channel.SendMessageAsync("God Fucking Damn it you won");
+                    return;
                 }
+
 
                 else if (message.Result.Content.Contains("Paper"))
                 {
                     await ctx.Channel.SendMessageAsync("i chose Rock");
                     await ctx.Channel.SendMessageAsync("God Fucking Damn it you won");
+                    return;
 
                 }
                 else if (message.Result.Content.Contains("Scissors"))
                 {
                     await ctx.Channel.SendMessageAsync("i chose Paper");
                     await ctx.Channel.SendMessageAsync("God Fucking Damn it you won");
+                    return;
                 }
                 else
                 {
                     await ctx.Channel.SendMessageAsync("You must choose rock,paper or scissors!");
+                    return;
                 }
             }
 
