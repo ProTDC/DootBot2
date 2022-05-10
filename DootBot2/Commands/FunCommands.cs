@@ -59,7 +59,7 @@ namespace DootBot2.Commands
         {
             var interactivity = ctx.Client.GetInteractivity();
 
-            await ctx.Channel.SendMessageAsync("Respond with either Rock, Paper or Scissor").ConfigureAwait(false);
+            await ctx.Channel.SendMessageAsync("Respond with either Rock, Paper or Scissors").ConfigureAwait(false);
 
             var message = await interactivity.WaitForMessageAsync(x => x.Channel == ctx.Channel).ConfigureAwait(false);
 
@@ -93,7 +93,7 @@ namespace DootBot2.Commands
                     await ctx.Channel.SendMessageAsync("You must choose rock,paper or scissors!");
                     return;
                 }
-            }
+            };
 
             if (computerChoice == 2) 
             {
@@ -122,7 +122,7 @@ namespace DootBot2.Commands
                     await ctx.Channel.SendMessageAsync("You must choose rock, paper or scissors!");
                     return;
                 }
-            }
+            };
 
             if (computerChoice == 3) 
             {
@@ -152,7 +152,7 @@ namespace DootBot2.Commands
                     await ctx.Channel.SendMessageAsync("You must choose rock,paper or scissors!");
                     return;
                 }
-            }
+            };
 
         }
 
