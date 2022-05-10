@@ -40,3 +40,4 @@ C:\Users\protd\source\repos\DootBot2\DootBot2\obj\Debug\netcoreapp3.1\DootBot2.c
 C:\Users\protd\source\repos\DootBot2\DootBot2\obj\Debug\netcoreapp3.1\DootBot2.dll
 C:\Users\protd\source\repos\DootBot2\DootBot2\obj\Debug\netcoreapp3.1\DootBot2.pdb
 C:\Users\protd\source\repos\DootBot2\DootBot2\obj\Debug\netcoreapp3.1\DootBot2.genruntimeconfig.cache
+C:\Users\protd\source\repos\DootBot2\DootBot2\bin\Debug\netcoreapp3.1\HtmlAgilityPack.dll

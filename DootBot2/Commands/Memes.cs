@@ -255,7 +255,7 @@ namespace DootBot2.Commands
         [Description("Displays the amount of memes saved to this bot")]
         public async Task MemeCount(CommandContext ctx) 
         {
-            await ctx.Channel.SendMessageAsync("There are " + meamea.Count + " memes saved").ConfigureAwait(false);
+            await ctx.Channel.SendMessageAsync($"There are {meamea.Count} memes saved").ConfigureAwait(false);
             return;
         }
 

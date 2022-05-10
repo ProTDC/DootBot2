@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "DE5Ap1NY9CD0Ov8d14HFUChAFHrBnDxUZ79mv9vVxku6fGFSAU8+MpparIyUSdgEhS+CZe44jigZuY54gCNpnw==",
+  "dgSpecHash": "aX2nqjUaFMHVQu39xh6B5TKvCva1HN/FTOBHEPk8tMVrh7SfUhXgDDdAtJV14RWlBgqRfeBvBWHYEd4SKSO9bw==",
   "success": true,
   "projectFilePath": "C:\\Users\\protd\\source\\repos\\DootBot2\\DootBot2\\DootBot2.csproj",
   "expectedPackageFiles": [
@@ -18,6 +18,7 @@
     "C:\\Users\\protd\\.nuget\\packages\\dsharpplus.voicenext\\4.2.0-nightly-01091\\dsharpplus.voicenext.4.2.0-nightly-01091.nupkg.sha512",
     "C:\\Users\\protd\\.nuget\\packages\\dsharpplus.voicenext.natives\\1.0.0\\dsharpplus.voicenext.natives.1.0.0.nupkg.sha512",
     "C:\\Users\\protd\\.nuget\\packages\\emzi0767.common\\2.6.2\\emzi0767.common.2.6.2.nupkg.sha512",
+    "C:\\Users\\protd\\.nuget\\packages\\htmlagilitypack\\1.11.42\\htmlagilitypack.1.11.42.nupkg.sha512",
     "C:\\Users\\protd\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\5.0.1\\microsoft.extensions.dependencyinjection.5.0.1.nupkg.sha512",
     "C:\\Users\\protd\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\protd\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",

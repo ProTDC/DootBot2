@@ -14,6 +14,7 @@
           "DSharpPlus.VoiceNext": "4.2.0-nightly-01091",
           "Discord.Net": "3.5.0",
           "Discord.Net.Core": "3.5.0",
+          "HtmlAgilityPack": "1.11.42",
           "System.Reactive.Reference": "5.0.0.0"
         },
         "runtime": {
@@ -205,6 +206,14 @@
           "lib/netcoreapp2.1/Emzi0767.Common.dll": {
             "assemblyVersion": "2.6.2.0",
             "fileVersion": "2.6.2.0"
+          }
+        }
+      },
+      "HtmlAgilityPack/1.11.42": {
+        "runtime": {
+          "lib/netstandard2.0/HtmlAgilityPack.dll": {
+            "assemblyVersion": "1.11.42.0",
+            "fileVersion": "1.11.42.0"
           }
         }
       },
@@ -987,6 +996,13 @@
       "sha512": "sha512-/4dew6o2Y8xN0Eu025mDBE/abp/nOVtX59EnZn67ILMqRTk2Mqlnr6oEScSnuLrld8VsIgy+8vURirL6WBpUBA==",
       "path": "emzi0767.common/2.6.2",
       "hashPath": "emzi0767.common.2.6.2.nupkg.sha512"
+    },
+    "HtmlAgilityPack/1.11.42": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-LDc1bEfF14EY2DZzak4xvzWvbpNXK3vi1u0KQbBpLUN4+cx/VrvXhgCAMSJhSU5vz0oMfW9JZIR20vj/PkDHPA==",
+      "path": "htmlagilitypack/1.11.42",
+      "hashPath": "htmlagilitypack.1.11.42.nupkg.sha512"
     },
     "Microsoft.Extensions.DependencyInjection/5.0.1": {
       "type": "package",

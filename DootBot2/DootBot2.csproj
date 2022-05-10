@@ -12,6 +12,7 @@
     <PackageReference Include="DSharpPlus.CommandsNext" Version="4.2.0-nightly-01091" />
     <PackageReference Include="DSharpPlus.Interactivity" Version="4.2.0-nightly-01091" />
     <PackageReference Include="DSharpPlus.VoiceNext" Version="4.2.0-nightly-01091" />
+    <PackageReference Include="HtmlAgilityPack" Version="1.11.42" />
   </ItemGroup>
 
   <ItemGroup>

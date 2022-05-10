@@ -2,6 +2,7 @@
 using DSharpPlus.CommandsNext.Attributes;
 using DSharpPlus.Interactivity.Extensions;
 using System;
+using System.Net;
 using System.Threading.Tasks;
 
 
@@ -53,6 +54,25 @@ namespace DootBot2.Commands
             return;
         }
 
+        [Command("Oljefondet")]
+        [Description("Displays the market value of Oljefondet")]
+        public async Task Oljefondet(CommandContext ctx)
+        {
+
+            using WebClient web1 = new WebClient();
+            HtmlAgilityPack.HtmlWeb website = new HtmlAgilityPack.HtmlWeb();
+            HtmlAgilityPack.HtmlDocument document = website.Load("https://www.nbim.no/no/oljefondet/markedsverdi/");
+            var datalist = document.DocumentNode.SelectNodes("//div[@class='section__article-fund__inner']");
+
+            foreach (var content in datalist)
+            {
+                await ctx.Channel.SendMessageAsync(content.InnerText);
+            }
+
+            Console.Read();
+
+        }
+
         [Command("RPS")]
         [Description("Starts a game of rock paper scissors against me")]
         public async Task RPS(CommandContext ctx)
@@ -91,7 +111,6 @@ namespace DootBot2.Commands
                 else
                 {
                     await ctx.Channel.SendMessageAsync("You must choose rock,paper or scissors!");
-                    return;
                 }
             };
 
@@ -120,7 +139,6 @@ namespace DootBot2.Commands
                 else
                 {
                     await ctx.Channel.SendMessageAsync("You must choose rock, paper or scissors!");
-                    return;
                 }
             };
 
@@ -150,7 +168,6 @@ namespace DootBot2.Commands
                 else
                 {
                     await ctx.Channel.SendMessageAsync("You must choose rock,paper or scissors!");
-                    return;
                 }
             };
 

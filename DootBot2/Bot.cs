@@ -20,7 +20,7 @@ namespace Dootbot2
     public class Bot
     {
         public DiscordClient Client { get; private set; }
-        public CommandsNextExtension Commands { get; private set; } 
+        public CommandsNextExtension Commands { get; private set; }
         public VoiceNextExtension Voice { get; set; }
 
 
@@ -60,8 +60,6 @@ namespace Dootbot2
                 IgnoreExtraArguments = false,
                 UseDefaultCommandHandler = true
             };
-
-            Commands = Client.UseCommandsNext(commandsConfig);
 
             var flagBritish = DiscordEmoji.FromName(Client, ":flag_gb:");
             var skull = DiscordEmoji.FromName(Client, ":skull:");
@@ -108,14 +106,14 @@ namespace Dootbot2
 
             Client.MessageCreated += async (s, e) =>
             {
-                if (e.Message.Author.Id.Equals(813186418553520128))
+                if (e.Message.Content.ToLower().Contains("Bitch"))
                 {
+                    await e.Message.RespondAsync("Bitch").ConfigureAwait(false);
                     return;
                 }
 
-                if (e.Message.Content.ToLower().Contains("bitch"))
+                if (e.Message.Author.IsBot)
                 {
-                    await e.Message.RespondAsync("Bitch").ConfigureAwait(false);
                     return;
                 }
 
@@ -136,19 +134,19 @@ namespace Dootbot2
                 }
             };
 
-            Client.MessageCreated += async (s, e) =>
-            {
-                if (e.Message.Author.IsBot)
-                {
-                    return;
-                }
+            //Client.MessageCreated += async (s, e) =>
+            //{
+            //    if (e.Message.Author.IsBot)
+            //    {
+            //        return;
+            //    }
 
-                if (e.Message.Author.Id.Equals(373135474119933955))
-                {
-                    await e.Message.RespondAsync("stfu tom").ConfigureAwait(false);
-                    return;
-                }
-            };
+            //    if (e.Message.Author.Id.Equals(373135474119933955))
+            //    {
+            //        await e.Message.RespondAsync("stfu tom").ConfigureAwait(false);
+            //        return;
+            //    }
+            //};
 
             //Client.MessageCreated += async (s, e) =>
             //{
@@ -173,19 +171,17 @@ namespace Dootbot2
                 return;
             };
 
-            Voice = Client.UseVoiceNext();
+            Commands = Client.UseCommandsNext(commandsConfig);
 
             Commands.RegisterCommands<FunCommands>();
             Commands.RegisterCommands<VoiceCommands>();
             Commands.RegisterCommands<Memes>();
-            Console.WriteLine("Commands loaded");
 
             await Client.ConnectAsync();
             await Task.Delay(-1);
         }
 
-
-
+ 
         private Task OnClientReady(object sender, ReadyEventArgs e)
         {
             return Task.CompletedTask;
