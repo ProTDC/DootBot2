@@ -174,7 +174,6 @@ namespace Dootbot2
             Commands = Client.UseCommandsNext(commandsConfig);
 
             Commands.RegisterCommands<FunCommands>();
-            Commands.RegisterCommands<VoiceCommands>();
             Commands.RegisterCommands<Memes>();
 
             await Client.ConnectAsync();

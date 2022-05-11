@@ -68,9 +68,22 @@ namespace DootBot2.Commands
             {
                 await ctx.Channel.SendMessageAsync(content.InnerText);
             }
-
             Console.Read();
+            return;
 
+        }
+
+        [Command("Avatar")]
+        [Description("Displays a mentioned users avatar")]
+        public async Task Avatar(CommandContext ctx)
+        {
+            await ctx.RespondAsync(ctx.Message.Author.AvatarUrl).ConfigureAwait(false);
+
+            if (ctx.Message.Content.Contains(ctx.User.Mention)) 
+            {
+                await ctx.RespondAsync(ctx.User.Mention).ConfigureAwait(false);
+            }
+            return;
         }
 
         [Command("RPS")]
@@ -100,7 +113,6 @@ namespace DootBot2.Commands
                     await ctx.Channel.SendMessageAsync("i chose Paper");
                     await ctx.Channel.SendMessageAsync("Its a tie ");
                     return;
-
                 }
                 else if (message.Result.Content.Contains("Scissors"))
                 {

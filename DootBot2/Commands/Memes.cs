@@ -251,7 +251,7 @@ namespace DootBot2.Commands
             return;
         }
 
-        [Command("memecount")]
+        [Command("Memecount")]
         [Description("Displays the amount of memes saved to this bot")]
         public async Task MemeCount(CommandContext ctx) 
         {
