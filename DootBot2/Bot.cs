@@ -97,7 +97,7 @@ namespace Dootbot2
                     return;
                 }
 
-                if (e.Message.Content.ToLower().Contains("fuckyou"))
+                if (e.Message.Content.ToLower().Contains("fuck you"))
                 {
                     await e.Message.RespondAsync("fuck you too").ConfigureAwait(false);
                     return;
@@ -185,6 +185,7 @@ namespace Dootbot2
 
             Commands.RegisterCommands<FunCommands>();
             Commands.RegisterCommands<Memes>();
+            Commands.RegisterCommands<RedditStuff>();
 
             await Client.ConnectAsync();
             await Task.Delay(-1);

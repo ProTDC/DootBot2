@@ -111,20 +111,20 @@ namespace DootBot2.Commands
 
             if (computerChoice == 1)
             {
-                if (message.Result.Content.Contains("Rock")) 
+                if (message.Result.Content.ToLower().Contains("rock")) 
                 {
                     await ctx.Channel.SendMessageAsync("i chose Rock");
                     await ctx.Channel.SendMessageAsync("its a tie");
                     return;
                 }
 
-                else if (message.Result.Content.Contains("Paper"))
+                else if (message.Result.Content.ToLower().Contains("paper"))
                 {
                     await ctx.Channel.SendMessageAsync("i chose Paper");
                     await ctx.Channel.SendMessageAsync("Its a tie ");
                     return;
                 }
-                else if (message.Result.Content.Contains("Scissors"))
+                else if (message.Result.Content.ToLower().Contains("scissors"))
                 {
                     await ctx.Channel.SendMessageAsync("i chose Scissors");
                     await ctx.Channel.SendMessageAsync("Its is a tie ");
@@ -138,21 +138,21 @@ namespace DootBot2.Commands
 
             if (computerChoice == 2) 
             {
-                if (message.Result.Content.Contains("Rock"))
+                if (message.Result.Content.ToLower().Contains("rock"))
                 {
                     await ctx.Channel.SendMessageAsync("i chose Paper");
                     await ctx.Channel.SendMessageAsync("You lose dumbass");
                     return;
                 }
 
-                else if (message.Result.Content.Contains("Paper"))
+                else if (message.Result.Content.ToLower().Contains("paper"))
                 {
                     await ctx.Channel.SendMessageAsync("i chose Scissors");
                     await ctx.Channel.SendMessageAsync("You lose dumbass");
                     return;
 
                 }
-                else if (message.Result.Content.Contains("Scissors"))
+                else if (message.Result.Content.ToLower().Contains("scissors"))
                 {
                     await ctx.Channel.SendMessageAsync("i chose Rock");
                     await ctx.Channel.SendMessageAsync("you lose dumbass");
@@ -166,7 +166,7 @@ namespace DootBot2.Commands
 
             if (computerChoice == 3) 
             {
-                if (message.Result.Content.Contains("Rock"))
+                if (message.Result.Content.ToLower().Contains("rock"))
                 {
                     await ctx.Channel.SendMessageAsync("i chose Scissors");
                     await ctx.Channel.SendMessageAsync("God Fucking Damn it you won");
@@ -174,14 +174,14 @@ namespace DootBot2.Commands
                 }
 
 
-                else if (message.Result.Content.Contains("Paper"))
+                else if (message.Result.Content.ToLower().Contains("paper"))
                 {
                     await ctx.Channel.SendMessageAsync("i chose Rock");
                     await ctx.Channel.SendMessageAsync("God Fucking Damn it you won");
                     return;
 
                 }
-                else if (message.Result.Content.Contains("Scissors"))
+                else if (message.Result.Content.ToLower().Contains ("scissors"))
                 {
                     await ctx.Channel.SendMessageAsync("i chose Paper");
                     await ctx.Channel.SendMessageAsync("God Fucking Damn it you won");

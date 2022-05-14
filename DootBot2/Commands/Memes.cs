@@ -235,7 +235,9 @@ namespace DootBot2.Commands
        "https://cdn.discordapp.com/attachments/800687255471390761/972567416053837854/unknown-9-1.jpg",
        "https://cdn.discordapp.com/attachments/967031855985590383/973097878115467284/IMG_1529.jpg",
        "https://cdn.discordapp.com/attachments/967031855985590383/973097867256410122/IMG_1533.jpg",
-       "https://cdn.discordapp.com/attachments/967031855985590383/973097867520655430/IMG_1532.jpg"
+       "https://cdn.discordapp.com/attachments/967031855985590383/973097867520655430/IMG_1532.jpg",
+       "https://cdn.discordapp.com/attachments/933080307219972146/975053864514498630/spytt.mp4",
+       "https://cdn.discordapp.com/attachments/933080307219972146/975054030466326619/why-dont-you-have-a-seat.jpg"
 
         };
 

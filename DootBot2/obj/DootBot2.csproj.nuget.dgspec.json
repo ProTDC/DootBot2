@@ -47,19 +47,19 @@
           "dependencies": {
             "DSharpPlus": {
               "target": "Package",
-              "version": "[4.3.0-nightly-01130, )"
+              "version": "[4.3.0-nightly-01134, )"
             },
             "DSharpPlus.CommandsNext": {
               "target": "Package",
-              "version": "[4.3.0-nightly-01130, )"
+              "version": "[4.3.0-nightly-01134, )"
             },
             "DSharpPlus.Interactivity": {
               "target": "Package",
-              "version": "[4.3.0-nightly-01130, )"
+              "version": "[4.3.0-nightly-01134, )"
             },
             "DSharpPlus.VoiceNext": {
               "target": "Package",
-              "version": "[4.3.0-nightly-01130, )"
+              "version": "[4.3.0-nightly-01134, )"
             },
             "Discord.Net": {
               "target": "Package",
@@ -72,6 +72,14 @@
             "HtmlAgilityPack": {
               "target": "Package",
               "version": "[1.11.42, )"
+            },
+            "OpenWeatherMap": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "Reddit": {
+              "target": "Package",
+              "version": "[1.5.0, )"
             }
           },
           "imports": [

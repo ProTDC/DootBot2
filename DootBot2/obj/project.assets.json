@@ -104,7 +104,7 @@
           "lib/netstandard2.1/Discord.Net.WebSocket.dll": {}
         }
       },
-      "DSharpPlus/4.3.0-nightly-01130": {
+      "DSharpPlus/4.3.0-nightly-01134": {
         "type": "package",
         "dependencies": {
           "Emzi0767.Common": "2.6.2",
@@ -124,10 +124,10 @@
           "lib/netstandard2.0/DSharpPlus.dll": {}
         }
       },
-      "DSharpPlus.CommandsNext/4.3.0-nightly-01130": {
+      "DSharpPlus.CommandsNext/4.3.0-nightly-01134": {
         "type": "package",
         "dependencies": {
-          "DSharpPlus": "4.3.0-nightly-01130",
+          "DSharpPlus": "4.3.0-nightly-01134",
           "Microsoft.Extensions.DependencyInjection": "5.0.1"
         },
         "compile": {
@@ -137,11 +137,11 @@
           "lib/netstandard2.0/DSharpPlus.CommandsNext.dll": {}
         }
       },
-      "DSharpPlus.Interactivity/4.3.0-nightly-01130": {
+      "DSharpPlus.Interactivity/4.3.0-nightly-01134": {
         "type": "package",
         "dependencies": {
           "ConcurrentHashSet": "1.1.0",
-          "DSharpPlus": "4.3.0-nightly-01130"
+          "DSharpPlus": "4.3.0-nightly-01134"
         },
         "compile": {
           "lib/netstandard2.0/DSharpPlus.Interactivity.dll": {}
@@ -150,10 +150,10 @@
           "lib/netstandard2.0/DSharpPlus.Interactivity.dll": {}
         }
       },
-      "DSharpPlus.VoiceNext/4.3.0-nightly-01130": {
+      "DSharpPlus.VoiceNext/4.3.0-nightly-01134": {
         "type": "package",
         "dependencies": {
-          "DSharpPlus": "4.3.0-nightly-01130",
+          "DSharpPlus": "4.3.0-nightly-01134",
           "DSharpPlus.VoiceNext.Natives": "1.0.0",
           "System.Threading.Channels": "5.0.0"
         },
@@ -207,6 +207,15 @@
         },
         "runtime": {
           "lib/netstandard2.0/HtmlAgilityPack.dll": {}
+        }
+      },
+      "Microsoft.CSharp/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/_._": {}
         }
       },
       "Microsoft.Extensions.DependencyInjection/5.0.1": {
@@ -275,6 +284,38 @@
         },
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "OpenWeatherMap/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.1/OpenWeatherMap.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/OpenWeatherMap.dll": {}
+        }
+      },
+      "Reddit/1.5.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CSharp": "4.5.0",
+          "Newtonsoft.Json": "11.0.2",
+          "RestSharp": "106.6.9"
+        },
+        "compile": {
+          "lib/netstandard2.0/Reddit.NET.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Reddit.NET.dll": {}
+        }
+      },
+      "RestSharp/106.6.9": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/RestSharp.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/RestSharp.dll": {}
         }
       },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
@@ -1565,57 +1606,57 @@
         "lib/netstandard2.1/Discord.Net.WebSocket.xml"
       ]
     },
-    "DSharpPlus/4.3.0-nightly-01130": {
-      "sha512": "x1OXYZZZOsLbAzEMNnu6ozyy/zLIXjXGIetvw4ALcRmWov8TuHiCvH8jeyFHfi+IDNcjjihywSjCoPFJPXXghA==",
+    "DSharpPlus/4.3.0-nightly-01134": {
+      "sha512": "BDXVNrmH09CWQXvW0u4q+IPj3JfO5q5b0jijXWcofvUAGevBG+Vi5xl9GdxA01rpyOwa0f1Hfz/Jtqpr8kM+Dw==",
       "type": "package",
-      "path": "dsharpplus/4.3.0-nightly-01130",
+      "path": "dsharpplus/4.3.0-nightly-01134",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "dsharpplus.4.3.0-nightly-01130.nupkg.sha512",
+        "dsharpplus.4.3.0-nightly-01134.nupkg.sha512",
         "dsharpplus.nuspec",
         "dsharpplus.png",
         "lib/netstandard2.0/DSharpPlus.dll",
         "lib/netstandard2.0/DSharpPlus.xml"
       ]
     },
-    "DSharpPlus.CommandsNext/4.3.0-nightly-01130": {
-      "sha512": "PwBqMkUQMvnk+Jinv2MpnpGFaJlsIJ65zm+yRizzecwcKOit1ImJddfbHBXLK27tjzlpEuYaBu5XHDm3yT6YFg==",
+    "DSharpPlus.CommandsNext/4.3.0-nightly-01134": {
+      "sha512": "L8qODlc9AxFuNQWDxp8VF3OWWqu51VQwD7opoPv1RMDAyuXNcUsZptksgpX8cihVwbm7AnOUuCprtCIokxrgLA==",
       "type": "package",
-      "path": "dsharpplus.commandsnext/4.3.0-nightly-01130",
+      "path": "dsharpplus.commandsnext/4.3.0-nightly-01134",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "dsharpplus.commandsnext.4.3.0-nightly-01130.nupkg.sha512",
+        "dsharpplus.commandsnext.4.3.0-nightly-01134.nupkg.sha512",
         "dsharpplus.commandsnext.nuspec",
         "dsharpplus.png",
         "lib/netstandard2.0/DSharpPlus.CommandsNext.dll",
         "lib/netstandard2.0/DSharpPlus.CommandsNext.xml"
       ]
     },
-    "DSharpPlus.Interactivity/4.3.0-nightly-01130": {
-      "sha512": "HcjHDmU/SD8AuobDfOsLg8ForOAwtlxl79fpNzzE6W/FrqzTF35tWHv8BiWM70c3x3T5k8MxLYFkTWlP+DbB2Q==",
+    "DSharpPlus.Interactivity/4.3.0-nightly-01134": {
+      "sha512": "D3O6A24RsAQMHuwQ7fwQGQ+QEGsCjj/jcwJaSOowGrG4XjmqLCgv89Xl++zaXL1xvD68qbE58gu7QhE/RPR1ag==",
       "type": "package",
-      "path": "dsharpplus.interactivity/4.3.0-nightly-01130",
+      "path": "dsharpplus.interactivity/4.3.0-nightly-01134",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "dsharpplus.interactivity.4.3.0-nightly-01130.nupkg.sha512",
+        "dsharpplus.interactivity.4.3.0-nightly-01134.nupkg.sha512",
         "dsharpplus.interactivity.nuspec",
         "dsharpplus.png",
         "lib/netstandard2.0/DSharpPlus.Interactivity.dll",
         "lib/netstandard2.0/DSharpPlus.Interactivity.xml"
       ]
     },
-    "DSharpPlus.VoiceNext/4.3.0-nightly-01130": {
-      "sha512": "ZB6X4rog5v3meTwwAnohVaLFsZXZNSKSQ05ENrd6h++pVwOzXjQcC+FUalsNLJRrrZJ7pCqA5JhmLtbVi352BA==",
+    "DSharpPlus.VoiceNext/4.3.0-nightly-01134": {
+      "sha512": "HJaFJtboOPhzuJ5d/OsCUF5zPaFO5bDKZlViSwTGdkIWCXoy2f6oiba7J3YFc9f+ReXe/tXlZdSoNcLMllYzPw==",
       "type": "package",
-      "path": "dsharpplus.voicenext/4.3.0-nightly-01130",
+      "path": "dsharpplus.voicenext/4.3.0-nightly-01134",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "dsharpplus.png",
-        "dsharpplus.voicenext.4.3.0-nightly-01130.nupkg.sha512",
+        "dsharpplus.voicenext.4.3.0-nightly-01134.nupkg.sha512",
         "dsharpplus.voicenext.nuspec",
         "lib/netstandard2.0/DSharpPlus.VoiceNext.dll",
         "lib/netstandard2.0/DSharpPlus.VoiceNext.xml"
@@ -1699,6 +1740,74 @@
         "lib/uap10.0/HtmlAgilityPack.dll",
         "lib/uap10.0/HtmlAgilityPack.pdb",
         "lib/uap10.0/HtmlAgilityPack.pri"
+      ]
+    },
+    "Microsoft.CSharp/4.5.0": {
+      "sha512": "kaj6Wb4qoMuH3HySFJhxwQfe8R/sJsNJnANrvv8WdFPMoNbKY5htfNscv+LHCu5ipz+49m2e+WQXpLXr9XYemQ==",
+      "type": "package",
+      "path": "microsoft.csharp/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/netcore50/Microsoft.CSharp.dll",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.3/Microsoft.CSharp.dll",
+        "lib/netstandard2.0/Microsoft.CSharp.dll",
+        "lib/portable-net45+win8+wp8+wpa81/_._",
+        "lib/uap10.0.16299/_._",
+        "lib/win8/_._",
+        "lib/wp80/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "microsoft.csharp.4.5.0.nupkg.sha512",
+        "microsoft.csharp.nuspec",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/netcore50/Microsoft.CSharp.dll",
+        "ref/netcore50/Microsoft.CSharp.xml",
+        "ref/netcore50/de/Microsoft.CSharp.xml",
+        "ref/netcore50/es/Microsoft.CSharp.xml",
+        "ref/netcore50/fr/Microsoft.CSharp.xml",
+        "ref/netcore50/it/Microsoft.CSharp.xml",
+        "ref/netcore50/ja/Microsoft.CSharp.xml",
+        "ref/netcore50/ko/Microsoft.CSharp.xml",
+        "ref/netcore50/ru/Microsoft.CSharp.xml",
+        "ref/netcore50/zh-hans/Microsoft.CSharp.xml",
+        "ref/netcore50/zh-hant/Microsoft.CSharp.xml",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard1.0/Microsoft.CSharp.dll",
+        "ref/netstandard1.0/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/de/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/es/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/fr/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/it/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/ja/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/ko/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/ru/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/zh-hans/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/zh-hant/Microsoft.CSharp.xml",
+        "ref/netstandard2.0/Microsoft.CSharp.dll",
+        "ref/netstandard2.0/Microsoft.CSharp.xml",
+        "ref/portable-net45+win8+wp8+wpa81/_._",
+        "ref/uap10.0.16299/_._",
+        "ref/win8/_._",
+        "ref/wp80/_._",
+        "ref/wpa81/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "Microsoft.Extensions.DependencyInjection/5.0.1": {
@@ -1858,6 +1967,46 @@
         "newtonsoft.json.13.0.1.nupkg.sha512",
         "newtonsoft.json.nuspec",
         "packageIcon.png"
+      ]
+    },
+    "OpenWeatherMap/1.1.0": {
+      "sha512": "UDCEzK6xKflN2+K6QCvPUS39cT+FXK8gZpdwP3TVx4sY6TvHN8h/uYIBNpVNHsObS3zO3LbaredlhVmzSk7spA==",
+      "type": "package",
+      "path": "openweathermap/1.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard1.1/OpenWeatherMap.dll",
+        "openweathermap.1.1.0.nupkg.sha512",
+        "openweathermap.nuspec"
+      ]
+    },
+    "Reddit/1.5.0": {
+      "sha512": "/Z5vx6As9AIuiorpPsF7TXdnofoiTlNeDNdUCZAVTpyW6o1ff/4l5PhyOMw397CmkF+jg6ixlGvw8ZYZ2b7C3w==",
+      "type": "package",
+      "path": "reddit/1.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Reddit.NET.dll",
+        "lib/netstandard2.0/Reddit.NET.xml",
+        "reddit.1.5.0.nupkg.sha512",
+        "reddit.nuspec"
+      ]
+    },
+    "RestSharp/106.6.9": {
+      "sha512": "/IAQTwlnlQcjlIyvelf+rhQcCRPy/r/0MftpNbff/D7PZVnmVXE4AnHk/F4NJJJEZbI4M+QTglB+xFkAyzr+9A==",
+      "type": "package",
+      "path": "restsharp/106.6.9",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/RestSharp.dll",
+        "lib/net452/RestSharp.xml",
+        "lib/netstandard2.0/RestSharp.dll",
+        "lib/netstandard2.0/RestSharp.xml",
+        "restsharp.106.6.9.nupkg.sha512",
+        "restsharp.nuspec"
       ]
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
@@ -4746,13 +4895,15 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "DSharpPlus >= 4.3.0-nightly-01130",
-      "DSharpPlus.CommandsNext >= 4.3.0-nightly-01130",
-      "DSharpPlus.Interactivity >= 4.3.0-nightly-01130",
-      "DSharpPlus.VoiceNext >= 4.3.0-nightly-01130",
+      "DSharpPlus >= 4.3.0-nightly-01134",
+      "DSharpPlus.CommandsNext >= 4.3.0-nightly-01134",
+      "DSharpPlus.Interactivity >= 4.3.0-nightly-01134",
+      "DSharpPlus.VoiceNext >= 4.3.0-nightly-01134",
       "Discord.Net >= 3.6.1",
       "Discord.Net.Core >= 3.6.1",
-      "HtmlAgilityPack >= 1.11.42"
+      "HtmlAgilityPack >= 1.11.42",
+      "OpenWeatherMap >= 1.1.0",
+      "Reddit >= 1.5.0"
     ]
   },
   "packageFolders": {
@@ -4802,19 +4953,19 @@
         "dependencies": {
           "DSharpPlus": {
             "target": "Package",
-            "version": "[4.3.0-nightly-01130, )"
+            "version": "[4.3.0-nightly-01134, )"
           },
           "DSharpPlus.CommandsNext": {
             "target": "Package",
-            "version": "[4.3.0-nightly-01130, )"
+            "version": "[4.3.0-nightly-01134, )"
           },
           "DSharpPlus.Interactivity": {
             "target": "Package",
-            "version": "[4.3.0-nightly-01130, )"
+            "version": "[4.3.0-nightly-01134, )"
           },
           "DSharpPlus.VoiceNext": {
             "target": "Package",
-            "version": "[4.3.0-nightly-01130, )"
+            "version": "[4.3.0-nightly-01134, )"
           },
           "Discord.Net": {
             "target": "Package",
@@ -4827,6 +4978,14 @@
           "HtmlAgilityPack": {
             "target": "Package",
             "version": "[1.11.42, )"
+          },
+          "OpenWeatherMap": {
+            "target": "Package",
+            "version": "[1.1.0, )"
+          },
+          "Reddit": {
+            "target": "Package",
+            "version": "[1.5.0, )"
           }
         },
         "imports": [
