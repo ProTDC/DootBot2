@@ -54,7 +54,7 @@ namespace Dootbot2
             var commandsConfig = new CommandsNextConfiguration
             {
                 StringPrefixes = new string[] { configJson.Prefix },
-                EnableDms = false,
+                EnableDms = true,
                 EnableMentionPrefix = true,
                 DmHelp = false,
                 IgnoreExtraArguments = false,
@@ -81,10 +81,10 @@ namespace Dootbot2
                 {
                     await e.Message.RespondAsync("Doot").ConfigureAwait(false);
 
-                    //await e.Message.CreateReactionAsync(letterD);
-                    //await e.Message.CreateReactionAsync(letterO);
-                    //await e.Message.CreateReactionAsync(lettero2);
-                    //await e.Message.CreateReactionAsync(letterT);
+                    await e.Message.CreateReactionAsync(letterD).ConfigureAwait(false);
+                    await e.Message.CreateReactionAsync(letterO).ConfigureAwait(false);
+                    await e.Message.CreateReactionAsync(lettero2).ConfigureAwait(false);
+                    await e.Message.CreateReactionAsync(letterT).ConfigureAwait(false);
                     return;
                 }
 
@@ -97,7 +97,7 @@ namespace Dootbot2
                     return;
                 }
 
-                if (e.Message.Content.ToLower().Contains("Fuckyou"))
+                if (e.Message.Content.ToLower().Contains("fuckyou"))
                 {
                     await e.Message.RespondAsync("fuck you too").ConfigureAwait(false);
                     return;
@@ -106,14 +106,14 @@ namespace Dootbot2
 
             Client.MessageCreated += async (s, e) =>
             {
-                if (e.Message.Content.ToLower().Contains("Bitch"))
+                if (e.Message.Author.IsBot)
                 {
-                    await e.Message.RespondAsync("Bitch").ConfigureAwait(false);
                     return;
                 }
 
-                if (e.Message.Author.IsBot)
+                if (e.Message.Content.ToLower().Contains("bitch"))
                 {
+                    await e.Message.RespondAsync("Bitch").ConfigureAwait(false);
                     return;
                 }
 
@@ -129,7 +129,7 @@ namespace Dootbot2
                 if (e.Message.Content.ToLower().Contains("british") || e.Message.Content.ToLower().Contains("bri'ish") || e.Message.Content.ToLower().Contains("briish"))
                 {
                     await e.Message.RespondAsync("BRi'ISH! ??!").ConfigureAwait(false);
-                    //await e.Message.CreateReactionAsync(flagBritish);
+                    await e.Message.CreateReactionAsync(flagBritish).ConfigureAwait(false);
                     return;
                 }
             };
@@ -148,19 +148,29 @@ namespace Dootbot2
             //    }
             //};
 
-            //Client.MessageCreated += async (s, e) =>
-            //{
-            //    if (e.Message.Content.Contains("fortnite") || e.Message.Content.Contains("valorant") & e.Message.Content.Contains("overwatch") || e.Message.Content.Contains("genshin"))
-            //    {
-            //        await e.Message.CreateReactionAsync(vomit);
-            //    }
-            //};
+            Client.MessageCreated += async (s, e) =>
+            {
+                if (e.Message.Content.ToLower().Contains("fortnite") || e.Message.Content.ToLower().Contains("valorant") || e.Message.Content.ToLower().Contains("overwatch") || e.Message.Content.ToLower().Contains("genshin"))
+                {
+                    await e.Message.CreateReactionAsync(vomit);
+                    return;
+                }
+            };
 
             Client.MessageCreated += async (s, e) =>
             {
                 if (e.Message.Content.ToLower().Contains("brunost") || e.Message.Content.ToLower().Contains("brun ost"))
                 {
                     await e.Message.RespondAsync("https://tenor.com/view/norway-brown-cheese-cheese-norwegian-brown-cheese-ragnarocka-gif-23473349").ConfigureAwait(false);
+                    return;
+                }
+            };
+
+            Client.MessageCreated += async (s, e) =>
+            {
+                if (e.Message.Content.ToLower().Contains("forgor"))
+                {
+                    await e.Message.CreateReactionAsync(skull).ConfigureAwait(false);
                     return;
                 }
             };

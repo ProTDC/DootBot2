@@ -1,7 +1,9 @@
 ﻿using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Attributes;
+using DSharpPlus.Entities;
 using DSharpPlus.Interactivity.Extensions;
 using System;
+using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 
@@ -70,19 +72,27 @@ namespace DootBot2.Commands
             }
             Console.Read();
             return;
-
         }
 
         [Command("Avatar")]
-        [Description("Displays a mentioned users avatar")]
-        public async Task Avatar(CommandContext ctx)
+        [Description("Displays your avatar")]
+        public async Task Avatar(CommandContext ctx, DiscordMember member)
         {
-            await ctx.RespondAsync(ctx.Message.Author.AvatarUrl).ConfigureAwait(false);
 
-            if (ctx.Message.Content.Contains(ctx.User.Mention)) 
+            await ctx.Channel.SendMessageAsync(member.DisplayName + "s avatar: " + member.AvatarUrl);
+
+            return;
+        }
+
+        [Command("pepe"), Aliases("feelsbadman"), Description("Feels bad, man.")]
+        public async Task Pepe(CommandContext ctx)
+        {
+            var embed = new DiscordEmbedBuilder
             {
-                await ctx.RespondAsync(ctx.User.Mention).ConfigureAwait(false);
-            }
+                Title = "Pepe",
+                ImageUrl = "http://i.imgur.com/44SoSqS.jpg"
+            };
+            await ctx.RespondAsync(embed);
             return;
         }
 
@@ -122,7 +132,7 @@ namespace DootBot2.Commands
                 }
                 else
                 {
-                    await ctx.Channel.SendMessageAsync("You must choose rock,paper or scissors!");
+                    await ctx.Channel.SendMessageAsync("You must choose Rock, Paper or Scissors!");
                 }
             };
 
@@ -150,7 +160,7 @@ namespace DootBot2.Commands
                 }
                 else
                 {
-                    await ctx.Channel.SendMessageAsync("You must choose rock, paper or scissors!");
+                    await ctx.Channel.SendMessageAsync("You must choose Rock, Paper or Scissors!");
                 }
             };
 
@@ -179,38 +189,37 @@ namespace DootBot2.Commands
                 }
                 else
                 {
-                    await ctx.Channel.SendMessageAsync("You must choose rock,paper or scissors!");
+                    await ctx.Channel.SendMessageAsync("You must choose Rock, Paper or Scissors!");
                 }
             };
-
         }
 
-        //[Command("Poll")]
-        //public async Task Poll(CommandContext ctx, TimeSpan duration, params DiscordEmoji[] emojiOptions)
-        //{
-        //    var interactivity = ctx.Client.GetInteractivity();
-        //    var options = emojiOptions.Select(x => x.ToString());
+        [Command("Poll")]
+        public async Task Poll(CommandContext ctx, TimeSpan duration, params DiscordEmoji[] emojiOptions)
+        {
+            var interactivity = ctx.Client.GetInteractivity();
+            var options = emojiOptions.Select(x => x.ToString());
 
-        //    var embed = new DiscordEmbedBuilder
-        //    {
-        //        Title = "Poll",
-        //        Description = string.Join("", options)
-        //    };
+            var embed = new DiscordEmbedBuilder
+            {
+                Title = "Poll",
+                Description = string.Join("", options)
+            };
 
-        //    var pollMessage = await ctx.Channel.SendMessageAsync(embed: embed).ConfigureAwait(false);
+            var pollMessage = await ctx.Channel.SendMessageAsync(embed: embed).ConfigureAwait(false);
 
-        //    foreach (DiscordEmoji option in emojiOptions)
-        //    {
-        //        await pollMessage.CreateReactionAsync(option).ConfigureAwait(false);
-        //    }
+            foreach (DiscordEmoji option in emojiOptions)
+            {
+                await pollMessage.CreateReactionAsync(option).ConfigureAwait(false);
+            }
 
-        //    var result = await interactivity.CollectReactionsAsync(pollMessage, duration).ConfigureAwait(false);
-        //    var distinctResult = result.Distinct();
-        //    var results = distinctResult.Select(x => $"{x.Emoji}: {x.Total}");
+            var result = await interactivity.CollectReactionsAsync(pollMessage, duration).ConfigureAwait(false);
+            var distinctResult = result.Distinct();
+            var results = distinctResult.Select(x => $"{x.Emoji}: {x.Total}");
 
 
-        //    await ctx.Channel.SendMessageAsync(string.Join("\n", results)).ConfigureAwait(false);
-        //}
+            await ctx.Channel.SendMessageAsync(string.Join("\n", results)).ConfigureAwait(false);
+        }
     }
 
 }
