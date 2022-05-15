@@ -13,6 +13,7 @@ using DSharpPlus.Interactivity.Extensions;
 using DSharpPlus.VoiceNext;
 using DootBot2;
 using DSharpPlus.Entities;
+using Discord.WebSocket;
 
 namespace Dootbot2
 {
@@ -22,7 +23,6 @@ namespace Dootbot2
         public DiscordClient Client { get; private set; }
         public CommandsNextExtension Commands { get; private set; }
         public VoiceNextExtension Voice { get; set; }
-
 
         public async Task RunAsync()
         {
@@ -40,6 +40,9 @@ namespace Dootbot2
                 TokenType = TokenType.Bot,
                 AutoReconnect = true,
                 MinimumLogLevel = LogLevel.Debug,
+
+                Intents = DiscordIntents.All
+
             };
 
             Client = new DiscordClient(config);
@@ -69,6 +72,33 @@ namespace Dootbot2
             var lettero2 = DiscordEmoji.FromName(Client, ":o2:");
             var letterT = DiscordEmoji.FromName(Client, ":regional_indicator_t:");
             var vomit = DiscordEmoji.FromName(Client, ":face_vomiting:");
+
+            Client.GuildCreated += async (s, e) =>
+            {
+                if (e.Guild.SystemChannel.Equals(null))
+                {
+                    return;
+                }
+                else
+                {
+                    await e.Guild.SystemChannel.SendMessageAsync("big mistake").ConfigureAwait(false);
+                    return;
+                }
+
+            };
+
+            Client.GuildMemberAdded += async (s, e) =>
+            {
+                if (e.Guild.SystemChannel.Equals(null))
+                {
+                    return;
+                }
+                else
+                {
+                    await e.Guild.SystemChannel.SendMessageAsync("fuck off " + e.Member.Mention).ConfigureAwait(false);
+                    return;
+                }
+            };
 
             Client.MessageCreated += async (s, e) =>
             {
@@ -102,6 +132,7 @@ namespace Dootbot2
                     await e.Message.RespondAsync("fuck you too").ConfigureAwait(false);
                     return;
                 }
+
             };
 
             Client.MessageCreated += async (s, e) =>
@@ -182,16 +213,19 @@ namespace Dootbot2
             };
 
             Commands = Client.UseCommandsNext(commandsConfig);
+            Voice = Client.UseVoiceNext();
 
             Commands.RegisterCommands<FunCommands>();
             Commands.RegisterCommands<Memes>();
-            Commands.RegisterCommands<RedditStuff>();
+            Commands.RegisterCommands<VoiceCommands>();
+            //Commands.RegisterCommands<Management>();
+            //Commands.RegisterCommands<RedditStuff>();
 
             await Client.ConnectAsync();
             await Task.Delay(-1);
         }
 
- 
+
         private Task OnClientReady(object sender, ReadyEventArgs e)
         {
             return Task.CompletedTask;

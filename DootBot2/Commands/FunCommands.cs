@@ -6,6 +6,7 @@ using System;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
+using OpenWeatherMap;
 
 
 namespace DootBot2.Commands
@@ -27,7 +28,6 @@ namespace DootBot2.Commands
         [Description("Displays motivation to keep on going")]
         public async Task Motivation(CommandContext ctx)
         {
-            Console.WriteLine("Command worked");
 
             Random rand = new Random();
 
@@ -36,7 +36,6 @@ namespace DootBot2.Commands
             else
                 await ctx.Channel.SendMessageAsync("https://cdn.discordapp.com/attachments/967031855985590383/971717012978036796/kys.mov").ConfigureAwait(false);
             return;
-
         }
 
         [Command("BitchesCount")]
@@ -52,7 +51,6 @@ namespace DootBot2.Commands
         public async Task Celebration(CommandContext ctx)
         {
             await ctx.Channel.SendMessageAsync("https://cdn.discordapp.com/attachments/634063767466147840/971711431902908496/trim.E9946223-78D6-454C-867F-627BBF29429B.mov").ConfigureAwait(false);
-            Console.WriteLine("Command worked");
             return;
         }
 

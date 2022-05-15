@@ -41,3 +41,6 @@ C:\Users\protd\source\repos\DootBot2\DootBot2\obj\Debug\netcoreapp3.1\DootBot2.d
 C:\Users\protd\source\repos\DootBot2\DootBot2\obj\Debug\netcoreapp3.1\DootBot2.pdb
 C:\Users\protd\source\repos\DootBot2\DootBot2\obj\Debug\netcoreapp3.1\DootBot2.genruntimeconfig.cache
 C:\Users\protd\source\repos\DootBot2\DootBot2\bin\Debug\netcoreapp3.1\HtmlAgilityPack.dll
+C:\Users\protd\source\repos\DootBot2\DootBot2\bin\Debug\netcoreapp3.1\OpenWeatherMap.dll
+C:\Users\protd\source\repos\DootBot2\DootBot2\bin\Debug\netcoreapp3.1\Reddit.NET.dll
+C:\Users\protd\source\repos\DootBot2\DootBot2\bin\Debug\netcoreapp3.1\RestSharp.dll
