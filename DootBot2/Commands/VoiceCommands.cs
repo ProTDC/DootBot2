@@ -58,10 +58,12 @@ namespace DootBot2.Commands
             var vnc = vnext.GetConnection(ctx.Guild);
             if (vnc == null)
             {
+                // not connected
                 await ctx.RespondAsync("Not connected in this guild.");
                 return;
             }
 
+            // disconnect
             vnc.Disconnect();
             await ctx.RespondAsync("Disconnected");
         }
