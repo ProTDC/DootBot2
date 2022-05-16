@@ -11,6 +11,8 @@ using System.Threading.Tasks;
 using DSharpPlus.Interactivity;
 using DSharpPlus.Interactivity.Extensions;
 using DSharpPlus.VoiceNext;
+using DSharpPlus.Net;
+using DSharpPlus.Lavalink;
 using DootBot2;
 using DSharpPlus.Entities;
 using Discord.WebSocket;
@@ -73,6 +75,8 @@ namespace Dootbot2
             var letterT = DiscordEmoji.FromName(Client, ":regional_indicator_t:");
             var vomit = DiscordEmoji.FromName(Client, ":face_vomiting:");
 
+            Voice = Client.UseVoiceNext();
+
             Client.GuildCreated += async (s, e) =>
             {
                 if (e.Guild.SystemChannel.Equals(null))
@@ -115,6 +119,16 @@ namespace Dootbot2
                     await e.Message.CreateReactionAsync(letterO).ConfigureAwait(false);
                     await e.Message.CreateReactionAsync(lettero2).ConfigureAwait(false);
                     await e.Message.CreateReactionAsync(letterT).ConfigureAwait(false);
+
+                    //if (e.Message.Author.Equals(voice))
+                    //{
+
+                    //}
+                    //else
+                    //{
+                    //    return;
+                    //}
+
                     return;
                 }
 
@@ -130,6 +144,21 @@ namespace Dootbot2
                 if (e.Message.Content.ToLower().Contains("fuck you"))
                 {
                     await e.Message.RespondAsync("fuck you too").ConfigureAwait(false);
+                    return;
+                }
+
+            };
+
+            Client.MessageCreated += async (s, e) =>
+            {
+                if (e.Message.Author.IsBot)
+                {
+                    return;
+                }
+
+                if (e.Message.Content.ToLower().Contains("wa"))
+                {
+                    await e.Message.RespondAsync("Wa").ConfigureAwait(false);
                     return;
                 }
 
@@ -208,12 +237,13 @@ namespace Dootbot2
 
             Client.MessageDeleted += async (s, e) =>
             {
-                await e.Message.RespondAsync(e.Message.Author.Mention + " https://tenor.com/view/delete-i-saw-that-i-saw-delete-message-i-see-gif-22475145").ConfigureAwait(false);
+                await e.Message.RespondAsync(e.Message.Author.Mention + " I SAW THAT!!! YOU DELETED MESSAGE: " + e.Message.Content).ConfigureAwait(false);
                 return;
             };
 
             Commands = Client.UseCommandsNext(commandsConfig);
-            Voice = Client.UseVoiceNext();
+
+            Commands.SetHelpFormatter<HelpFormatter>();
 
             Commands.RegisterCommands<FunCommands>();
             Commands.RegisterCommands<Memes>();

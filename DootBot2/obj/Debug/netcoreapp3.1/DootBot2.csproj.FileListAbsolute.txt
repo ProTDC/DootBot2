@@ -44,3 +44,6 @@ C:\Users\protd\source\repos\DootBot2\DootBot2\bin\Debug\netcoreapp3.1\HtmlAgilit
 C:\Users\protd\source\repos\DootBot2\DootBot2\bin\Debug\netcoreapp3.1\OpenWeatherMap.dll
 C:\Users\protd\source\repos\DootBot2\DootBot2\bin\Debug\netcoreapp3.1\Reddit.NET.dll
 C:\Users\protd\source\repos\DootBot2\DootBot2\bin\Debug\netcoreapp3.1\RestSharp.dll
+C:\Users\protd\source\repos\DootBot2\DootBot2\bin\Debug\netcoreapp3.1\DSharpPlus.Lavalink.dll
+C:\Users\protd\source\repos\DootBot2\DootBot2\bin\Debug\netcoreapp3.1\Lavalink4NET.dll
+C:\Users\protd\source\repos\DootBot2\DootBot2\bin\Debug\netcoreapp3.1\Lavalink4NET.DSharpPlus.dll

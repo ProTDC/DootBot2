@@ -57,6 +57,10 @@
               "target": "Package",
               "version": "[4.3.0-nightly-01134, )"
             },
+            "DSharpPlus.Lavalink": {
+              "target": "Package",
+              "version": "[4.3.0-nightly-01134, )"
+            },
             "DSharpPlus.VoiceNext": {
               "target": "Package",
               "version": "[4.3.0-nightly-01134, )"
@@ -72,6 +76,10 @@
             "HtmlAgilityPack": {
               "target": "Package",
               "version": "[1.11.42, )"
+            },
+            "Lavalink4NET.DSharpPlus": {
+              "target": "Package",
+              "version": "[2.1.1, )"
             },
             "OpenWeatherMap": {
               "target": "Package",

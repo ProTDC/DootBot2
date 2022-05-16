@@ -150,6 +150,18 @@
           "lib/netstandard2.0/DSharpPlus.Interactivity.dll": {}
         }
       },
+      "DSharpPlus.Lavalink/4.3.0-nightly-01134": {
+        "type": "package",
+        "dependencies": {
+          "DSharpPlus": "4.3.0-nightly-01134"
+        },
+        "compile": {
+          "lib/netstandard2.0/DSharpPlus.Lavalink.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/DSharpPlus.Lavalink.dll": {}
+        }
+      },
       "DSharpPlus.VoiceNext/4.3.0-nightly-01134": {
         "type": "package",
         "dependencies": {
@@ -207,6 +219,31 @@
         },
         "runtime": {
           "lib/netstandard2.0/HtmlAgilityPack.dll": {}
+        }
+      },
+      "Lavalink4NET/2.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.1/Lavalink4NET.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Lavalink4NET.dll": {}
+        }
+      },
+      "Lavalink4NET.DSharpPlus/2.1.1": {
+        "type": "package",
+        "dependencies": {
+          "DSharpPlus": "4.2.0-nightly-01026",
+          "Lavalink4NET": "2.1.1"
+        },
+        "compile": {
+          "lib/netstandard2.1/Lavalink4NET.DSharpPlus.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Lavalink4NET.DSharpPlus.dll": {}
         }
       },
       "Microsoft.CSharp/4.5.0": {
@@ -1648,6 +1685,20 @@
         "lib/netstandard2.0/DSharpPlus.Interactivity.xml"
       ]
     },
+    "DSharpPlus.Lavalink/4.3.0-nightly-01134": {
+      "sha512": "qZD8qJbMbP6sPPgCqqpJfqr4Q5gTQ3gQQf5NESK/lUE6morN2f36Z5DObuMlWa5zM9sJPdUJGy9XGbQJf8e8/Q==",
+      "type": "package",
+      "path": "dsharpplus.lavalink/4.3.0-nightly-01134",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "dsharpplus.lavalink.4.3.0-nightly-01134.nupkg.sha512",
+        "dsharpplus.lavalink.nuspec",
+        "dsharpplus.png",
+        "lib/netstandard2.0/DSharpPlus.Lavalink.dll",
+        "lib/netstandard2.0/DSharpPlus.Lavalink.xml"
+      ]
+    },
     "DSharpPlus.VoiceNext/4.3.0-nightly-01134": {
       "sha512": "HJaFJtboOPhzuJ5d/OsCUF5zPaFO5bDKZlViSwTGdkIWCXoy2f6oiba7J3YFc9f+ReXe/tXlZdSoNcLMllYzPw==",
       "type": "package",
@@ -1740,6 +1791,38 @@
         "lib/uap10.0/HtmlAgilityPack.dll",
         "lib/uap10.0/HtmlAgilityPack.pdb",
         "lib/uap10.0/HtmlAgilityPack.pri"
+      ]
+    },
+    "Lavalink4NET/2.1.1": {
+      "sha512": "pa0honczCKERulNxgUl7GJfACr8tYdXE0sWN0+yroVPhLvgwOZQ6pxSUX1jqpWIKS+TZqD91KRsjggm0JiEj8w==",
+      "type": "package",
+      "path": "lavalink4net/2.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Lavalink4NET.png",
+        "lavalink4net.2.1.1.nupkg.sha512",
+        "lavalink4net.nuspec",
+        "lib/netstandard2.0/Lavalink4NET.dll",
+        "lib/netstandard2.0/Lavalink4NET.xml",
+        "lib/netstandard2.1/Lavalink4NET.dll",
+        "lib/netstandard2.1/Lavalink4NET.xml"
+      ]
+    },
+    "Lavalink4NET.DSharpPlus/2.1.1": {
+      "sha512": "TpyPWcmpCzU+LCxtlK4Y7bNV8yKJRj1sQHr+Hwdr/0rmI1zU+Ky7gQPUSm8VG60pqyc6L/TgV2dBGiNxG+ptfQ==",
+      "type": "package",
+      "path": "lavalink4net.dsharpplus/2.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Lavalink4NET.png",
+        "lavalink4net.dsharpplus.2.1.1.nupkg.sha512",
+        "lavalink4net.dsharpplus.nuspec",
+        "lib/netstandard2.0/Lavalink4NET.DSharpPlus.dll",
+        "lib/netstandard2.0/Lavalink4NET.DSharpPlus.xml",
+        "lib/netstandard2.1/Lavalink4NET.DSharpPlus.dll",
+        "lib/netstandard2.1/Lavalink4NET.DSharpPlus.xml"
       ]
     },
     "Microsoft.CSharp/4.5.0": {
@@ -4898,10 +4981,12 @@
       "DSharpPlus >= 4.3.0-nightly-01134",
       "DSharpPlus.CommandsNext >= 4.3.0-nightly-01134",
       "DSharpPlus.Interactivity >= 4.3.0-nightly-01134",
+      "DSharpPlus.Lavalink >= 4.3.0-nightly-01134",
       "DSharpPlus.VoiceNext >= 4.3.0-nightly-01134",
       "Discord.Net >= 3.6.1",
       "Discord.Net.Core >= 3.6.1",
       "HtmlAgilityPack >= 1.11.42",
+      "Lavalink4NET.DSharpPlus >= 2.1.1",
       "OpenWeatherMap >= 1.1.0",
       "Reddit >= 1.5.0"
     ]
@@ -4963,6 +5048,10 @@
             "target": "Package",
             "version": "[4.3.0-nightly-01134, )"
           },
+          "DSharpPlus.Lavalink": {
+            "target": "Package",
+            "version": "[4.3.0-nightly-01134, )"
+          },
           "DSharpPlus.VoiceNext": {
             "target": "Package",
             "version": "[4.3.0-nightly-01134, )"
@@ -4978,6 +5067,10 @@
           "HtmlAgilityPack": {
             "target": "Package",
             "version": "[1.11.42, )"
+          },
+          "Lavalink4NET.DSharpPlus": {
+            "target": "Package",
+            "version": "[2.1.1, )"
           },
           "OpenWeatherMap": {
             "target": "Package",

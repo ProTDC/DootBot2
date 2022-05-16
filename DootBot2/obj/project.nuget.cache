@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "yMoB6rAnxWUrRtw8M4h6cVJeQoKOJpX03Y4UhxVrS/2GgJujUQappR4ewq0+Zg0teVZZEreDWfIkzsLcI6ZRjw==",
+  "dgSpecHash": "+d6tU//Uh2yc4yEUrrQGppxtOwLIp068u958AK0yCTweW5j5A82pUDmSTfZw1HZM77kvNMLpmZppDH/FMzNI6Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\protd\\source\\repos\\DootBot2\\DootBot2\\DootBot2.csproj",
   "expectedPackageFiles": [
@@ -15,10 +15,13 @@
     "C:\\Users\\protd\\.nuget\\packages\\dsharpplus\\4.3.0-nightly-01134\\dsharpplus.4.3.0-nightly-01134.nupkg.sha512",
     "C:\\Users\\protd\\.nuget\\packages\\dsharpplus.commandsnext\\4.3.0-nightly-01134\\dsharpplus.commandsnext.4.3.0-nightly-01134.nupkg.sha512",
     "C:\\Users\\protd\\.nuget\\packages\\dsharpplus.interactivity\\4.3.0-nightly-01134\\dsharpplus.interactivity.4.3.0-nightly-01134.nupkg.sha512",
+    "C:\\Users\\protd\\.nuget\\packages\\dsharpplus.lavalink\\4.3.0-nightly-01134\\dsharpplus.lavalink.4.3.0-nightly-01134.nupkg.sha512",
     "C:\\Users\\protd\\.nuget\\packages\\dsharpplus.voicenext\\4.3.0-nightly-01134\\dsharpplus.voicenext.4.3.0-nightly-01134.nupkg.sha512",
     "C:\\Users\\protd\\.nuget\\packages\\dsharpplus.voicenext.natives\\1.0.0\\dsharpplus.voicenext.natives.1.0.0.nupkg.sha512",
     "C:\\Users\\protd\\.nuget\\packages\\emzi0767.common\\2.6.2\\emzi0767.common.2.6.2.nupkg.sha512",
     "C:\\Users\\protd\\.nuget\\packages\\htmlagilitypack\\1.11.42\\htmlagilitypack.1.11.42.nupkg.sha512",
+    "C:\\Users\\protd\\.nuget\\packages\\lavalink4net\\2.1.1\\lavalink4net.2.1.1.nupkg.sha512",
+    "C:\\Users\\protd\\.nuget\\packages\\lavalink4net.dsharpplus\\2.1.1\\lavalink4net.dsharpplus.2.1.1.nupkg.sha512",
     "C:\\Users\\protd\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\protd\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\5.0.1\\microsoft.extensions.dependencyinjection.5.0.1.nupkg.sha512",
     "C:\\Users\\protd\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
