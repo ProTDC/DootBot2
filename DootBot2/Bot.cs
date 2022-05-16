@@ -119,25 +119,6 @@ namespace Dootbot2
                     await e.Message.CreateReactionAsync(letterO).ConfigureAwait(false);
                     await e.Message.CreateReactionAsync(lettero2).ConfigureAwait(false);
                     await e.Message.CreateReactionAsync(letterT).ConfigureAwait(false);
-
-                    //if (e.Message.Author.Equals(voice))
-                    //{
-
-                    //}
-                    //else
-                    //{
-                    //    return;
-                    //}
-
-                    return;
-                }
-
-            };
-
-            Client.MessageCreated += async (s, e) =>
-            {
-                if (e.Message.Author.IsBot)
-                {
                     return;
                 }
 
@@ -147,27 +128,9 @@ namespace Dootbot2
                     return;
                 }
 
-            };
-
-            Client.MessageCreated += async (s, e) =>
-            {
-                if (e.Message.Author.IsBot)
-                {
-                    return;
-                }
-
-                if (e.Message.Content.ToLower().Contains("wa"))
+                if (e.Message.Content.ToLower().StartsWith("wa"))
                 {
                     await e.Message.RespondAsync("Wa").ConfigureAwait(false);
-                    return;
-                }
-
-            };
-
-            Client.MessageCreated += async (s, e) =>
-            {
-                if (e.Message.Author.IsBot)
-                {
                     return;
                 }
 
@@ -177,21 +140,31 @@ namespace Dootbot2
                     return;
                 }
 
-            };
-
-            Client.MessageCreated += async (s, e) =>
-            {
-                if (e.Message.Author.IsBot)
-                {
-                    return;
-                }
-
                 if (e.Message.Content.ToLower().Contains("british") || e.Message.Content.ToLower().Contains("bri'ish") || e.Message.Content.ToLower().Contains("briish"))
                 {
                     await e.Message.RespondAsync("BRi'ISH! ??!").ConfigureAwait(false);
                     await e.Message.CreateReactionAsync(flagBritish).ConfigureAwait(false);
                     return;
                 }
+
+                if (e.Message.Content.ToLower().Contains("fortnite") || e.Message.Content.ToLower().Contains("valorant") || e.Message.Content.ToLower().Contains("overwatch") || e.Message.Content.ToLower().Contains("genshin"))
+                {
+                    await e.Message.CreateReactionAsync(vomit);
+                    return;
+                }
+
+                if (e.Message.Content.ToLower().Contains("brunost") || e.Message.Content.ToLower().Contains("brun ost"))
+                {
+                    await e.Message.Channel.SendMessageAsync("https://tenor.com/view/norway-brown-cheese-cheese-norwegian-brown-cheese-ragnarocka-gif-23473349").ConfigureAwait(false);
+                    return;
+                }
+
+                if (e.Message.Content.ToLower().Contains("forgor"))
+                {
+                    await e.Message.CreateReactionAsync(skull).ConfigureAwait(false);
+                    return;
+                }
+
             };
 
             //Client.MessageCreated += async (s, e) =>
@@ -208,32 +181,6 @@ namespace Dootbot2
             //    }
             //};
 
-            Client.MessageCreated += async (s, e) =>
-            {
-                if (e.Message.Content.ToLower().Contains("fortnite") || e.Message.Content.ToLower().Contains("valorant") || e.Message.Content.ToLower().Contains("overwatch") || e.Message.Content.ToLower().Contains("genshin"))
-                {
-                    await e.Message.CreateReactionAsync(vomit);
-                    return;
-                }
-            };
-
-            Client.MessageCreated += async (s, e) =>
-            {
-                if (e.Message.Content.ToLower().Contains("brunost") || e.Message.Content.ToLower().Contains("brun ost"))
-                {
-                    await e.Message.RespondAsync("https://tenor.com/view/norway-brown-cheese-cheese-norwegian-brown-cheese-ragnarocka-gif-23473349").ConfigureAwait(false);
-                    return;
-                }
-            };
-
-            Client.MessageCreated += async (s, e) =>
-            {
-                if (e.Message.Content.ToLower().Contains("forgor"))
-                {
-                    await e.Message.CreateReactionAsync(skull).ConfigureAwait(false);
-                    return;
-                }
-            };
 
             Client.MessageDeleted += async (s, e) =>
             {
