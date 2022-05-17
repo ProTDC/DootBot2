@@ -67,6 +67,8 @@ namespace Dootbot2
             };
 
             var flagBritish = DiscordEmoji.FromName(Client, ":flag_gb:");
+            var flagNor = DiscordEmoji.FromName(Client, ":flag_no:");
+            var confetti = DiscordEmoji.FromName(Client, ":confetti_ball:");
             var skull = DiscordEmoji.FromName(Client, ":skull:");
             var trumpet = DiscordEmoji.FromName(Client, ":trumpet:");
             var letterD = DiscordEmoji.FromName(Client, ":regional_indicator_d:");
@@ -106,6 +108,7 @@ namespace Dootbot2
 
             Client.MessageCreated += async (s, e) =>
             {
+
                 if (e.Message.Author.IsBot)
                 {
                     return;
@@ -128,7 +131,7 @@ namespace Dootbot2
                     return;
                 }
 
-                if (e.Message.Content.ToLower().StartsWith("wa"))
+                if (e.Message.Content.ToLower().Contains("wa"))
                 {
                     await e.Message.RespondAsync("Wa").ConfigureAwait(false);
                     return;

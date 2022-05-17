@@ -273,7 +273,24 @@ namespace DootBot2.Commands
        "https://cdn.discordapp.com/attachments/688931789951205478/975547837871951892/1_5121053733685297822.mp4",
        "https://cdn.discordapp.com/attachments/929807268994744340/975666767051489330/my_new_steel_toed_boots_.mp4",
        "https://cdn.discordapp.com/attachments/956994953727336448/975715592407515177/redditsave.com_yo-jt0wfrebmxt81.mp4",
-       "https://cdn.discordapp.com/attachments/486049908248412160/975644845601329193/MemeFeedBot-1-1.mp4"
+       "https://cdn.discordapp.com/attachments/486049908248412160/975644845601329193/MemeFeedBot-1-1.mp4",
+       "https://cdn.discordapp.com/attachments/956994953727336448/976219464108478494/No_England.mp4",
+       "https://media.discordapp.net/attachments/268400938799071232/976155012814221372/IMG_6242.jpg?width=582&height=671",
+       "https://cdn.discordapp.com/attachments/835536152667619328/909227580551491654/12fd62a198f414021.mp4",
+       "https://media.discordapp.net/attachments/967031855985590383/976070575367802930/fasly1w2nuz81.jpg",
+       "https://media.discordapp.net/attachments/551797187734929418/968898176968962048/unknown.png?width=678&height=671",
+       "https://cdn.discordapp.com/attachments/967031855985590383/976065684008239144/IMG_1601.jpg",
+       "https://cdn.discordapp.com/attachments/967031855985590383/976065711279579147/IMG_1598.jpg",
+       "https://cdn.discordapp.com/attachments/967031855985590383/976065705092993024/IMG_1599.jpg",
+       "https://cdn.discordapp.com/attachments/953513218666561556/976120049695854652/5wbTf6H.mp4",
+       "https://cdn.discordapp.com/attachments/967031855985590383/975700962985512970/unknown.png",
+       "https://cdn.discordapp.com/attachments/967031855985590383/973988224626200598/unknown.png",
+       "https://media.discordapp.net/attachments/967031855985590383/976065671383379999/IMG_1603.jpg?width=418&height=669",
+       "https://cdn.discordapp.com/attachments/967031855985590383/976065674667503636/IMG_1602.jpg",
+       "https://cdn.discordapp.com/attachments/967031855985590383/973983000754782288/unknown.png",
+       "https://cdn.discordapp.com/attachments/967031855985590383/976065727343767552/IMG_1595.jpg",
+       ""
+
         };
 
         [Command("Memes")]
