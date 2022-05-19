@@ -289,8 +289,17 @@ namespace DootBot2.Commands
        "https://cdn.discordapp.com/attachments/967031855985590383/976065674667503636/IMG_1602.jpg",
        "https://cdn.discordapp.com/attachments/967031855985590383/973983000754782288/unknown.png",
        "https://cdn.discordapp.com/attachments/967031855985590383/976065727343767552/IMG_1595.jpg",
-       ""
-
+       "https://cdn.discordapp.com/attachments/831213786840825857/976342142299549746/IMG_20220509_095043.jpg",
+       "https://cdn.discordapp.com/attachments/956994953727336448/976389071511359498/make_myself_clear.mp4",
+       "https://cdn.discordapp.com/attachments/956994953727336448/976390308092866610/trim.ABE2CE3B-D343-439D-BDC4-256566F40A21.mov",
+       "https://cdn.discordapp.com/attachments/551797187734929418/831241183014813696/image0-1779.png",
+       "https://cdn.discordapp.com/attachments/956994953727336448/976414396035256381/wtf.jpg",
+       "https://cdn.discordapp.com/attachments/956994953727336448/976800639298449509/9DD8B33F-DFFF-44D7-8DF9-4A511CF18B08.jpg",
+       "https://cdn.discordapp.com/attachments/956994953727336448/976799639959379968/A713A505-BBA8-4500-AD26-2A924359DF1E.jpg",
+       "https://cdn.discordapp.com/attachments/424976647268204545/976622364911603732/20220517_224650.jpg",
+       "https://cdn.discordapp.com/attachments/775717139214368779/976738111461683240/281259155_1015954745723481_3272610740276166321_n.mp4",
+       "https://cdn.discordapp.com/attachments/956994953727336448/976800166575243274/trim.CEA04177-5FB4-4B85-A8BD-37DC7D8DF954.mov",
+       "https://cdn.discordapp.com/attachments/956994953727336448/976800045892522005/B683D379-F373-4F33-A464-ED1A0BD3ABBA.jpg"
         };
 
         [Command("Memes")]

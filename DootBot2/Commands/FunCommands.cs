@@ -38,15 +38,8 @@ namespace DootBot2.Commands
             return;
         }
 
-        [Command("BitchesCount")]
-        [Description("Counts how many bitches you currently have")]
-        public async Task Bitches(CommandContext ctx)
-        {
-            await ctx.Channel.SendMessageAsync(ctx.Member.DisplayName + " you currently have 0 bitches").ConfigureAwait(false);
-            return;
-        }
-
         [Command("Celebrate")]
+        [Aliases("Celebration")]
         [Description("Celebration")]
         public async Task Celebration(CommandContext ctx)
         {
