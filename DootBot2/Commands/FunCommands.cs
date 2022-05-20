@@ -69,15 +69,16 @@ namespace DootBot2.Commands
         [Description("Displays a users information")]
         public async Task User(CommandContext ctx, DiscordMember member)
         {
-            DiscordActivity activity = new DiscordActivity();
+            String activity = member.Presence.Activity.Name;
             //DiscordClient discord = ctx.Client;
 
             var embed = new DiscordEmbedBuilder
             {
                 Title = member.DisplayName,
-                Description = member.Presence.Activity.Equals(activity),
+                Description = activity,
                 ImageUrl = member.AvatarUrl
             };
+            Console.WriteLine($"User Activity: {activity}");
             await ctx.RespondAsync(embed);
             return;
         }
