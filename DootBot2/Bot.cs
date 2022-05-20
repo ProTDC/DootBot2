@@ -125,11 +125,11 @@ namespace Dootbot2
                     return;
                 }
 
-                if (e.Message.Content.ToLower().Contains("fuck you"))
-                {
-                    await e.Message.RespondAsync("fuck you too").ConfigureAwait(false);
-                    return;
-                }
+                //if (e.Message.Content.ToLower().Contains("fuck you"))
+                //{
+                //    await e.Message.RespondAsync("fuck you too").ConfigureAwait(false);
+                //    return;
+                //}
 
                 if (e.Message.Content.ToLower().Contains("wa"))
                 {

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using OpenWeatherMap;
-
+using DSharpPlus;
 
 namespace DootBot2.Commands
 
@@ -69,10 +69,35 @@ namespace DootBot2.Commands
         [Description("Displays your avatar")]
         public async Task Avatar(CommandContext ctx, DiscordMember member)
         {
-
             await ctx.Channel.SendMessageAsync(member.DisplayName + "s avatar: " + member.AvatarUrl);
-
             return;
+        }
+
+        [Command("Activity")]
+        [Description("Displays a users status or activity")]
+        public async Task Status(CommandContext ctx, DiscordMember member)
+        {
+            await ctx.Channel.SendMessageAsync(member.DisplayName + "s activity is currently: " + member.Presence.Activity);
+            return;
+        }
+
+        [Hidden]
+        [Command("setactivity")]
+        private async Task Setactivity(CommandContext ctx)
+        {
+            if (ctx.User.Id == 461446979155918859)
+            {
+                DiscordActivity activity = new DiscordActivity();
+                DiscordClient discord = ctx.Client;
+                string input = Console.ReadLine();
+                activity.Name = input;
+                await discord.UpdateStatusAsync(activity);
+                return;
+            }
+            else
+            {
+                return;
+            }
         }
 
         [Command("pepe"), Aliases("feelsbadman"), Description("Feels bad, man.")]

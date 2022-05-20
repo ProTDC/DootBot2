@@ -299,7 +299,12 @@ namespace DootBot2.Commands
        "https://cdn.discordapp.com/attachments/424976647268204545/976622364911603732/20220517_224650.jpg",
        "https://cdn.discordapp.com/attachments/775717139214368779/976738111461683240/281259155_1015954745723481_3272610740276166321_n.mp4",
        "https://cdn.discordapp.com/attachments/956994953727336448/976800166575243274/trim.CEA04177-5FB4-4B85-A8BD-37DC7D8DF954.mov",
-       "https://cdn.discordapp.com/attachments/956994953727336448/976800045892522005/B683D379-F373-4F33-A464-ED1A0BD3ABBA.jpg"
+       "https://cdn.discordapp.com/attachments/956994953727336448/976800045892522005/B683D379-F373-4F33-A464-ED1A0BD3ABBA.jpg",
+       "https://cdn.discordapp.com/attachments/268400938799071232/976864415825666048/7307137387f1fa5d5cea321a57fa1a904755833b08717670ce63b15642fd0319_1-1.mp4",
+       "https://cdn.discordapp.com/attachments/232570410464575489/976869583363391498/5f6ff5d0fc18c7c44df0690746e9d8c8078100b74328d0adfbd4be9fd753ac87_1.mp4",
+       "https://cdn.discordapp.com/attachments/953513218666561556/977039547064020992/c.mp4",
+       "https://cdn.discordapp.com/attachments/787161929268854804/977142769795624960/SnapInsta_277333108_1702301133445855_1398637651150884164_n.mp4",
+       "https://cdn.discordapp.com/attachments/953513218666561556/977052812020170772/ok.mp4"
         };
 
         [Command("Memes")]
@@ -322,6 +327,13 @@ namespace DootBot2.Commands
             return;
         }
 
+        //[Hidden]
+        //[Command("memeadd")]
+        //[Description("adds a meme")]
+        //public async Task MemeAdd(CommandContext ctx)
+        //{
+
+        //}
 
     }
 
