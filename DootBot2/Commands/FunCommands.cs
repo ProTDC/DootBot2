@@ -59,37 +59,37 @@ namespace DootBot2.Commands
 
             foreach (var content in datalist)
             {
-                await ctx.Channel.SendMessageAsync(content.InnerText);
+                await ctx.Channel.SendMessageAsync(content.InnerText).ConfigureAwait(false);
             }
             Console.Read();
             return;
         }
 
-        [Command("Avatar")]
-        [Description("Displays your avatar")]
-        public async Task Avatar(CommandContext ctx, DiscordMember member)
+        [Command("User")]
+        [Description("Displays a users information")]
+        public async Task User(CommandContext ctx, DiscordMember member)
         {
-            await ctx.Channel.SendMessageAsync(member.DisplayName + "s avatar: " + member.AvatarUrl);
+            DiscordActivity activity = new DiscordActivity();
+            //DiscordClient discord = ctx.Client;
+
+            var embed = new DiscordEmbedBuilder
+            {
+                Title = member.DisplayName,
+                Description = member.Presence.Activity.Equals(activity),
+                ImageUrl = member.AvatarUrl
+            };
+            await ctx.RespondAsync(embed);
             return;
         }
 
-        [Command("Activity")]
-        [Description("Displays a users status or activity")]
-        public async Task Status(CommandContext ctx, DiscordMember member)
-        {
-            await ctx.Channel.SendMessageAsync(member.DisplayName + "s activity is currently: " + member.Presence.Activity);
-            return;
-        }
-
-        [Hidden]
         [Command("setactivity")]
-        private async Task Setactivity(CommandContext ctx)
+        private async Task setactivity(CommandContext ctx)
         {
             if (ctx.User.Id == 461446979155918859)
             {
                 DiscordActivity activity = new DiscordActivity();
                 DiscordClient discord = ctx.Client;
-                string input = Console.ReadLine();
+                string input = "Fortnite";
                 activity.Name = input;
                 await discord.UpdateStatusAsync(activity);
                 return;
@@ -98,18 +98,6 @@ namespace DootBot2.Commands
             {
                 return;
             }
-        }
-
-        [Command("pepe"), Aliases("feelsbadman"), Description("Feels bad, man.")]
-        public async Task Pepe(CommandContext ctx)
-        {
-            var embed = new DiscordEmbedBuilder
-            {
-                Title = "Pepe",
-                ImageUrl = "http://i.imgur.com/44SoSqS.jpg"
-            };
-            await ctx.RespondAsync(embed);
-            return;
         }
 
         [Command("RPS")]

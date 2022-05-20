@@ -11,11 +11,8 @@ using System.Threading.Tasks;
 using DSharpPlus.Interactivity;
 using DSharpPlus.Interactivity.Extensions;
 using DSharpPlus.VoiceNext;
-using DSharpPlus.Net;
-using DSharpPlus.Lavalink;
 using DootBot2;
 using DSharpPlus.Entities;
-using Discord.WebSocket;
 
 namespace Dootbot2
 {
@@ -42,9 +39,17 @@ namespace Dootbot2
                 TokenType = TokenType.Bot,
                 AutoReconnect = true,
                 MinimumLogLevel = LogLevel.Debug,
-
-                Intents = DiscordIntents.All
-
+                Intents = DiscordIntents.DirectMessageReactions
+                | DiscordIntents.DirectMessages
+                | DiscordIntents.GuildBans
+                | DiscordIntents.GuildEmojis
+                | DiscordIntents.GuildInvites
+                | DiscordIntents.GuildMembers
+                | DiscordIntents.GuildMessages
+                | DiscordIntents.GuildPresences
+                | DiscordIntents.Guilds
+                | DiscordIntents.GuildVoiceStates
+                | DiscordIntents.GuildWebhooks,
             };
 
             Client = new DiscordClient(config);
@@ -106,6 +111,8 @@ namespace Dootbot2
                 }
             };
 
+            
+
             Client.MessageCreated += async (s, e) =>
             {
 
@@ -122,14 +129,15 @@ namespace Dootbot2
                     await e.Message.CreateReactionAsync(letterO).ConfigureAwait(false);
                     await e.Message.CreateReactionAsync(lettero2).ConfigureAwait(false);
                     await e.Message.CreateReactionAsync(letterT).ConfigureAwait(false);
+
                     return;
                 }
 
-                //if (e.Message.Content.ToLower().Contains("fuck you"))
-                //{
-                //    await e.Message.RespondAsync("fuck you too").ConfigureAwait(false);
-                //    return;
-                //}
+                if (e.Message.Content.ToLower().Contains("fuck you"))
+                {
+                    await e.Message.RespondAsync("fuck you too").ConfigureAwait(false);
+                    return;
+                }
 
                 if (e.Message.Content.ToLower().Contains("wa"))
                 {

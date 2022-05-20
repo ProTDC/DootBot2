@@ -332,7 +332,7 @@ namespace DootBot2.Commands
         //[Description("adds a meme")]
         //public async Task MemeAdd(CommandContext ctx)
         //{
-
+        //    await ctx.Channel.SendMessageAsync("ok");
         //}
 
     }
