@@ -69,28 +69,32 @@ namespace DootBot2.Commands
         [Description("Displays a users information")]
         public async Task User(CommandContext ctx, DiscordMember member)
         {
-            String activity = member.Presence.Activity.Name;
-            //DiscordClient discord = ctx.Client;
-
             var embed = new DiscordEmbedBuilder
             {
                 Title = member.DisplayName,
-                Description = activity,
-                ImageUrl = member.AvatarUrl
+                Url = "https://www.youtube.com/watch?v=xvFZjo5PgG0",
+
+                Thumbnail = new DiscordEmbedBuilder.EmbedThumbnail
+                {
+                    Url = member.AvatarUrl
+                }
             };
-            Console.WriteLine($"User Activity: {activity}");
-            await ctx.RespondAsync(embed);
+            embed.AddField("Status:", member.Presence.Status.ToString());
+            //embed.AddField("Activity:", member.Presence.Activity.Name);
+
+            await ctx.Channel.SendMessageAsync(embed);
             return;
+
         }
 
-        [Command("setactivity")]
+        [Command("setact")]
         private async Task setactivity(CommandContext ctx)
         {
             if (ctx.User.Id == 461446979155918859)
             {
                 DiscordActivity activity = new DiscordActivity();
                 DiscordClient discord = ctx.Client;
-                string input = "Fortnite";
+                string input = "Doot";
                 activity.Name = input;
                 await discord.UpdateStatusAsync(activity);
                 return;
