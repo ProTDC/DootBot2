@@ -80,7 +80,8 @@ namespace DootBot2.Commands
                 }
             };
             embed.AddField("Status:", member.Presence.Status.ToString());
-            //embed.AddField("Activity:", member.Presence.Activity.Name);
+            embed.AddField("Activity:", member.Presence.Activity.Name);
+
 
             await ctx.Channel.SendMessageAsync(embed);
             return;
