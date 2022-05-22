@@ -73,14 +73,19 @@ namespace DootBot2.Commands
             {
                 Title = member.DisplayName,
                 Url = "https://www.youtube.com/watch?v=xvFZjo5PgG0",
+                Description = "Custom status here",
 
                 Thumbnail = new DiscordEmbedBuilder.EmbedThumbnail
                 {
                     Url = member.AvatarUrl
                 }
             };
+
+            embed.AddField("UserID", member.Id.ToString());
             embed.AddField("Status:", member.Presence.Status.ToString());
-            embed.AddField("Activity:", member.Presence.Activity.Name);
+            embed.AddField("Created:", member.CreationTimestamp.DateTime.ToLongDateString());
+            embed.AddField("Joined at:", member.Guild.JoinedAt.DateTime.ToLongDateString());
+            //embed.AddField("Activity:", member.Presence.Activity.Name);
 
 
             await ctx.Channel.SendMessageAsync(embed);
