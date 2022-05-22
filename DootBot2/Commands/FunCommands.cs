@@ -83,6 +83,7 @@ namespace DootBot2.Commands
 
             embed.AddField("UserID", member.Id.ToString());
             embed.AddField("Status:", member.Presence.Status.ToString());
+            embed.AddField("Roles:", "role here");
             embed.AddField("Created:", member.CreationTimestamp.DateTime.ToLongDateString());
             embed.AddField("Joined at:", member.Guild.JoinedAt.DateTime.ToLongDateString());
             //embed.AddField("Activity:", member.Presence.Activity.Name);
@@ -93,6 +94,7 @@ namespace DootBot2.Commands
 
         }
 
+        [Hidden]
         [Command("setact")]
         private async Task setactivity(CommandContext ctx)
         {
