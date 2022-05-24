@@ -36,7 +36,7 @@ namespace DootBot2.Commands
             {
                 Title = member.DisplayName,
                 Url = "https://www.youtube.com/watch?v=xvFZjo5PgG0",
-                Description = "i am dumbass lol",
+                Description = "this person is dumbass lol",
 
                 Thumbnail = new DiscordEmbedBuilder.EmbedThumbnail
                 {
@@ -47,13 +47,19 @@ namespace DootBot2.Commands
             embed.AddField("UserID", member.Id.ToString());
             embed.AddField("Status:", member.Presence.Status.ToString());
 
-            if (member.Presence.Activity.ActivityType.Equals(DSharpPlus.Entities.ActivityType.Playing))
+            if (member.Presence.Activity.Equals(DSharpPlus.Entities.ActivityType.Playing))
             {
-                embed.AddField("Activity", "not currently doing anything");
+                embed.AddField("Playing: ", member.Presence.Activity.Name.ToString());
             }
+
+            //else if (member.Presence.Activity.Equals(DSharpPlus.Entities.ActivityType.ListeningTo))
+            //{
+            //    embed.AddField("Listening to: ", member.Presence.Activity.RichPresence.Details);
+            //}
+            
             else
             {
-                embed.AddField("Playing: ", member.Presence.Activity.Name.ToLower());
+                embed.AddField("Activity", "not currently doing anything");
             }
 
             embed.AddField("Created:", member.CreationTimestamp.DateTime.ToLongDateString());
