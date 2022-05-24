@@ -14,16 +14,6 @@ namespace DootBot2.Commands
 {
     class FunCommands : BaseCommandModule
     {
-
-        [Command("Porn")]
-        [Description("Displays porn")]
-        public async Task Porn(CommandContext ctx)
-        {
-            await ctx.RespondAsync("Degenerates like you, belong on a cross").ConfigureAwait(false);
-            Console.WriteLine("Command worked");
-            return;
-        }
-
         [Command("Motivation")]
         [Description("Displays motivation to keep on going")]
         public async Task Motivation(CommandContext ctx)
@@ -63,54 +53,6 @@ namespace DootBot2.Commands
             }
             Console.Read();
             return;
-        }
-
-        [Command("User")]
-        [Description("Displays a users information")]
-        public async Task User(CommandContext ctx, DiscordMember member)
-        {
-            var embed = new DiscordEmbedBuilder
-            {
-                Title = member.DisplayName,
-                Url = "https://www.youtube.com/watch?v=xvFZjo5PgG0",
-                Description = "Custom status here",
-
-                Thumbnail = new DiscordEmbedBuilder.EmbedThumbnail
-                {
-                    Url = member.AvatarUrl
-                }
-            };
-
-            embed.AddField("UserID", member.Id.ToString());
-            embed.AddField("Status:", member.Presence.Status.ToString());
-            embed.AddField("Roles:", "role here");
-            embed.AddField("Created:", member.CreationTimestamp.DateTime.ToLongDateString());
-            embed.AddField("Joined at:", member.Guild.JoinedAt.DateTime.ToLongDateString());
-            //embed.AddField("Activity:", member.Presence.Activity.Name);
-
-
-            await ctx.Channel.SendMessageAsync(embed);
-            return;
-
-        }
-
-        [Hidden]
-        [Command("setact")]
-        private async Task setactivity(CommandContext ctx)
-        {
-            if (ctx.User.Id == 461446979155918859)
-            {
-                DiscordActivity activity = new DiscordActivity();
-                DiscordClient discord = ctx.Client;
-                string input = "Doot";
-                activity.Name = input;
-                await discord.UpdateStatusAsync(activity);
-                return;
-            }
-            else
-            {
-                return;
-            }
         }
 
         [Command("RPS")]
@@ -210,6 +152,13 @@ namespace DootBot2.Commands
                 }
             };
         }
+
+        //[Command("Russian Roulette")]
+        //[Description("Starts a game of rock paper scissors against me")]
+        //public async Task RussianRoulette(CommandContext ctx)
+        //{
+            
+        //}
 
         [Command("Poll")]
         public async Task Poll(CommandContext ctx, TimeSpan duration, params DiscordEmoji[] emojiOptions)
