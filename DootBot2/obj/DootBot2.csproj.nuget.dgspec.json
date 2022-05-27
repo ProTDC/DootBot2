@@ -27,7 +27,7 @@
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {},
-          "https://www.nuget.org/packages/DSharpPlus/4.3.0-nightly-01130": {}
+          "https://www.nuget.org/packages/DSharpPlus/4.3.0-nightly-01135": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
@@ -47,31 +47,31 @@
           "dependencies": {
             "DSharpPlus": {
               "target": "Package",
-              "version": "[4.3.0-nightly-01134, )"
+              "version": "[4.3.0-nightly-01135, )"
             },
             "DSharpPlus.CommandsNext": {
               "target": "Package",
-              "version": "[4.3.0-nightly-01134, )"
+              "version": "[4.3.0-nightly-01135, )"
             },
             "DSharpPlus.Interactivity": {
               "target": "Package",
-              "version": "[4.3.0-nightly-01134, )"
+              "version": "[4.3.0-nightly-01135, )"
             },
             "DSharpPlus.Lavalink": {
               "target": "Package",
-              "version": "[4.3.0-nightly-01134, )"
+              "version": "[4.3.0-nightly-01135, )"
             },
             "DSharpPlus.VoiceNext": {
               "target": "Package",
-              "version": "[4.3.0-nightly-01134, )"
+              "version": "[4.3.0-nightly-01135, )"
             },
             "Discord.Net": {
               "target": "Package",
-              "version": "[3.6.1, )"
+              "version": "[3.7.0, )"
             },
             "Discord.Net.Core": {
               "target": "Package",
-              "version": "[3.6.1, )"
+              "version": "[3.7.0, )"
             },
             "HtmlAgilityPack": {
               "target": "Package",

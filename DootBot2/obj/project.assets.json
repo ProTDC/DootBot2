@@ -11,21 +11,21 @@
           "lib/netstandard2.0/ConcurrentCollections.dll": {}
         }
       },
-      "Discord.Net/3.6.1": {
+      "Discord.Net/3.7.0": {
         "type": "package",
         "dependencies": {
-          "Discord.Net.Commands": "3.6.1",
-          "Discord.Net.Core": "3.6.1",
-          "Discord.Net.Interactions": "3.6.1",
-          "Discord.Net.Rest": "3.6.1",
-          "Discord.Net.WebSocket": "3.6.1",
-          "Discord.Net.Webhook": "3.6.1"
+          "Discord.Net.Commands": "3.7.0",
+          "Discord.Net.Core": "3.7.0",
+          "Discord.Net.Interactions": "3.7.0",
+          "Discord.Net.Rest": "3.7.0",
+          "Discord.Net.WebSocket": "3.7.0",
+          "Discord.Net.Webhook": "3.7.0"
         }
       },
-      "Discord.Net.Commands/3.6.1": {
+      "Discord.Net.Commands/3.7.0": {
         "type": "package",
         "dependencies": {
-          "Discord.Net.Core": "3.6.1"
+          "Discord.Net.Core": "3.7.0"
         },
         "compile": {
           "lib/netstandard2.1/Discord.Net.Commands.dll": {}
@@ -34,7 +34,7 @@
           "lib/netstandard2.1/Discord.Net.Commands.dll": {}
         }
       },
-      "Discord.Net.Core/3.6.1": {
+      "Discord.Net.Core/3.7.0": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "13.0.1",
@@ -49,12 +49,12 @@
           "lib/netstandard2.1/Discord.Net.Core.dll": {}
         }
       },
-      "Discord.Net.Interactions/3.6.1": {
+      "Discord.Net.Interactions/3.7.0": {
         "type": "package",
         "dependencies": {
-          "Discord.Net.Core": "3.6.1",
-          "Discord.Net.Rest": "3.6.1",
-          "Discord.Net.WebSocket": "3.6.1",
+          "Discord.Net.Core": "3.7.0",
+          "Discord.Net.Rest": "3.7.0",
+          "Discord.Net.WebSocket": "3.7.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0",
           "System.Collections.Immutable": "5.0.0",
           "System.Reactive": "5.0.0"
@@ -66,10 +66,10 @@
           "lib/netstandard2.1/Discord.Net.Interactions.dll": {}
         }
       },
-      "Discord.Net.Rest/3.6.1": {
+      "Discord.Net.Rest/3.7.0": {
         "type": "package",
         "dependencies": {
-          "Discord.Net.Core": "3.6.1"
+          "Discord.Net.Core": "3.7.0"
         },
         "compile": {
           "lib/netstandard2.1/Discord.Net.Rest.dll": {}
@@ -78,11 +78,11 @@
           "lib/netstandard2.1/Discord.Net.Rest.dll": {}
         }
       },
-      "Discord.Net.Webhook/3.6.1": {
+      "Discord.Net.Webhook/3.7.0": {
         "type": "package",
         "dependencies": {
-          "Discord.Net.Core": "3.6.1",
-          "Discord.Net.Rest": "3.6.1"
+          "Discord.Net.Core": "3.7.0",
+          "Discord.Net.Rest": "3.7.0"
         },
         "compile": {
           "lib/netstandard2.1/Discord.Net.Webhook.dll": {}
@@ -91,11 +91,11 @@
           "lib/netstandard2.1/Discord.Net.Webhook.dll": {}
         }
       },
-      "Discord.Net.WebSocket/3.6.1": {
+      "Discord.Net.WebSocket/3.7.0": {
         "type": "package",
         "dependencies": {
-          "Discord.Net.Core": "3.6.1",
-          "Discord.Net.Rest": "3.6.1"
+          "Discord.Net.Core": "3.7.0",
+          "Discord.Net.Rest": "3.7.0"
         },
         "compile": {
           "lib/netstandard2.1/Discord.Net.WebSocket.dll": {}
@@ -104,7 +104,7 @@
           "lib/netstandard2.1/Discord.Net.WebSocket.dll": {}
         }
       },
-      "DSharpPlus/4.3.0-nightly-01134": {
+      "DSharpPlus/4.3.0-nightly-01135": {
         "type": "package",
         "dependencies": {
           "Emzi0767.Common": "2.6.2",
@@ -124,10 +124,10 @@
           "lib/netstandard2.0/DSharpPlus.dll": {}
         }
       },
-      "DSharpPlus.CommandsNext/4.3.0-nightly-01134": {
+      "DSharpPlus.CommandsNext/4.3.0-nightly-01135": {
         "type": "package",
         "dependencies": {
-          "DSharpPlus": "4.3.0-nightly-01134",
+          "DSharpPlus": "4.3.0-nightly-01135",
           "Microsoft.Extensions.DependencyInjection": "5.0.1"
         },
         "compile": {
@@ -137,11 +137,11 @@
           "lib/netstandard2.0/DSharpPlus.CommandsNext.dll": {}
         }
       },
-      "DSharpPlus.Interactivity/4.3.0-nightly-01134": {
+      "DSharpPlus.Interactivity/4.3.0-nightly-01135": {
         "type": "package",
         "dependencies": {
           "ConcurrentHashSet": "1.1.0",
-          "DSharpPlus": "4.3.0-nightly-01134"
+          "DSharpPlus": "4.3.0-nightly-01135"
         },
         "compile": {
           "lib/netstandard2.0/DSharpPlus.Interactivity.dll": {}
@@ -150,10 +150,10 @@
           "lib/netstandard2.0/DSharpPlus.Interactivity.dll": {}
         }
       },
-      "DSharpPlus.Lavalink/4.3.0-nightly-01134": {
+      "DSharpPlus.Lavalink/4.3.0-nightly-01135": {
         "type": "package",
         "dependencies": {
-          "DSharpPlus": "4.3.0-nightly-01134"
+          "DSharpPlus": "4.3.0-nightly-01135"
         },
         "compile": {
           "lib/netstandard2.0/DSharpPlus.Lavalink.dll": {}
@@ -162,10 +162,10 @@
           "lib/netstandard2.0/DSharpPlus.Lavalink.dll": {}
         }
       },
-      "DSharpPlus.VoiceNext/4.3.0-nightly-01134": {
+      "DSharpPlus.VoiceNext/4.3.0-nightly-01135": {
         "type": "package",
         "dependencies": {
-          "DSharpPlus": "4.3.0-nightly-01134",
+          "DSharpPlus": "4.3.0-nightly-01135",
           "DSharpPlus.VoiceNext.Natives": "1.0.0",
           "System.Threading.Channels": "5.0.0"
         },
@@ -1508,25 +1508,26 @@
         "lib/netstandard2.0/ConcurrentCollections.xml"
       ]
     },
-    "Discord.Net/3.6.1": {
-      "sha512": "TfcL/HG57fVt//WVJ2XyF2PlytY9IYkkwwkPLIhvu5FW4wf9rm7+N8RPh4qtELLfsa5ES0FK2RbgYjABRR9AjA==",
+    "Discord.Net/3.7.0": {
+      "sha512": "4Yo5+cAEwf+uczKxA3XJ67ZHx06s0T5tG3CB4KR9HDAcb7CdMTo9K3l78eWUMsfSM7uen+0hHvmZ4etZChqoOw==",
       "type": "package",
-      "path": "discord.net/3.6.1",
+      "path": "discord.net/3.7.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "discord.net.3.6.1.nupkg.sha512",
+        "discord.net.3.7.0.nupkg.sha512",
         "discord.net.nuspec"
       ]
     },
-    "Discord.Net.Commands/3.6.1": {
-      "sha512": "kK7m571yzSzPd93o+n8Z+TfvX62BT1HtOEZIWXKwXWO8itP/sgqBNExjWK/6DOpkbD6+khc2f3rp+TA0rJD88g==",
+    "Discord.Net.Commands/3.7.0": {
+      "sha512": "GssDCYs3nglj5oyJKXpMVQDoH9Q+omucRlslYtSjOZnTBbg7P61HM1ME2OlS2Ma3K9gJWstOPd6+E8dRkY52XQ==",
       "type": "package",
-      "path": "discord.net.commands/3.6.1",
+      "path": "discord.net.commands/3.7.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "discord.net.commands.3.6.1.nupkg.sha512",
+        "PackageLogo.png",
+        "discord.net.commands.3.7.0.nupkg.sha512",
         "discord.net.commands.nuspec",
         "lib/net461/Discord.Net.Commands.dll",
         "lib/net461/Discord.Net.Commands.xml",
@@ -1540,14 +1541,15 @@
         "lib/netstandard2.1/Discord.Net.Commands.xml"
       ]
     },
-    "Discord.Net.Core/3.6.1": {
-      "sha512": "ibVjQiWzgqh0GyP/GXE2kv3TA/9ysmmNFG/WmRE7GepQQAXXGxVUO9IMJ8h14EvIXMQ0m0DktMe5DkUnilo3Ag==",
+    "Discord.Net.Core/3.7.0": {
+      "sha512": "+fN8MacuCDDAdZD4aXMDgP/l7cwKmOrGQB6OlkTvfRiyjVYFiLCi7RI2fKmHTQ4GvyrOF99gfHes9q11PPFo2A==",
       "type": "package",
-      "path": "discord.net.core/3.6.1",
+      "path": "discord.net.core/3.7.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "discord.net.core.3.6.1.nupkg.sha512",
+        "PackageLogo.png",
+        "discord.net.core.3.7.0.nupkg.sha512",
         "discord.net.core.nuspec",
         "lib/net461/Discord.Net.Core.dll",
         "lib/net461/Discord.Net.Core.xml",
@@ -1561,14 +1563,15 @@
         "lib/netstandard2.1/Discord.Net.Core.xml"
       ]
     },
-    "Discord.Net.Interactions/3.6.1": {
-      "sha512": "WGOxz6SMUu4WS5b/JdrhlwQletcplBIYqvjFBBDfnqE+uNJqcNGtAdyjLqIILfXGx8aSSSSYZSCeAUa7FZ8Yew==",
+    "Discord.Net.Interactions/3.7.0": {
+      "sha512": "UFZuYzFhY3/9Gb/ee/3GgdKV0JjjgGXd5Ed4pw3o1rx1yAtqhhqe5dP16MAbwurLqcpd/7Ly8ZsBPZwqvW+wdg==",
       "type": "package",
-      "path": "discord.net.interactions/3.6.1",
+      "path": "discord.net.interactions/3.7.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "discord.net.interactions.3.6.1.nupkg.sha512",
+        "PackageLogo.png",
+        "discord.net.interactions.3.7.0.nupkg.sha512",
         "discord.net.interactions.nuspec",
         "lib/net461/Discord.Net.Interactions.dll",
         "lib/net461/Discord.Net.Interactions.xml",
@@ -1582,14 +1585,15 @@
         "lib/netstandard2.1/Discord.Net.Interactions.xml"
       ]
     },
-    "Discord.Net.Rest/3.6.1": {
-      "sha512": "T7RRThIS23roFEJwTL1l7aawjVyn7ZB5yH3tMge0d6TiCzzp4V4FAZ+ArTt19LHRFhPly90v8V3sWqmTMN+5Zg==",
+    "Discord.Net.Rest/3.7.0": {
+      "sha512": "PeqcH/4k2Nhyuxnaa7t03U+Jt4hcOCTJvObzv4wXv404fhRkMmhHJT788o1F7HKgTaaNPXm7IRVGdIyG73TR7w==",
       "type": "package",
-      "path": "discord.net.rest/3.6.1",
+      "path": "discord.net.rest/3.7.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "discord.net.rest.3.6.1.nupkg.sha512",
+        "PackageLogo.png",
+        "discord.net.rest.3.7.0.nupkg.sha512",
         "discord.net.rest.nuspec",
         "lib/net461/Discord.Net.Rest.dll",
         "lib/net461/Discord.Net.Rest.xml",
@@ -1603,14 +1607,15 @@
         "lib/netstandard2.1/Discord.Net.Rest.xml"
       ]
     },
-    "Discord.Net.Webhook/3.6.1": {
-      "sha512": "xikKHIGAIMz0BzHkaTKb48DNpFjKW8mvJjLJSezJ1xQOu+laHNk/hav4qxVtyZz7HSI/vGTkmlq9hKVhWzpaUA==",
+    "Discord.Net.Webhook/3.7.0": {
+      "sha512": "Isi2eoMrzQNzqilqbzlTEBD0RFPBnhhm3aE9xZ6+SEOIj2F7j1OmDsonHyo+BhAjbynKmfEodiSB/IBjVshwsg==",
       "type": "package",
-      "path": "discord.net.webhook/3.6.1",
+      "path": "discord.net.webhook/3.7.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "discord.net.webhook.3.6.1.nupkg.sha512",
+        "PackageLogo.png",
+        "discord.net.webhook.3.7.0.nupkg.sha512",
         "discord.net.webhook.nuspec",
         "lib/net5.0/Discord.Net.Webhook.dll",
         "lib/net5.0/Discord.Net.Webhook.xml",
@@ -1622,14 +1627,15 @@
         "lib/netstandard2.1/Discord.Net.Webhook.xml"
       ]
     },
-    "Discord.Net.WebSocket/3.6.1": {
-      "sha512": "hF22Xy7URlVEDQZ69INOgzPvFUsIDfd+r6U+1yF9HWdBn3d4THnvAAhkv1TraSx/T/MKS7g+jvk/HZ3mh5S3aw==",
+    "Discord.Net.WebSocket/3.7.0": {
+      "sha512": "Jaau78Xq6UTdyDl9W0szAJMnW7wiiu6s4xhOgMq3sJ9LAODZwz3wmNIYXoWurcRQ8ImI+QG93N2KxAjO/+JB4w==",
       "type": "package",
-      "path": "discord.net.websocket/3.6.1",
+      "path": "discord.net.websocket/3.7.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "discord.net.websocket.3.6.1.nupkg.sha512",
+        "PackageLogo.png",
+        "discord.net.websocket.3.7.0.nupkg.sha512",
         "discord.net.websocket.nuspec",
         "lib/net461/Discord.Net.WebSocket.dll",
         "lib/net461/Discord.Net.WebSocket.xml",
@@ -1643,71 +1649,71 @@
         "lib/netstandard2.1/Discord.Net.WebSocket.xml"
       ]
     },
-    "DSharpPlus/4.3.0-nightly-01134": {
-      "sha512": "BDXVNrmH09CWQXvW0u4q+IPj3JfO5q5b0jijXWcofvUAGevBG+Vi5xl9GdxA01rpyOwa0f1Hfz/Jtqpr8kM+Dw==",
+    "DSharpPlus/4.3.0-nightly-01135": {
+      "sha512": "vryhP8suBnqxL0KhB5knMWkrskD0B7bWltr64FaXuKXwrCIDKAKiEG+uUVxih6XAM7IIu5xl9jldXe75hS2U8w==",
       "type": "package",
-      "path": "dsharpplus/4.3.0-nightly-01134",
+      "path": "dsharpplus/4.3.0-nightly-01135",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "dsharpplus.4.3.0-nightly-01134.nupkg.sha512",
+        "dsharpplus.4.3.0-nightly-01135.nupkg.sha512",
         "dsharpplus.nuspec",
         "dsharpplus.png",
         "lib/netstandard2.0/DSharpPlus.dll",
         "lib/netstandard2.0/DSharpPlus.xml"
       ]
     },
-    "DSharpPlus.CommandsNext/4.3.0-nightly-01134": {
-      "sha512": "L8qODlc9AxFuNQWDxp8VF3OWWqu51VQwD7opoPv1RMDAyuXNcUsZptksgpX8cihVwbm7AnOUuCprtCIokxrgLA==",
+    "DSharpPlus.CommandsNext/4.3.0-nightly-01135": {
+      "sha512": "zAQTJAy/+OwFXMQdp+ZBRi0SQvCj3KzZcDdxZWfxW4tqTOfW+6czWZavU3ljzz3cl6KR1OZacZUgKFDByvp8Cg==",
       "type": "package",
-      "path": "dsharpplus.commandsnext/4.3.0-nightly-01134",
+      "path": "dsharpplus.commandsnext/4.3.0-nightly-01135",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "dsharpplus.commandsnext.4.3.0-nightly-01134.nupkg.sha512",
+        "dsharpplus.commandsnext.4.3.0-nightly-01135.nupkg.sha512",
         "dsharpplus.commandsnext.nuspec",
         "dsharpplus.png",
         "lib/netstandard2.0/DSharpPlus.CommandsNext.dll",
         "lib/netstandard2.0/DSharpPlus.CommandsNext.xml"
       ]
     },
-    "DSharpPlus.Interactivity/4.3.0-nightly-01134": {
-      "sha512": "D3O6A24RsAQMHuwQ7fwQGQ+QEGsCjj/jcwJaSOowGrG4XjmqLCgv89Xl++zaXL1xvD68qbE58gu7QhE/RPR1ag==",
+    "DSharpPlus.Interactivity/4.3.0-nightly-01135": {
+      "sha512": "HjGB0VG/0jsynKhi1CYyrSMJz3VLJxJQ3I6+QoIh1JyhykP2Z1Jrjs/2ViKrNjdOWWotACYWaAYUXwaFw0DcIw==",
       "type": "package",
-      "path": "dsharpplus.interactivity/4.3.0-nightly-01134",
+      "path": "dsharpplus.interactivity/4.3.0-nightly-01135",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "dsharpplus.interactivity.4.3.0-nightly-01134.nupkg.sha512",
+        "dsharpplus.interactivity.4.3.0-nightly-01135.nupkg.sha512",
         "dsharpplus.interactivity.nuspec",
         "dsharpplus.png",
         "lib/netstandard2.0/DSharpPlus.Interactivity.dll",
         "lib/netstandard2.0/DSharpPlus.Interactivity.xml"
       ]
     },
-    "DSharpPlus.Lavalink/4.3.0-nightly-01134": {
-      "sha512": "qZD8qJbMbP6sPPgCqqpJfqr4Q5gTQ3gQQf5NESK/lUE6morN2f36Z5DObuMlWa5zM9sJPdUJGy9XGbQJf8e8/Q==",
+    "DSharpPlus.Lavalink/4.3.0-nightly-01135": {
+      "sha512": "hxgN174lfChnljSaqpg0Ekh+cSTd/+fJ9aKB8Bnt3RsoKcMP8rtEeOUIGFz/O1DC4BXhOq5LtIulaEcFLDEypw==",
       "type": "package",
-      "path": "dsharpplus.lavalink/4.3.0-nightly-01134",
+      "path": "dsharpplus.lavalink/4.3.0-nightly-01135",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "dsharpplus.lavalink.4.3.0-nightly-01134.nupkg.sha512",
+        "dsharpplus.lavalink.4.3.0-nightly-01135.nupkg.sha512",
         "dsharpplus.lavalink.nuspec",
         "dsharpplus.png",
         "lib/netstandard2.0/DSharpPlus.Lavalink.dll",
         "lib/netstandard2.0/DSharpPlus.Lavalink.xml"
       ]
     },
-    "DSharpPlus.VoiceNext/4.3.0-nightly-01134": {
-      "sha512": "HJaFJtboOPhzuJ5d/OsCUF5zPaFO5bDKZlViSwTGdkIWCXoy2f6oiba7J3YFc9f+ReXe/tXlZdSoNcLMllYzPw==",
+    "DSharpPlus.VoiceNext/4.3.0-nightly-01135": {
+      "sha512": "IiBrNWADzFbtCPcrtvBjxPk+OzrcSOKFsL/vZB8Wq83am7PoF+ez0pi/NbH7tegcTGlg2qDH+DxmSP6RTNO9YA==",
       "type": "package",
-      "path": "dsharpplus.voicenext/4.3.0-nightly-01134",
+      "path": "dsharpplus.voicenext/4.3.0-nightly-01135",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "dsharpplus.png",
-        "dsharpplus.voicenext.4.3.0-nightly-01134.nupkg.sha512",
+        "dsharpplus.voicenext.4.3.0-nightly-01135.nupkg.sha512",
         "dsharpplus.voicenext.nuspec",
         "lib/netstandard2.0/DSharpPlus.VoiceNext.dll",
         "lib/netstandard2.0/DSharpPlus.VoiceNext.xml"
@@ -4978,13 +4984,13 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "DSharpPlus >= 4.3.0-nightly-01134",
-      "DSharpPlus.CommandsNext >= 4.3.0-nightly-01134",
-      "DSharpPlus.Interactivity >= 4.3.0-nightly-01134",
-      "DSharpPlus.Lavalink >= 4.3.0-nightly-01134",
-      "DSharpPlus.VoiceNext >= 4.3.0-nightly-01134",
-      "Discord.Net >= 3.6.1",
-      "Discord.Net.Core >= 3.6.1",
+      "DSharpPlus >= 4.3.0-nightly-01135",
+      "DSharpPlus.CommandsNext >= 4.3.0-nightly-01135",
+      "DSharpPlus.Interactivity >= 4.3.0-nightly-01135",
+      "DSharpPlus.Lavalink >= 4.3.0-nightly-01135",
+      "DSharpPlus.VoiceNext >= 4.3.0-nightly-01135",
+      "Discord.Net >= 3.7.0",
+      "Discord.Net.Core >= 3.7.0",
       "HtmlAgilityPack >= 1.11.42",
       "Lavalink4NET.DSharpPlus >= 2.1.1",
       "OpenWeatherMap >= 1.1.0",
@@ -5018,7 +5024,7 @@
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {},
-        "https://www.nuget.org/packages/DSharpPlus/4.3.0-nightly-01130": {}
+        "https://www.nuget.org/packages/DSharpPlus/4.3.0-nightly-01135": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
@@ -5038,31 +5044,31 @@
         "dependencies": {
           "DSharpPlus": {
             "target": "Package",
-            "version": "[4.3.0-nightly-01134, )"
+            "version": "[4.3.0-nightly-01135, )"
           },
           "DSharpPlus.CommandsNext": {
             "target": "Package",
-            "version": "[4.3.0-nightly-01134, )"
+            "version": "[4.3.0-nightly-01135, )"
           },
           "DSharpPlus.Interactivity": {
             "target": "Package",
-            "version": "[4.3.0-nightly-01134, )"
+            "version": "[4.3.0-nightly-01135, )"
           },
           "DSharpPlus.Lavalink": {
             "target": "Package",
-            "version": "[4.3.0-nightly-01134, )"
+            "version": "[4.3.0-nightly-01135, )"
           },
           "DSharpPlus.VoiceNext": {
             "target": "Package",
-            "version": "[4.3.0-nightly-01134, )"
+            "version": "[4.3.0-nightly-01135, )"
           },
           "Discord.Net": {
             "target": "Package",
-            "version": "[3.6.1, )"
+            "version": "[3.7.0, )"
           },
           "Discord.Net.Core": {
             "target": "Package",
-            "version": "[3.6.1, )"
+            "version": "[3.7.0, )"
           },
           "HtmlAgilityPack": {
             "target": "Package",
