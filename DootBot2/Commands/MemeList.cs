@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace DootBot2.Commands
 {
@@ -301,7 +299,23 @@ namespace DootBot2.Commands
        "https://cdn.discordapp.com/attachments/953513218666561556/977039547064020992/c.mp4",
        "https://cdn.discordapp.com/attachments/787161929268854804/977142769795624960/SnapInsta_277333108_1702301133445855_1398637651150884164_n.mp4",
        "https://cdn.discordapp.com/attachments/953513218666561556/977052812020170772/ok.mp4",
-       "https://cdn.discordapp.com/attachments/953513218666561556/977912115761385512/IMG_2906.jpg"
+       "https://cdn.discordapp.com/attachments/953513218666561556/977912115761385512/IMG_2906.jpg",
+       "https://media.discordapp.net/attachments/955511932809510973/980641975109820457/unknown-0084.jpg?width=580&height=670",
+       "https://cdn.discordapp.com/attachments/955511932809510973/975854155077943356/Screenshot_20220509-164929_YouTube.jpg",
+       "https://cdn.discordapp.com/attachments/831213786840825857/980692193574547456/fallout_4_junkjet_skull.mp4",
+       "https://cdn.discordapp.com/attachments/956994953727336448/980743391178539028/cm-chat-media-video-1589da2d6-ffa3-5f20-b8a8-249e1339606230400.mov",
+       "https://cdn.discordapp.com/attachments/955511932809510973/975853979911200828/ez.mp4",
+       "https://cdn.discordapp.com/attachments/955511932809510973/980128718821425172/O8L773JOl_ttNfl1.mp4",
+       "https://cdn.discordapp.com/attachments/956994953727336448/980743226854113310/video0_5.mp4",
+       "https://media.discordapp.net/attachments/955511932809510973/980514470226956388/image0-22.jpg",
+       "https://cdn.discordapp.com/attachments/955511932809510973/980164062342152282/1653754555170_.mp4",
+       "https://cdn.discordapp.com/attachments/955511932809510973/980512896943521853/MemeFeedBot-4.mov",
+       "https://cdn.discordapp.com/attachments/955511932809510973/980599329876238376/trim.04094C87-75FD-4865-811D-33239522C562.mov",
+       "https://media.discordapp.net/attachments/627339918716436480/980398435997995028/unknown.png",
+       "https://media.discordapp.net/attachments/956994953727336448/980551122597068900/NYT.jpg",
+       "https://cdn.discordapp.com/attachments/956994953727336448/980551473677074522/redditsave.com_epic_gamer_moment-sk1rnzbyomz81.mp4",
+       "https://cdn.discordapp.com/attachments/956994953727336448/980550406218330132/IMG_5353.png"
+
         };
 
         public List<string> GetList()

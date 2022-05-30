@@ -11,7 +11,7 @@ namespace DootBot2.Commands
     {
         [Hidden]
         [Command("setact")]
-        private async Task setactivity(CommandContext ctx)
+        private async Task Setact(CommandContext ctx)
         {
             if (ctx.User.Id == 461446979155918859)
             {
@@ -20,6 +20,7 @@ namespace DootBot2.Commands
                 string input = "Doot";
                 activity.Name = input;
                 await discord.UpdateStatusAsync(activity);
+                await ctx.Channel.SendMessageAsync("https://media.discordapp.net/attachments/956994953727336448/980798142343675934/unknown.png").ConfigureAwait(false);
                 return;
             }
             else
@@ -34,10 +35,10 @@ namespace DootBot2.Commands
         {
             var embed = new DiscordEmbedBuilder
             {
-                Title = member.DisplayName + " #" + member.Discriminator,
-                Url = "https://www.youtube.com/watch?v=xvFZjo5PgG0",
-                Description = "Description here",
-                Color = DiscordColor.Blue,
+                Title = $"{member.Username}#{member.Discriminator}",
+                //Url = "https://www.youtube.com/watch?v=xvFZjo5PgG0",
+                Description = $"aka: {member.Nickname}", 
+                Color = member.Color,
 
                 Thumbnail = new DiscordEmbedBuilder.EmbedThumbnail
                 {
@@ -45,13 +46,13 @@ namespace DootBot2.Commands
                 }
             };
 
-            embed.AddField("UserID:", member.Id.ToString());
-            embed.AddField("Status:", member.Presence.Status.ToString());
-            embed.AddField("Has Permissions:", member.Permissions.ToPermissionString());
-            embed.AddField("Test:", member.Guild.Roles.ToString());  //doesnt work
+            embed.AddField("UserID", member.Id.ToString());
+            embed.AddField("Status", member.Presence.Status.ToString()); //Doesn't work on offline people
+            embed.AddField("Hypesquad", member.Flags.ToString());
             embed.AddField("Is a Bot?", member.IsBot.ToString());
-            embed.AddField("Created:", member.CreationTimestamp.DateTime.ToLongDateString());
-            embed.AddField("Joined this server at:", member.Guild.JoinedAt.DateTime.ToLongDateString());
+            embed.AddField("Created", member.CreationTimestamp.DateTime.ToLongDateString());
+            embed.AddField("Joined this server at", member.Guild.JoinedAt.DateTime.ToLongDateString());
+            embed.AddField("Bitches", "0");
 
             await ctx.Channel.SendMessageAsync(embed);
             return;
@@ -93,21 +94,21 @@ namespace DootBot2.Commands
         //    }
         //}
 
-        [Command("Silence")]
-        [Description("Adds a channel (must be a moderator or higher)")]
-        [RequireRoles(RoleCheckMode.Any, "Moderator", "Owner")]
-        public async Task Silence(CommandContext ctx, DiscordMember member)
-        {
-            var emoji = DiscordEmoji.FromName(ctx.Client, ":ok_hand:");
-            var message = await ctx.RespondAsync($"{member.Mention}, react with {emoji}.");
+        //[Command("Silence")]
+        //[Description("Adds a channel (must be a moderator or higher)")]
+        //[RequireRoles(RoleCheckMode.Any, "Moderator", "Owner")]
+        //public async Task Silence(CommandContext ctx, DiscordMember member)
+        //{
+        //    var emoji = DiscordEmoji.FromName(ctx.Client, ":ok_hand:");
+        //    var message = await ctx.RespondAsync($"{member.Mention}, react with {emoji}.");
 
-            var result = await message.WaitForReactionAsync(member, emoji);
+        //    var result = await message.WaitForReactionAsync(member, emoji);
 
-            if (!result.TimedOut)
-            {
-                await ctx.RespondAsync("Thank you!");
-            }
-        }
+        //    if (!result.TimedOut)
+        //    {
+        //        await ctx.RespondAsync("Thank you!");
+        //    }
+        //}
 
     }
 }

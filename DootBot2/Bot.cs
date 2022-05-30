@@ -16,7 +16,6 @@ using DSharpPlus.Entities;
 
 namespace Dootbot2
 {
-
     public class Bot
     {
         public DiscordClient Client { get; private set; }
@@ -106,13 +105,23 @@ namespace Dootbot2
                 }
                 else
                 {
-                    await e.Guild.SystemChannel.SendMessageAsync("fuck off " + e.Member.Mention).ConfigureAwait(false);
+                    await e.Guild.SystemChannel.SendMessageAsync($"Who the fuck are you {e.Member.Mention}?").ConfigureAwait(false);
                     return;
                 }
             };
 
-            
-
+            Client.GuildMemberRemoved += async (s, e) =>
+            {
+                if (e.Guild.SystemChannel.Equals(null))
+                {
+                    return;
+                }
+                else
+                {
+                    await e.Guild.SystemChannel.SendMessageAsync($"Lmfao bye {e.Member.Mention}").ConfigureAwait(false);
+                }
+            };
+         
             Client.MessageCreated += async (s, e) =>
             {
 
@@ -201,7 +210,7 @@ namespace Dootbot2
 
             Commands = Client.UseCommandsNext(commandsConfig);
 
-            Commands.SetHelpFormatter<HelpFormatter>();
+            Commands.SetHelpFormatter<CustomHelpFormatter>();
 
             Commands.RegisterCommands<FunCommands>();
             Commands.RegisterCommands<Memes>();

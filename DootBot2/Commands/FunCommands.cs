@@ -153,13 +153,6 @@ namespace DootBot2.Commands
             };
         }
 
-        //[Command("Russian Roulette")]
-        //[Description("Starts a game of rock paper scissors against me")]
-        //public async Task RussianRoulette(CommandContext ctx)
-        //{
-            
-        //}
-
         [Command("Poll")]
         public async Task Poll(CommandContext ctx, TimeSpan duration, params DiscordEmoji[] emojiOptions)
         {
