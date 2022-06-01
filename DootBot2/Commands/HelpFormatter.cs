@@ -13,12 +13,10 @@ namespace DootBot2.Commands
 
         public override CommandHelpMessage Build()
         {
-            EmbedBuilder.Description = "test";
-            EmbedBuilder.Color = DiscordColor.Blue;
-            EmbedBuilder.Url = "https://www.youtube.com/watch?v=WTWyosdkx44";
+            EmbedBuilder.Color = DiscordColor.DarkButNotBlack;
             EmbedBuilder.ImageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXSXaT2sNW2XGDEnvz5vEkJ5vD27XYpxb_Y9l96gmFxUH7ZbgwFhQsMm6_jlgr4kFifuo&usqp=CAU";
-
- 
+            EmbedBuilder.AddField("Specific Commands" +
+                "", "to view a specific command write ?help [command here]");
 
             return base.Build();
         }

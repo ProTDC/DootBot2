@@ -36,7 +36,7 @@ namespace DootBot2.Commands
             var embed = new DiscordEmbedBuilder
             {
                 Title = $"{member.Username}#{member.Discriminator}",
-                //Url = "https://www.youtube.com/watch?v=xvFZjo5PgG0",
+                Url = "https://www.youtube.com/watch?v=xvFZjo5PgG0",
                 Description = $"aka: {member.Nickname}", 
                 Color = member.Color,
 
@@ -57,11 +57,28 @@ namespace DootBot2.Commands
             await ctx.Channel.SendMessageAsync(embed);
             return;
         }
-           
+
+        [Command("Changenick")]
+        [Description("Changes the nickname of a member (must be a moderator or higher)")]
+        //[RequireRoles(RoleCheckMode.Any, "Moderator", "Admin", "Owner")]
+        public async Task Addchnl(CommandContext ctx, DiscordMember member, string message)
+        {
+            if (message.Contains(message))
+            {
+                await ctx.Channel.SendMessageAsync($"Changed {member.Mention}s nickname to {message}").ConfigureAwait(false);
+                await member.ModifyAsync(x => x.Nickname = message).ConfigureAwait(false);
+                return;
+            }
+            else
+            {
+                await ctx.Channel.SendMessageAsync("please provide a valid member").ConfigureAwait(false);
+                return;
+            }
+        }
 
         [Command("addchnl")]
         [Description("Adds a channel (must be a moderator or higher)")]
-        [RequireRoles(RoleCheckMode.Any, "Moderator", "Owner")]
+        [RequireRoles(RoleCheckMode.Any, "Moderator", "Admin", "Owner")]
         public async Task Addchnl(CommandContext ctx, string message)
         {
             if (message.Contains(message))
