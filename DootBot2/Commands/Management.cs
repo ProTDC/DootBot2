@@ -58,6 +58,13 @@ namespace DootBot2.Commands
             return;
         }
 
+        [Command("Avatar")]
+        [Description("Displays a users avatar")]
+        public async Task Avatar(CommandContext ctx, DiscordMember member)
+        {
+            await ctx.Channel.SendMessageAsync(member.AvatarUrl).ConfigureAwait(false);
+        }
+
         [Command("Changenick")]
         [Description("Changes the nickname of a member (must be a moderator or higher)")]
         //[RequireRoles(RoleCheckMode.Any, "Moderator", "Admin", "Owner")]
@@ -65,7 +72,7 @@ namespace DootBot2.Commands
         {
             if (message.Contains(message))
             {
-                await ctx.Channel.SendMessageAsync($"Changed {member.Mention}s nickname to {message}").ConfigureAwait(false);
+                await ctx.Channel.SendMessageAsync($"Changed {member.Username}s nickname to {message}").ConfigureAwait(false);
                 await member.ModifyAsync(x => x.Nickname = message).ConfigureAwait(false);
                 return;
             }
@@ -76,14 +83,14 @@ namespace DootBot2.Commands
             }
         }
 
-        [Command("addchnl")]
+        [Command("createchnl")]
         [Description("Adds a channel (must be a moderator or higher)")]
         [RequireRoles(RoleCheckMode.Any, "Moderator", "Admin", "Owner")]
         public async Task Addchnl(CommandContext ctx, string message)
         {
             if (message.Contains(message))
             {
-                await ctx.Channel.SendMessageAsync($"added channel: {message}").ConfigureAwait(false);
+                await ctx.Channel.SendMessageAsync($"Created channel: {message}").ConfigureAwait(false);
                 await ctx.Guild.CreateChannelAsync(message, DSharpPlus.ChannelType.Text).ConfigureAwait(false);
                 return;
             }
@@ -101,29 +108,13 @@ namespace DootBot2.Commands
         //{
         //    if (message.Contains(message))
         //    {
-        //        await ctx.Channel.SendMessageAsync($"deleted channel: {message}").ConfigureAwait(false);
-        //        await ctx.Guild.(message).ConfigureAwait(false);
+        //        await ctx.Channel.SendMessageAsync($"Deleted channel: {message}").ConfigureAwait(false);
+        //        await ctx.Guild
         //    }
         //    else
         //    {
         //        await ctx.Channel.SendMessageAsync("you did not provide a valid channel name").ConfigureAwait(false);
         //        return;
-        //    }
-        //}
-
-        //[Command("Silence")]
-        //[Description("Adds a channel (must be a moderator or higher)")]
-        //[RequireRoles(RoleCheckMode.Any, "Moderator", "Owner")]
-        //public async Task Silence(CommandContext ctx, DiscordMember member)
-        //{
-        //    var emoji = DiscordEmoji.FromName(ctx.Client, ":ok_hand:");
-        //    var message = await ctx.RespondAsync($"{member.Mention}, react with {emoji}.");
-
-        //    var result = await message.WaitForReactionAsync(member, emoji);
-
-        //    if (!result.TimedOut)
-        //    {
-        //        await ctx.RespondAsync("Thank you!");
         //    }
         //}
 

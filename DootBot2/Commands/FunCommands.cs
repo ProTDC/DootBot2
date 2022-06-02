@@ -41,18 +41,24 @@ namespace DootBot2.Commands
         [Description("Displays the market value of Oljefondet")]
         public async Task Oljefondet(CommandContext ctx)
         {
-
             using WebClient web1 = new WebClient();
             HtmlAgilityPack.HtmlWeb website = new HtmlAgilityPack.HtmlWeb();
-            HtmlAgilityPack.HtmlDocument document = website.Load("https://www.nbim.no/no/oljefondet/markedsverdi/");
-            var datalist = document.DocumentNode.SelectNodes("//div[@class='section__article-fund__inner']");
+            HtmlAgilityPack.HtmlDocument document = website.Load("https://www.nbim.no/no");
+            var datalist = document.DocumentNode.SelectNodes("//div[@class='page-title']");
 
             foreach (var content in datalist)
             {
                 await ctx.Channel.SendMessageAsync(content.InnerText).ConfigureAwait(false);
             }
-            Console.Read();
             return;
+        }
+
+        [Command("Arebirdsreal")]
+        [Description("Tells you if birds are real or not")]
+        public async Task Birb(CommandContext ctx)
+        {
+            await ctx.Channel.TriggerTypingAsync();
+            await ctx.Channel.SendMessageAsync("No").ConfigureAwait(false);
         }
 
         [Command("RPS")]
@@ -178,6 +184,22 @@ namespace DootBot2.Commands
 
 
             await ctx.Channel.SendMessageAsync(string.Join("\n", results)).ConfigureAwait(false);
+        }
+
+        [Hidden]
+        [Command("Repeat")]
+        [Description("Classified")]
+        public async Task Repeat(CommandContext ctx)
+        {
+            var interactivity = ctx.Client.GetInteractivity();
+            var chnlsend = ctx.Guild.GetChannel(424874562082045962);
+
+            var message = await interactivity.WaitForMessageAsync(x => x.Channel.Name.ToLower().Contains("spam"));
+
+            await chnlsend.SendMessageAsync(message.Result.Content);
+
+            await ctx.Channel.DeleteMessageAsync(ctx.Message);
+            await ctx.Channel.DeleteMessageAsync(message.Result);
         }
     }
 

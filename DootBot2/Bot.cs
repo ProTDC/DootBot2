@@ -63,7 +63,7 @@ namespace Dootbot2
             var commandsConfig = new CommandsNextConfiguration
             {
                 StringPrefixes = new string[] { configJson.Prefix },
-                EnableDms = true,
+                EnableDms = false,
                 EnableMentionPrefix = true,
                 DmHelp = false,
                 IgnoreExtraArguments = false,
@@ -202,11 +202,11 @@ namespace Dootbot2
             //};
 
 
-            Client.MessageDeleted += async (s, e) =>
-            {
-                await e.Message.RespondAsync(e.Message.Author.Mention + " I SAW THAT!!! YOU DELETED MESSAGE: " + e.Message.Content).ConfigureAwait(false);
-                return;
-            };
+            //Client.MessageDeleted += async (s, e) =>
+            //{
+            //    await e.Message.RespondAsync(e.Message.Author.Mention + " I SAW THAT!!! YOU DELETED MESSAGE: " + e.Message.Content).ConfigureAwait(false);
+            //    return;
+            //};
 
             Commands = Client.UseCommandsNext(commandsConfig);
 

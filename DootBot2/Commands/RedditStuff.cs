@@ -12,13 +12,13 @@ namespace DootBot2.Commands
 {
     class RedditStuff : BaseCommandModule
     {
-        public RedditClient Reddit { get; private set;}
+        //public RedditClient Reddit { get; private set;}
 
         //[Command("Cats")]
         //[Description("Displays a picture of a cat")]
         //public async Task Cats(CommandContext ctx)
         //{
-        //    var cats = Reddit.Subreddit();
+        //    var cats = Reddit.subre
         //    await ctx.Channel.SendMessageAsync().ConfigureAwait(false);
         //}
     }

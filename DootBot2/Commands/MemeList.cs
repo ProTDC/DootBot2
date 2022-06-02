@@ -317,7 +317,11 @@ namespace DootBot2.Commands
        "https://cdn.discordapp.com/attachments/956994953727336448/980550406218330132/IMG_5353.png",
        "https://cdn.discordapp.com/attachments/953513218666561556/953944822996140072/aexkWgLj_700w_0.png",
        "https://cdn.discordapp.com/attachments/939143870128746546/978734535460134992/caught_on_4k.mp4",
-       "https://cdn.discordapp.com/attachments/712695558678249482/968841134640082944/fHoZcLCKsdmCUFSd.mp4"
+       "https://cdn.discordapp.com/attachments/712695558678249482/968841134640082944/fHoZcLCKsdmCUFSd.mp4",
+       "https://cdn.discordapp.com/attachments/955458213397016596/981797226160459826/real_and_true.mp4",
+       "https://cdn.discordapp.com/attachments/775715874623455262/829052047558311936/2pb4v4hhw2r61.jpg",
+       "https://cdn.discordapp.com/attachments/326055605963980800/838109317873270864/image0.jpg,",
+       "https://cdn.discordapp.com/attachments/402503641938001943/835115828521205780/hotdog.mp4"
 
         };
 
