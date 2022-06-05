@@ -192,7 +192,7 @@ namespace DootBot2.Commands
         public async Task Repeat(CommandContext ctx)
         {
             var interactivity = ctx.Client.GetInteractivity();
-            var chnlsend = ctx.Guild.GetChannel(424874562082045962);
+            var chnlsend = ctx.Guild.GetChannel(981805613732483082);
 
             var message = await interactivity.WaitForMessageAsync(x => x.Channel.Name.ToLower().Contains("spam"));
 

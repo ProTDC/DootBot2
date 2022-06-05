@@ -81,8 +81,6 @@ namespace Dootbot2
             var letterT = DiscordEmoji.FromName(Client, ":regional_indicator_t:");
             var vomit = DiscordEmoji.FromName(Client, ":face_vomiting:");
 
-            Voice = Client.UseVoiceNext();
-
             Client.GuildCreated += async (s, e) =>
             {
                 if (e.Guild.SystemChannel.Equals(null))
@@ -173,12 +171,6 @@ namespace Dootbot2
                     return;
                 }
 
-                if (e.Message.Content.ToLower().Contains("brunost") || e.Message.Content.ToLower().Contains("brun ost"))
-                {
-                    await e.Message.Channel.SendMessageAsync("https://tenor.com/view/norway-brown-cheese-cheese-norwegian-brown-cheese-ragnarocka-gif-23473349").ConfigureAwait(false);
-                    return;
-                }
-
                 if (e.Message.Content.ToLower().Contains("forgor"))
                 {
                     await e.Message.CreateReactionAsync(skull).ConfigureAwait(false);
@@ -186,6 +178,7 @@ namespace Dootbot2
                 }
 
             };
+
 
             //Client.MessageCreated += async (s, e) =>
             //{
@@ -202,13 +195,14 @@ namespace Dootbot2
             //};
 
 
-            //Client.MessageDeleted += async (s, e) =>
-            //{
-            //    await e.Message.RespondAsync(e.Message.Author.Mention + " I SAW THAT!!! YOU DELETED MESSAGE: " + e.Message.Content).ConfigureAwait(false);
-            //    return;
-            //};
+            Client.MessageDeleted += async (s, e) =>
+            {
+                await e.Message.RespondAsync(e.Message.Author.Mention + " I SAW THAT!!! YOU DELETED MESSAGE: " + e.Message.Content).ConfigureAwait(false);
+                return;
+            };
 
             Commands = Client.UseCommandsNext(commandsConfig);
+            Voice = Client.UseVoiceNext();
 
             Commands.SetHelpFormatter<CustomHelpFormatter>();
 

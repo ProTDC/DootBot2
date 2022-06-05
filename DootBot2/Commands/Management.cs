@@ -4,6 +4,7 @@ using DSharpPlus.CommandsNext.Attributes;
 using DSharpPlus.Entities;
 using DSharpPlus.Interactivity.Extensions;
 using System.Threading.Tasks;
+using System.Linq;
 
 namespace DootBot2.Commands
 {
@@ -27,6 +28,31 @@ namespace DootBot2.Commands
             {
                 return;
             }
+        }
+
+        [Command("Server")]
+        [Description("Displays information about this server")]
+        public async Task Guildinfo(CommandContext ctx)
+        {
+            var embed = new DiscordEmbedBuilder
+            {
+                Title = ctx.Guild.Name,
+                Color = ctx.Member.Color,
+
+                Thumbnail = new DiscordEmbedBuilder.EmbedThumbnail
+                {
+                    Url = ctx.Guild.IconUrl
+                }
+            };
+
+            embed.AddField("ServerID", ctx.Guild.Id.ToString());
+            embed.AddField("Owner", ctx.Guild.Owner.Username);
+            embed.AddField("Total members", ctx.Guild.MemberCount.ToString());
+            embed.AddField("Serverboost", ctx.Guild.PremiumTier.ToString());
+            embed.AddField("Creation date", ctx.Guild.CreationTimestamp.UtcDateTime.ToShortDateString());
+
+            await ctx.Channel.SendMessageAsync(embed);
+            return;
         }
 
         [Command("User")]
@@ -67,7 +93,7 @@ namespace DootBot2.Commands
 
         [Command("Changenick")]
         [Description("Changes the nickname of a member (must be a moderator or higher)")]
-        //[RequireRoles(RoleCheckMode.Any, "Moderator", "Admin", "Owner")]
+        [RequireRoles(RoleCheckMode.Any, "Moderator", "Admin", "Owner")]
         public async Task Addchnl(CommandContext ctx, DiscordMember member, string message)
         {
             if (message.Contains(message))
@@ -101,22 +127,21 @@ namespace DootBot2.Commands
             }
         }
 
-        //[Command("delchnl")]
-        //[Description("Deletes a channel (must be a moderator or higher)")]
-        //[RequireRoles(RoleCheckMode.Any, "Moderator", "Owner")]
-        //public async Task Delchnl(CommandContext ctx, string message)
-        //{
-        //    if (message.Contains(message))
-        //    {
-        //        await ctx.Channel.SendMessageAsync($"Deleted channel: {message}").ConfigureAwait(false);
-        //        await ctx.Guild
-        //    }
-        //    else
-        //    {
-        //        await ctx.Channel.SendMessageAsync("you did not provide a valid channel name").ConfigureAwait(false);
-        //        return;
-        //    }
-        //}
+        [Command("delchnl")]
+        [Description("Deletes a channel (must be a moderator or higher)")]
+        [RequireRoles(RoleCheckMode.Any, "Moderator", "Owner")]
+        public async Task Delchnl(CommandContext ctx, string message)
+        {
+            if (message.Contains(message))
+            {
+                await ctx.Channel.SendMessageAsync($"Deleted channel: {message}").ConfigureAwait(false);
+            }
+            else
+            {
+                await ctx.Channel.SendMessageAsync("you did not provide a valid channel name").ConfigureAwait(false);
+                return;
+            }
+        }
 
     }
 }
