@@ -120,7 +120,7 @@ namespace DootBot2.Commands
                 var psi = new ProcessStartInfo
                 {
                     FileName = "ffmpeg.exe",
-                    Arguments = $@"-i {filename} -ac 2 -f s16le -ar 48000 pipe:1 -loglevel quiet",
+                    Arguments = $@"-i ""{filename}"" -ac 2 -f s16le -ar 48000 pipe:1 -loglevel quiet",
                     RedirectStandardOutput = true,
                     UseShellExecute = false
                 };

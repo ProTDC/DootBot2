@@ -1,6 +1,8 @@
 ﻿using DootBot2.Commands;
 using DSharpPlus;
 using DSharpPlus.CommandsNext;
+using DSharpPlus.Net;
+using DSharpPlus.Lavalink;
 using DSharpPlus.EventArgs;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
@@ -11,6 +13,7 @@ using System.Threading.Tasks;
 using DSharpPlus.Interactivity;
 using DSharpPlus.Interactivity.Extensions;
 using DSharpPlus.VoiceNext;
+using DSharpPlus.VoiceNext.Codec;
 using DootBot2;
 using DSharpPlus.Entities;
 
@@ -45,10 +48,12 @@ namespace Dootbot2
                 | DiscordIntents.GuildInvites
                 | DiscordIntents.GuildMembers
                 | DiscordIntents.GuildMessages
+                | DiscordIntents.GuildMessageReactions
                 | DiscordIntents.GuildPresences
                 | DiscordIntents.Guilds
                 | DiscordIntents.GuildVoiceStates
-                | DiscordIntents.GuildWebhooks,
+                | DiscordIntents.GuildWebhooks
+                | DiscordIntents.GuildVoiceStates
             };
 
             Client = new DiscordClient(config);
@@ -69,6 +74,7 @@ namespace Dootbot2
                 IgnoreExtraArguments = false,
                 UseDefaultCommandHandler = true
             };
+
 
             var flagBritish = DiscordEmoji.FromName(Client, ":flag_gb:");
             var flagNor = DiscordEmoji.FromName(Client, ":flag_no:");
@@ -179,6 +185,11 @@ namespace Dootbot2
 
             };
 
+            //Client.MessageReactionAdded += async (s, e) =>
+            //{
+            //    await e.Message.CreateReactionAsync(e.Emoji);
+            //};
+
 
             //Client.MessageCreated += async (s, e) =>
             //{
@@ -194,14 +205,27 @@ namespace Dootbot2
             //    }
             //};
 
-
-            Client.MessageDeleted += async (s, e) =>
+            Client.MessageUpdated += async (s, e) =>
             {
-                await e.Message.RespondAsync(e.Message.Author.Mention + " I SAW THAT!!! YOU DELETED MESSAGE: " + e.Message.Content).ConfigureAwait(false);
+                await e.Message.RespondAsync($"{e.Message.Author.Mention} Edited this message, the original content was: {e.MessageBefore.Content}").ConfigureAwait(false);
                 return;
             };
 
+            Client.MessageDeleted += async (s, e) =>
+            {
+                if (e.Message.Author.Equals(461446979155918859))
+                {
+                    return;
+                }
+                else
+                {
+                    await e.Message.RespondAsync($"{e.Message.Author.Mention} I SAW THAT!!! YOU DELETED MESSAGE: {e.Message.Content}").ConfigureAwait(false);
+                    return;
+                }
+            };
+
             Commands = Client.UseCommandsNext(commandsConfig);
+
             Voice = Client.UseVoiceNext();
 
             Commands.SetHelpFormatter<CustomHelpFormatter>();
