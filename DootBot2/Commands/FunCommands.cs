@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using OpenWeatherMap;
 using DSharpPlus;
 using IMDbApiLib;
+using IMDbApiLib.Models;
 
 namespace DootBot2.Commands
 
@@ -60,15 +61,16 @@ namespace DootBot2.Commands
         }
 
         [Command("Movie")]
-        [Description("Displays a movies rating")]
-        public async Task Movie(CommandContext ctx, string message)
+        [Description("Displays a movie")]
+        public async Task Movie(CommandContext ctx)
         {
             var apiLib = new ApiLib("k_0w44lid6");
-            var data = await apiLib.SearchMovieAsync(message);
+            var data = await apiLib.RatingsAsync("tt5697572");
 
             var embed = new DiscordEmbedBuilder()
             {
-                Title = data.Title.ToString()
+                Title = data.Title,
+                Description = data.IMDbId
             };
 
             await ctx.RespondAsync(embed).ConfigureAwait(false);
@@ -81,7 +83,9 @@ namespace DootBot2.Commands
         //public async Task TopMovie(CommandContext ctx)
         //{
         //    var apiLib = new ApiLib("k_0w44lid6");
-        //    await ctx.RespondAsync(apiLib.Top250MoviesAsync()).ConfigureAwait(false);
+        //    var data = apiLib.Top250MoviesAsync();
+
+        //    await ctx.RespondAsync(data.Result.ToString()).ConfigureAwait(false);
         //}
 
 
