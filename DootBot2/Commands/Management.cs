@@ -16,6 +16,8 @@ namespace DootBot2.Commands
         {
             if (ctx.User.Id == 461446979155918859)
             {
+                await ctx.Channel.TriggerTypingAsync();
+
                 DiscordActivity activity = new DiscordActivity();
                 DiscordClient discord = ctx.Client;
                 string input = "Doot";
@@ -34,6 +36,8 @@ namespace DootBot2.Commands
         [Description("Displays information about this server")]
         public async Task Guildinfo(CommandContext ctx)
         {
+            await ctx.Channel.TriggerTypingAsync();
+
             var embed = new DiscordEmbedBuilder
             {
                 Title = ctx.Guild.Name,
@@ -59,6 +63,8 @@ namespace DootBot2.Commands
         [Description("Displays a users information")]
         public async Task User(CommandContext ctx, DiscordMember member)
         {
+            await ctx.Channel.TriggerTypingAsync();
+
             var embed = new DiscordEmbedBuilder
             {
                 Title = $"{member.Username}#{member.Discriminator}",
@@ -74,6 +80,7 @@ namespace DootBot2.Commands
 
             embed.AddField("UserID", member.Id.ToString());
             embed.AddField("Status", member.Presence.Status.ToString()); //Doesn't work on offline people
+            embed.AddField("test", member.Presence.Activity.Name);
             embed.AddField("Hypesquad", member.Flags.ToString());
             embed.AddField("Is a Bot?", member.IsBot.ToString());
             embed.AddField("Created", member.CreationTimestamp.DateTime.ToLongDateString());
@@ -88,7 +95,10 @@ namespace DootBot2.Commands
         [Description("Displays a users avatar")]
         public async Task Avatar(CommandContext ctx, DiscordMember member)
         {
+            await ctx.Channel.TriggerTypingAsync();
+
             await ctx.Channel.SendMessageAsync(member.AvatarUrl).ConfigureAwait(false);
+            return;
         }
 
         [Command("Changenick")]
@@ -98,46 +108,58 @@ namespace DootBot2.Commands
         {
             if (message.Contains(message))
             {
+                await ctx.Channel.TriggerTypingAsync();
+
                 await ctx.Channel.SendMessageAsync($"Changed {member.Username}s nickname to {message}").ConfigureAwait(false);
                 await member.ModifyAsync(x => x.Nickname = message).ConfigureAwait(false);
                 return;
             }
             else
             {
+                await ctx.Channel.TriggerTypingAsync();
+
                 await ctx.Channel.SendMessageAsync("please provide a valid member").ConfigureAwait(false);
                 return;
             }
         }
 
-        [Command("createchnl")]
+        [Command("Createchnl")]
         [Description("Adds a channel (must be a moderator or higher)")]
         [RequireRoles(RoleCheckMode.Any, "Moderator", "Admin", "Owner")]
         public async Task Addchnl(CommandContext ctx, string message)
         {
             if (message.Contains(message))
             {
+                await ctx.Channel.TriggerTypingAsync();
+
                 await ctx.Channel.SendMessageAsync($"Created channel: {message}").ConfigureAwait(false);
                 await ctx.Guild.CreateChannelAsync(message, DSharpPlus.ChannelType.Text).ConfigureAwait(false);
                 return;
             }
             else
             {
+                await ctx.Channel.TriggerTypingAsync();
+
                 await ctx.Channel.SendMessageAsync("please provide a name for the channel").ConfigureAwait(false);
                 return;
             }
         }
 
-        [Command("delchnl")]
+        [Command("Delchnl")]
         [Description("Deletes a channel (must be a moderator or higher)")]
         [RequireRoles(RoleCheckMode.Any, "Moderator", "Owner")]
         public async Task Delchnl(CommandContext ctx, string message)
         {
             if (message.Contains(message))
             {
+                await ctx.Channel.TriggerTypingAsync();
+
                 await ctx.Channel.SendMessageAsync($"Deleted channel: {message}").ConfigureAwait(false);
             }
             else
             {
+                await ctx.Channel.TriggerTypingAsync();
+
                 await ctx.Channel.SendMessageAsync("you did not provide a valid channel name").ConfigureAwait(false);
                 return;
             }

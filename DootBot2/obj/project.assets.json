@@ -11,7 +11,7 @@
           "lib/netstandard2.0/ConcurrentCollections.dll": {}
         }
       },
-      "DSharpPlus/4.3.0-nightly-01140": {
+      "DSharpPlus/4.3.0-nightly-01141": {
         "type": "package",
         "dependencies": {
           "Emzi0767.Common": "2.6.2",
@@ -31,10 +31,10 @@
           "lib/netstandard2.0/DSharpPlus.dll": {}
         }
       },
-      "DSharpPlus.CommandsNext/4.3.0-nightly-01140": {
+      "DSharpPlus.CommandsNext/4.3.0-nightly-01141": {
         "type": "package",
         "dependencies": {
-          "DSharpPlus": "4.3.0-nightly-01140",
+          "DSharpPlus": "4.3.0-nightly-01141",
           "Microsoft.Extensions.DependencyInjection": "5.0.1"
         },
         "compile": {
@@ -44,11 +44,11 @@
           "lib/netstandard2.0/DSharpPlus.CommandsNext.dll": {}
         }
       },
-      "DSharpPlus.Interactivity/4.3.0-nightly-01140": {
+      "DSharpPlus.Interactivity/4.3.0-nightly-01141": {
         "type": "package",
         "dependencies": {
           "ConcurrentHashSet": "1.1.0",
-          "DSharpPlus": "4.3.0-nightly-01140"
+          "DSharpPlus": "4.3.0-nightly-01141"
         },
         "compile": {
           "lib/netstandard2.0/DSharpPlus.Interactivity.dll": {}
@@ -57,10 +57,10 @@
           "lib/netstandard2.0/DSharpPlus.Interactivity.dll": {}
         }
       },
-      "DSharpPlus.Lavalink/4.3.0-nightly-01140": {
+      "DSharpPlus.Lavalink/4.3.0-nightly-01141": {
         "type": "package",
         "dependencies": {
-          "DSharpPlus": "4.3.0-nightly-01140"
+          "DSharpPlus": "4.3.0-nightly-01141"
         },
         "compile": {
           "lib/netstandard2.0/DSharpPlus.Lavalink.dll": {}
@@ -69,10 +69,10 @@
           "lib/netstandard2.0/DSharpPlus.Lavalink.dll": {}
         }
       },
-      "DSharpPlus.VoiceNext/4.3.0-nightly-01140": {
+      "DSharpPlus.VoiceNext/4.3.0-nightly-01141": {
         "type": "package",
         "dependencies": {
-          "DSharpPlus": "4.3.0-nightly-01140",
+          "DSharpPlus": "4.3.0-nightly-01141",
           "DSharpPlus.VoiceNext.Natives": "1.0.0",
           "System.Threading.Channels": "5.0.0"
         },
@@ -126,6 +126,19 @@
         },
         "runtime": {
           "lib/netstandard2.0/HtmlAgilityPack.dll": {}
+        }
+      },
+      "IMDbApiLib/1.8.1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.1",
+          "System.ComponentModel.Annotations": "5.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IMDbApiLib.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IMDbApiLib.dll": {}
         }
       },
       "Lavalink4NET/2.1.1": {
@@ -472,6 +485,15 @@
         },
         "runtime": {
           "lib/netstandard2.0/System.Collections.Immutable.dll": {}
+        }
+      },
+      "System.ComponentModel.Annotations/5.0.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.1/System.ComponentModel.Annotations.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/System.ComponentModel.Annotations.dll": {}
         }
       },
       "System.Diagnostics.Debug/4.3.0": {
@@ -1382,71 +1404,71 @@
         "lib/netstandard2.0/ConcurrentCollections.xml"
       ]
     },
-    "DSharpPlus/4.3.0-nightly-01140": {
-      "sha512": "woSIaSvYcu1+CrHGpHH91divRgYaBGW+viBtS45yl7RgJM41yosP6yAZELU0mlJ2n2cLzQbk7LIhw8NlaB1w+Q==",
+    "DSharpPlus/4.3.0-nightly-01141": {
+      "sha512": "EXUOQ+Scl4lwr3UnDR7Vvuf1pR3P/p4mBkmlgkjzrpov2cUjJRLTF7pRKj0QbVkf9MZEglinopbgoEZaWdzB0w==",
       "type": "package",
-      "path": "dsharpplus/4.3.0-nightly-01140",
+      "path": "dsharpplus/4.3.0-nightly-01141",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "dsharpplus.4.3.0-nightly-01140.nupkg.sha512",
+        "dsharpplus.4.3.0-nightly-01141.nupkg.sha512",
         "dsharpplus.nuspec",
         "dsharpplus.png",
         "lib/netstandard2.0/DSharpPlus.dll",
         "lib/netstandard2.0/DSharpPlus.xml"
       ]
     },
-    "DSharpPlus.CommandsNext/4.3.0-nightly-01140": {
-      "sha512": "Us7hPXI0sB0k/6QsBZFXfX2h9ypXnEWNR4WTlRoV9Xd3QMGwKkQOSPCzGHlpHPXIxCHE7mCdks6z+3LDtMFzjg==",
+    "DSharpPlus.CommandsNext/4.3.0-nightly-01141": {
+      "sha512": "ITxdbEZZGUrYiH2KXu7nILn16tP7D/cXmWiHmS1cjFyDUWSjPLW27K/TlJQzWFI/y9dHdsdJ0Eg4JEoN/Q2+Ug==",
       "type": "package",
-      "path": "dsharpplus.commandsnext/4.3.0-nightly-01140",
+      "path": "dsharpplus.commandsnext/4.3.0-nightly-01141",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "dsharpplus.commandsnext.4.3.0-nightly-01140.nupkg.sha512",
+        "dsharpplus.commandsnext.4.3.0-nightly-01141.nupkg.sha512",
         "dsharpplus.commandsnext.nuspec",
         "dsharpplus.png",
         "lib/netstandard2.0/DSharpPlus.CommandsNext.dll",
         "lib/netstandard2.0/DSharpPlus.CommandsNext.xml"
       ]
     },
-    "DSharpPlus.Interactivity/4.3.0-nightly-01140": {
-      "sha512": "vKJP3Y/iRZi0SKvZCYgCP4v/FFN7d/vkwGVNYWpwGMaXY50MiUx2ywfH9cBzN7aSd7LiWITqbw+ssUk/WXPfXw==",
+    "DSharpPlus.Interactivity/4.3.0-nightly-01141": {
+      "sha512": "mgucke/Lrp+Z5IvSSnmaUQ00ao5SO05uNhl7qsyfqbKnOaPK29MK2KdNMr2YY6kBewhg42uTEEjezuGTcyij0w==",
       "type": "package",
-      "path": "dsharpplus.interactivity/4.3.0-nightly-01140",
+      "path": "dsharpplus.interactivity/4.3.0-nightly-01141",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "dsharpplus.interactivity.4.3.0-nightly-01140.nupkg.sha512",
+        "dsharpplus.interactivity.4.3.0-nightly-01141.nupkg.sha512",
         "dsharpplus.interactivity.nuspec",
         "dsharpplus.png",
         "lib/netstandard2.0/DSharpPlus.Interactivity.dll",
         "lib/netstandard2.0/DSharpPlus.Interactivity.xml"
       ]
     },
-    "DSharpPlus.Lavalink/4.3.0-nightly-01140": {
-      "sha512": "SG/kuSVlUmXhd46Whsq87ek0IiPPWuPCa3J+m1hjcdzC9GEdWt+MuuykIERrQzbufbkHTzQ8LR1rrfSRiHWy8w==",
+    "DSharpPlus.Lavalink/4.3.0-nightly-01141": {
+      "sha512": "fYlXgonjO9SV1pkjIXAVn7Bhn2oatNcZu4CWe/PTrmwy0Ir44O8oIZRwaZ8R0EvLENyQmN/plgQ9Ez67tbL8YQ==",
       "type": "package",
-      "path": "dsharpplus.lavalink/4.3.0-nightly-01140",
+      "path": "dsharpplus.lavalink/4.3.0-nightly-01141",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "dsharpplus.lavalink.4.3.0-nightly-01140.nupkg.sha512",
+        "dsharpplus.lavalink.4.3.0-nightly-01141.nupkg.sha512",
         "dsharpplus.lavalink.nuspec",
         "dsharpplus.png",
         "lib/netstandard2.0/DSharpPlus.Lavalink.dll",
         "lib/netstandard2.0/DSharpPlus.Lavalink.xml"
       ]
     },
-    "DSharpPlus.VoiceNext/4.3.0-nightly-01140": {
-      "sha512": "pPEBqDRGTB+udhMh7yv4zBM7RVTWRT6oUe9BeLEk8pGSZXlk2/Z7HEdGpzd6nXd4dfrPr6/lg/Adlq4zFzzQUQ==",
+    "DSharpPlus.VoiceNext/4.3.0-nightly-01141": {
+      "sha512": "88oMljAp0gOE3Nx4btBaw/ZWQmXvBO91Q0wjVjzIuVwx5t0J7KGOpeiXM4TsnAQxLMmQaWO5JW7+iahuqICcVQ==",
       "type": "package",
-      "path": "dsharpplus.voicenext/4.3.0-nightly-01140",
+      "path": "dsharpplus.voicenext/4.3.0-nightly-01141",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "dsharpplus.png",
-        "dsharpplus.voicenext.4.3.0-nightly-01140.nupkg.sha512",
+        "dsharpplus.voicenext.4.3.0-nightly-01141.nupkg.sha512",
         "dsharpplus.voicenext.nuspec",
         "lib/netstandard2.0/DSharpPlus.VoiceNext.dll",
         "lib/netstandard2.0/DSharpPlus.VoiceNext.xml"
@@ -1530,6 +1552,20 @@
         "lib/uap10.0/HtmlAgilityPack.dll",
         "lib/uap10.0/HtmlAgilityPack.pdb",
         "lib/uap10.0/HtmlAgilityPack.pri"
+      ]
+    },
+    "IMDbApiLib/1.8.1": {
+      "sha512": "aA9qRWSLVz5Py+XNGXSPW1qa5AbMKB9nfzL7QgpIw3hBGkHd/75Dd/P0KfuZFQ5jBOMwsBJnT+fHVsx9G0JhvA==",
+      "type": "package",
+      "path": "imdbapilib/1.8.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "IMDbApiLib_Icon.png",
+        "imdbapilib.1.8.1.nupkg.sha512",
+        "imdbapilib.nuspec",
+        "lib/net46/IMDbApiLib.dll",
+        "lib/netstandard2.0/IMDbApiLib.dll"
       ]
     },
     "Lavalink4NET/2.1.1": {
@@ -2213,6 +2249,96 @@
         "lib/portable-net45+win8+wp8+wpa81/System.Collections.Immutable.xml",
         "system.collections.immutable.5.0.0.nupkg.sha512",
         "system.collections.immutable.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.ComponentModel.Annotations/5.0.0": {
+      "sha512": "dMkqfy2el8A8/I76n2Hi1oBFEbG1SfxD2l5nhwXV3XjlnOmwxJlQbYpJH4W51odnU9sARCSAgv7S3CyAFMkpYg==",
+      "type": "package",
+      "path": "system.componentmodel.annotations/5.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/net461/System.ComponentModel.Annotations.dll",
+        "lib/netcore50/System.ComponentModel.Annotations.dll",
+        "lib/netstandard1.4/System.ComponentModel.Annotations.dll",
+        "lib/netstandard2.0/System.ComponentModel.Annotations.dll",
+        "lib/netstandard2.1/System.ComponentModel.Annotations.dll",
+        "lib/netstandard2.1/System.ComponentModel.Annotations.xml",
+        "lib/portable-net45+win8/_._",
+        "lib/win8/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/net461/System.ComponentModel.Annotations.dll",
+        "ref/net461/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/System.ComponentModel.Annotations.dll",
+        "ref/netcore50/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/de/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/es/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/fr/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/it/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/ja/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/ko/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/ru/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/zh-hans/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/zh-hant/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/System.ComponentModel.Annotations.dll",
+        "ref/netstandard1.1/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/de/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/es/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/fr/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/it/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/ja/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/ko/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/ru/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/zh-hans/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/zh-hant/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/System.ComponentModel.Annotations.dll",
+        "ref/netstandard1.3/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/de/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/es/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/fr/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/it/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/ja/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/ko/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/ru/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/zh-hans/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/zh-hant/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/System.ComponentModel.Annotations.dll",
+        "ref/netstandard1.4/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/de/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/es/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/fr/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/it/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/ja/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/ko/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/ru/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/zh-hans/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/zh-hant/System.ComponentModel.Annotations.xml",
+        "ref/netstandard2.0/System.ComponentModel.Annotations.dll",
+        "ref/netstandard2.0/System.ComponentModel.Annotations.xml",
+        "ref/netstandard2.1/System.ComponentModel.Annotations.dll",
+        "ref/netstandard2.1/System.ComponentModel.Annotations.xml",
+        "ref/portable-net45+win8/_._",
+        "ref/win8/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.componentmodel.annotations.5.0.0.nupkg.sha512",
+        "system.componentmodel.annotations.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
@@ -4642,12 +4768,13 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "DSharpPlus >= 4.3.0-nightly-01140",
-      "DSharpPlus.CommandsNext >= 4.3.0-nightly-01140",
-      "DSharpPlus.Interactivity >= 4.3.0-nightly-01140",
-      "DSharpPlus.Lavalink >= 4.3.0-nightly-01140",
-      "DSharpPlus.VoiceNext >= 4.3.0-nightly-01140",
+      "DSharpPlus >= 4.3.0-nightly-01141",
+      "DSharpPlus.CommandsNext >= 4.3.0-nightly-01141",
+      "DSharpPlus.Interactivity >= 4.3.0-nightly-01141",
+      "DSharpPlus.Lavalink >= 4.3.0-nightly-01141",
+      "DSharpPlus.VoiceNext >= 4.3.0-nightly-01141",
       "HtmlAgilityPack >= 1.11.43",
+      "IMDbApiLib >= 1.8.1",
       "Lavalink4NET.DSharpPlus >= 2.1.1",
       "OpenWeatherMap >= 1.1.0",
       "Reddit >= 1.5.0"
@@ -4700,27 +4827,31 @@
         "dependencies": {
           "DSharpPlus": {
             "target": "Package",
-            "version": "[4.3.0-nightly-01140, )"
+            "version": "[4.3.0-nightly-01141, )"
           },
           "DSharpPlus.CommandsNext": {
             "target": "Package",
-            "version": "[4.3.0-nightly-01140, )"
+            "version": "[4.3.0-nightly-01141, )"
           },
           "DSharpPlus.Interactivity": {
             "target": "Package",
-            "version": "[4.3.0-nightly-01140, )"
+            "version": "[4.3.0-nightly-01141, )"
           },
           "DSharpPlus.Lavalink": {
             "target": "Package",
-            "version": "[4.3.0-nightly-01140, )"
+            "version": "[4.3.0-nightly-01141, )"
           },
           "DSharpPlus.VoiceNext": {
             "target": "Package",
-            "version": "[4.3.0-nightly-01140, )"
+            "version": "[4.3.0-nightly-01141, )"
           },
           "HtmlAgilityPack": {
             "target": "Package",
             "version": "[1.11.43, )"
+          },
+          "IMDbApiLib": {
+            "target": "Package",
+            "version": "[1.8.1, )"
           },
           "Lavalink4NET.DSharpPlus": {
             "target": "Package",

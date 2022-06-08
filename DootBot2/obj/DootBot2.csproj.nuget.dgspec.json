@@ -47,27 +47,31 @@
           "dependencies": {
             "DSharpPlus": {
               "target": "Package",
-              "version": "[4.3.0-nightly-01140, )"
+              "version": "[4.3.0-nightly-01141, )"
             },
             "DSharpPlus.CommandsNext": {
               "target": "Package",
-              "version": "[4.3.0-nightly-01140, )"
+              "version": "[4.3.0-nightly-01141, )"
             },
             "DSharpPlus.Interactivity": {
               "target": "Package",
-              "version": "[4.3.0-nightly-01140, )"
+              "version": "[4.3.0-nightly-01141, )"
             },
             "DSharpPlus.Lavalink": {
               "target": "Package",
-              "version": "[4.3.0-nightly-01140, )"
+              "version": "[4.3.0-nightly-01141, )"
             },
             "DSharpPlus.VoiceNext": {
               "target": "Package",
-              "version": "[4.3.0-nightly-01140, )"
+              "version": "[4.3.0-nightly-01141, )"
             },
             "HtmlAgilityPack": {
               "target": "Package",
               "version": "[1.11.43, )"
+            },
+            "IMDbApiLib": {
+              "target": "Package",
+              "version": "[1.8.1, )"
             },
             "Lavalink4NET.DSharpPlus": {
               "target": "Package",

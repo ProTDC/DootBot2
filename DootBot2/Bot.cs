@@ -136,6 +136,8 @@ namespace Dootbot2
 
                 if (e.Message.Content.ToLower().Contains("doot"))
                 {
+                    await e.Channel.TriggerTypingAsync();
+                    
                     await e.Message.RespondAsync("Doot").ConfigureAwait(false);
 
                     await e.Message.CreateReactionAsync(letterD).ConfigureAwait(false);
@@ -148,24 +150,32 @@ namespace Dootbot2
 
                 if (e.Message.Content.ToLower().Contains("fuck you"))
                 {
+                    await e.Channel.TriggerTypingAsync();
+
                     await e.Message.RespondAsync("fuck you too").ConfigureAwait(false);
                     return;
                 }
 
                 if (e.Message.Content.ToLower().Contains("wa"))
                 {
+                    await e.Channel.TriggerTypingAsync();
+
                     await e.Message.RespondAsync("Wa").ConfigureAwait(false);
                     return;
                 }
 
                 if (e.Message.Content.ToLower().Contains("bitch"))
                 {
+                    await e.Channel.TriggerTypingAsync();
+
                     await e.Message.RespondAsync("Bitch").ConfigureAwait(false);
                     return;
                 }
 
                 if (e.Message.Content.ToLower().Contains("british") || e.Message.Content.ToLower().Contains("bri'ish") || e.Message.Content.ToLower().Contains("briish"))
                 {
+                    await e.Channel.TriggerTypingAsync();
+
                     await e.Message.RespondAsync("BRi'ISH! ??!").ConfigureAwait(false);
                     await e.Message.CreateReactionAsync(flagBritish).ConfigureAwait(false);
                     return;
@@ -185,10 +195,10 @@ namespace Dootbot2
 
             };
 
-            //Client.MessageReactionAdded += async (s, e) =>
-            //{
-            //    await e.Message.CreateReactionAsync(e.Emoji);
-            //};
+            Client.MessageReactionAdded += async (s, e) =>
+            {
+                await e.Message.CreateReactionAsync(e.Emoji);
+            };
 
 
             //Client.MessageCreated += async (s, e) =>
@@ -207,21 +217,29 @@ namespace Dootbot2
 
             Client.MessageUpdated += async (s, e) =>
             {
-                await e.Message.RespondAsync($"{e.Message.Author.Mention} Edited this message, the original content was: {e.MessageBefore.Content}").ConfigureAwait(false);
-                return;
-            };
+                await e.Channel.TriggerTypingAsync();
 
-            Client.MessageDeleted += async (s, e) =>
-            {
                 if (e.Message.Author.Equals(461446979155918859))
+                {
+                    return;
+                }
+                if (e.Message.Author.Equals(813186418553520128))
                 {
                     return;
                 }
                 else
                 {
-                    await e.Message.RespondAsync($"{e.Message.Author.Mention} I SAW THAT!!! YOU DELETED MESSAGE: {e.Message.Content}").ConfigureAwait(false);
+                    await e.Message.RespondAsync($"{e.Message.Author.Mention} Edited this message, the original content was: {e.MessageBefore.Content}").ConfigureAwait(false);
                     return;
                 }
+            };
+
+            Client.MessageDeleted += async (s, e) =>
+            {
+                await e.Channel.TriggerTypingAsync();
+
+                await e.Message.RespondAsync($"{e.Message.Author.Mention} DELETED A MESSAGE!! The deleted message was: {e.Message.Content}").ConfigureAwait(false);
+                return;
             };
 
             Commands = Client.UseCommandsNext(commandsConfig);

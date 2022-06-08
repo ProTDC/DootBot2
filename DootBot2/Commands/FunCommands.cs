@@ -8,6 +8,7 @@ using System.Net;
 using System.Threading.Tasks;
 using OpenWeatherMap;
 using DSharpPlus;
+using IMDbApiLib;
 
 namespace DootBot2.Commands
 
@@ -18,6 +19,7 @@ namespace DootBot2.Commands
         [Description("Displays motivation to keep on going")]
         public async Task Motivation(CommandContext ctx)
         {
+            await ctx.Channel.TriggerTypingAsync();
 
             Random rand = new Random();
 
@@ -33,6 +35,8 @@ namespace DootBot2.Commands
         [Description("Celebration")]
         public async Task Celebration(CommandContext ctx)
         {
+            await ctx.Channel.TriggerTypingAsync();
+
             await ctx.Channel.SendMessageAsync("https://cdn.discordapp.com/attachments/634063767466147840/971711431902908496/trim.E9946223-78D6-454C-867F-627BBF29429B.mov").ConfigureAwait(false);
             return;
         }
@@ -41,6 +45,8 @@ namespace DootBot2.Commands
         [Description("Displays the market value of Oljefondet")]
         public async Task Oljefondet(CommandContext ctx)
         {
+            await ctx.Channel.TriggerTypingAsync();
+
             using WebClient web1 = new WebClient();
             HtmlAgilityPack.HtmlWeb website = new HtmlAgilityPack.HtmlWeb();
             HtmlAgilityPack.HtmlDocument document = website.Load("https://www.nbim.no/no");
@@ -53,11 +59,38 @@ namespace DootBot2.Commands
             return;
         }
 
+        [Command("Movie")]
+        [Description("Displays a movies rating")]
+        public async Task Movie(CommandContext ctx, string message)
+        {
+            var apiLib = new ApiLib("k_0w44lid6");
+            var data = await apiLib.SearchMovieAsync(message);
+
+            var embed = new DiscordEmbedBuilder()
+            {
+                Title = data.Title.ToString()
+            };
+
+            await ctx.RespondAsync(embed).ConfigureAwait(false);
+
+            return;
+        }
+
+        //[Command("Bestmovies")]
+        //[Description("Displays the top movies")]
+        //public async Task TopMovie(CommandContext ctx)
+        //{
+        //    var apiLib = new ApiLib("k_0w44lid6");
+        //    await ctx.RespondAsync(apiLib.Top250MoviesAsync()).ConfigureAwait(false);
+        //}
+
+
         [Command("Arebirdsreal")]
         [Description("Tells you if birds are real or not")]
         public async Task Birb(CommandContext ctx)
         {
             await ctx.Channel.TriggerTypingAsync();
+
             await ctx.Channel.SendMessageAsync("No").ConfigureAwait(false);
         }
 
@@ -162,6 +195,8 @@ namespace DootBot2.Commands
         [Command("Poll")]
         public async Task Poll(CommandContext ctx, TimeSpan duration, params DiscordEmoji[] emojiOptions)
         {
+            await ctx.Channel.TriggerTypingAsync();
+
             var interactivity = ctx.Client.GetInteractivity();
             var options = emojiOptions.Select(x => x.ToString());
 
@@ -191,6 +226,8 @@ namespace DootBot2.Commands
         [Description("Classified")]
         public async Task Repeat(CommandContext ctx)
         {
+            await ctx.Channel.TriggerTypingAsync();
+
             var interactivity = ctx.Client.GetInteractivity();
             var chnlsend = ctx.Guild.GetChannel(981805613732483082);
 
@@ -201,6 +238,7 @@ namespace DootBot2.Commands
             await ctx.Channel.DeleteMessageAsync(ctx.Message);
             await ctx.Channel.DeleteMessageAsync(message.Result);
         }
+
     }
 
 }
