@@ -65,28 +65,14 @@ namespace DootBot2.Commands
         public async Task Movie(CommandContext ctx)
         {
             var apiLib = new ApiLib("k_0w44lid6");
-            var data = await apiLib.RatingsAsync("tt5697572");
+            var data = await apiLib.SearchTitleAsync("Cats".ToLower());
 
-            var embed = new DiscordEmbedBuilder()
-            {
-                Title = data.Title,
-                Description = data.IMDbId
-            };
+            Console.WriteLine(data.Results.ToString());
 
-            await ctx.RespondAsync(embed).ConfigureAwait(false);
+            //await ctx.RespondAsync(embed).ConfigureAwait(false);
 
             return;
         }
-
-        //[Command("Bestmovies")]
-        //[Description("Displays the top movies")]
-        //public async Task TopMovie(CommandContext ctx)
-        //{
-        //    var apiLib = new ApiLib("k_0w44lid6");
-        //    var data = apiLib.Top250MoviesAsync();
-
-        //    await ctx.RespondAsync(data.Result.ToString()).ConfigureAwait(false);
-        //}
 
 
         [Command("Arebirdsreal")]
