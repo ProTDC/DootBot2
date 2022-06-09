@@ -10,6 +10,7 @@ using OpenWeatherMap;
 using DSharpPlus;
 using IMDbApiLib;
 using IMDbApiLib.Models;
+using System.Net.Http;
 
 namespace DootBot2.Commands
 
@@ -60,42 +61,48 @@ namespace DootBot2.Commands
             return;
         }
 
+        static readonly HttpClient httpClient = new HttpClient();
         [Command("Movie")]
         [Description("Displays a movie")]
         public async Task Movie(CommandContext ctx, string message)
         {
-            var apiLib = new ApiLib("keyhere");
+            var key = "k_0w44lid6";
+            var title = message.ToLower();
+            var type = "SearchTitle";
+            HttpResponseMessage response = await httpClient.GetAsync($"http://www.imdb-api.com/en/API/{type}/{key}/{title}");
+            var content = await response.Content.ReadAsStringAsync();
+            //Console.WriteLine(content);
+            var array = content.Replace("{", "").Replace("}", "").Split(",");
+            //remove comments to remove the type things
+            var searchType = array[0];  //.Split(":")[1].Replace('"', ' ');
+            var expression = array[1];  //.Split(":")[1].Replace('"', ' ');
+            var results = array[2];     //.Split(":")[1].Replace('"', ' ');
+            var errorMessage = array[3];//.Split(":")[1].Replace('"', ' ');
 
-            var data = await apiLib.SearchMovieAsync("leon the professional 1994");
+            var id = content.Split("id\":\"")[1].Split("\"")[0];
 
-            await ctx.RespondAsync(data.Results.ToString());
+            var apiLib = new ApiLib(key);
+            var ratingData = await apiLib.RatingsAsync(id);
 
+            var embed = new DiscordEmbedBuilder
+            {
+                Title = ratingData.FullTitle,
+            };
+            embed.AddField("IMDB ", ratingData.IMDb);
+            embed.AddField("Metacritic ", ratingData.Metacritic);
+            embed.AddField("Rottentomatoes ", ratingData.RottenTomatoes);
 
-            //var data = await apiLib.RatingsAsync(message);
-
-            //var embed = new DiscordEmbedBuilder
-            //{
-            //    Title = data.FullTitle,
-            //    Description = data.Year,
-            //    Color = ctx.Member.Color
-
-            //    //Thumbnail = new DiscordEmbedBuilder.EmbedThumbnail
-            //    //{
-            //    //    Url = data.
-            //    //}
-            //};
-
-            //embed.AddField("IMDB rating", data.IMDb);
-            //embed.AddField("Metacritic rating", data.Metacritic);
-            //embed.AddField("RottenTomatoes rating", data.RottenTomatoes);
-
-            //await ctx.RespondAsync(embed).ConfigureAwait(false);
-
+            Console.WriteLine(searchType);
+            Console.WriteLine(expression);
+            Console.WriteLine(results);
+            Console.WriteLine(errorMessage);
+            await ctx.RespondAsync(embed).ConfigureAwait(false);
             return;
         }
 
 
-        [Command("Arebirdsreal")]
+
+         [Command("Arebirdsreal")]
         [Description("Tells you if birds are real or not")]
         public async Task Birb(CommandContext ctx)
         {
