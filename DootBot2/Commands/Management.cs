@@ -5,6 +5,7 @@ using DSharpPlus.Entities;
 using DSharpPlus.Interactivity.Extensions;
 using System.Threading.Tasks;
 using System.Linq;
+using System;
 
 namespace DootBot2.Commands
 {
@@ -65,6 +66,8 @@ namespace DootBot2.Commands
         {
             await ctx.Channel.TriggerTypingAsync();
 
+            var roles = member.Roles;
+
             var embed = new DiscordEmbedBuilder
             {
                 Title = $"{member.Username}#{member.Discriminator}",
@@ -79,8 +82,16 @@ namespace DootBot2.Commands
             };
 
             embed.AddField("UserID", member.Id.ToString());
-            embed.AddField("Status", member.Presence.Status.ToString()); //Doesn't work on offline people
-            embed.AddField("test", member.Presence.Activity.Name);
+
+            string Result;
+            foreach(var userRoles in roles)
+            {
+                Result = userRoles.Name;
+
+                embed.AddField("Roles", Result);
+                break;
+            }
+
             embed.AddField("Hypesquad", member.Flags.ToString());
             embed.AddField("Is a Bot?", member.IsBot.ToString());
             embed.AddField("Created", member.CreationTimestamp.DateTime.ToLongDateString());

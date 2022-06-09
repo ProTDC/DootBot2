@@ -1,8 +1,6 @@
 ﻿using DootBot2.Commands;
 using DSharpPlus;
 using DSharpPlus.CommandsNext;
-using DSharpPlus.Net;
-using DSharpPlus.Lavalink;
 using DSharpPlus.EventArgs;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
@@ -200,35 +198,15 @@ namespace Dootbot2
                 await e.Message.CreateReactionAsync(e.Emoji);
             };
 
-
-            //Client.MessageCreated += async (s, e) =>
-            //{
-            //    if (e.Message.Author.IsBot)
-            //    {
-            //        return;
-            //    }
-
-            //    if (e.Message.Author.Id.Equals(373135474119933955))
-            //    {
-            //        await e.Message.RespondAsync("stfu tom").ConfigureAwait(false);
-            //        return;
-            //    }
-            //};
-
             Client.MessageUpdated += async (s, e) =>
             {
-                await e.Channel.TriggerTypingAsync();
-
-                if (e.Message.Author.Equals(461446979155918859))
-                {
-                    return;
-                }
-                if (e.Message.Author.Equals(813186418553520128))
+                if (e.Message.Author.IsBot || e.Message.Author.Id.Equals(461446979155918859))
                 {
                     return;
                 }
                 else
                 {
+                    await e.Channel.TriggerTypingAsync();
                     await e.Message.RespondAsync($"{e.Message.Author.Mention} Edited this message, the original content was: {e.MessageBefore.Content}").ConfigureAwait(false);
                     return;
                 }

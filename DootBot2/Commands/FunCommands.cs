@@ -64,30 +64,45 @@ namespace DootBot2.Commands
         static readonly HttpClient httpClient = new HttpClient();
         [Command("Movie")]
         [Description("Displays a movie")]
-        public async Task Movie(CommandContext ctx, string message)
+        public async Task Movie(CommandContext ctx, params string[]message)
         {
-            var key = "keyhere";
-            var title = message.ToLower();
+            await ctx.TriggerTypingAsync();
+
+            var combinedMessage = "";
+            foreach (string word in message)
+            {
+                combinedMessage += word;
+            }
+
+            Console.WriteLine(combinedMessage);
+
+            var key = "k_0w44lid6";
+            var title = combinedMessage;
             var type = "SearchTitle";
             HttpResponseMessage response = await httpClient.GetAsync($"http://www.imdb-api.com/en/API/{type}/{key}/{title}");
             var content = await response.Content.ReadAsStringAsync();
 
             var array = content.Replace("{", "").Replace("}", "").Split(",");
-
-            var searchType = array[0];  //.Split(":")[1].Replace('"', ' ');
-            var expression = array[1];  //.Split(":")[1].Replace('"', ' ');
-            var results = array[2];     //.Split(":")[1].Replace('"', ' ');
-            var errorMessage = array[3];//.Split(":")[1].Replace('"', ' ');
+            
+            var searchType = array[0];  
+            var expression = array[1];  
+            var results = array[2];     
+            var errorMessage = array[3];
 
             var id = content.Split("id\":\"")[1].Split("\"")[0];
 
             var apiLib = new ApiLib(key);
             var ratingData = await apiLib.RatingsAsync(id);
+            var movieData = await apiLib.TitleAsync(id);
 
             var embed = new DiscordEmbedBuilder
             {
                 Title = ratingData.FullTitle,
+                Description = movieData.Plot,
+                ImageUrl = movieData.Image,
             };
+            embed.AddField("Director", movieData.Directors);
+            embed.AddField("Genres", movieData.Genres);
             embed.AddField("IMDB ", ratingData.IMDb);
             embed.AddField("Metacritic ", ratingData.Metacritic);
             embed.AddField("Rottentomatoes ", ratingData.RottenTomatoes);
