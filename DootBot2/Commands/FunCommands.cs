@@ -66,14 +66,14 @@ namespace DootBot2.Commands
         [Description("Displays a movie")]
         public async Task Movie(CommandContext ctx, string message)
         {
-            var key = "k_0w44lid6";
+            var key = "keyhere";
             var title = message.ToLower();
             var type = "SearchTitle";
             HttpResponseMessage response = await httpClient.GetAsync($"http://www.imdb-api.com/en/API/{type}/{key}/{title}");
             var content = await response.Content.ReadAsStringAsync();
-            //Console.WriteLine(content);
+
             var array = content.Replace("{", "").Replace("}", "").Split(",");
-            //remove comments to remove the type things
+
             var searchType = array[0];  //.Split(":")[1].Replace('"', ' ');
             var expression = array[1];  //.Split(":")[1].Replace('"', ' ');
             var results = array[2];     //.Split(":")[1].Replace('"', ' ');
