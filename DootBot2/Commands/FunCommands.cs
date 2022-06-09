@@ -62,12 +62,32 @@ namespace DootBot2.Commands
 
         [Command("Movie")]
         [Description("Displays a movie")]
-        public async Task Movie(CommandContext ctx)
+        public async Task Movie(CommandContext ctx, string message)
         {
-            var apiLib = new ApiLib("k_0w44lid6");
-            var data = await apiLib.SearchTitleAsync("Cats".ToLower());
+            var apiLib = new ApiLib("keyhere");
 
-            Console.WriteLine(data.Results.ToString());
+            var data = await apiLib.SearchMovieAsync("leon the professional 1994");
+
+            await ctx.RespondAsync(data.Results.ToString());
+
+
+            //var data = await apiLib.RatingsAsync(message);
+
+            //var embed = new DiscordEmbedBuilder
+            //{
+            //    Title = data.FullTitle,
+            //    Description = data.Year,
+            //    Color = ctx.Member.Color
+
+            //    //Thumbnail = new DiscordEmbedBuilder.EmbedThumbnail
+            //    //{
+            //    //    Url = data.
+            //    //}
+            //};
+
+            //embed.AddField("IMDB rating", data.IMDb);
+            //embed.AddField("Metacritic rating", data.Metacritic);
+            //embed.AddField("RottenTomatoes rating", data.RottenTomatoes);
 
             //await ctx.RespondAsync(embed).ConfigureAwait(false);
 
