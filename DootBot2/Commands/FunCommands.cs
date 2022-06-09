@@ -10,6 +10,9 @@ using OpenWeatherMap;
 using DSharpPlus;
 using IMDbApiLib;
 using IMDbApiLib.Models;
+using System.Threading.Tasks;
+using System.Net.Http;
+using System.Net.Http.Headers;
 
 namespace DootBot2.Commands
 
@@ -60,17 +63,28 @@ namespace DootBot2.Commands
             return;
         }
 
+        private static readonly HttpClient httpClient = new HttpClient();
         [Command("Movie")]
         [Description("Displays a movie")]
         public async Task Movie(CommandContext ctx)
         {
-            var apiLib = new ApiLib("k_0w44lid6");
-            var data = await apiLib.SearchTitleAsync("Cats".ToLower());
-
-            Console.WriteLine(data.Results.ToString());
-
+            var key = "k_0w44lid6";
+            var title = "Cats".ToLower();
+            var type = "SearchTitle";
+            HttpResponseMessage response = await httpClient.GetAsync($"http://www.imdb-api.com/en/API/{type}/{key}/{title}");
+            var content = await response.Content.ReadAsStringAsync();
+            //Console.WriteLine(content);
+            var array = content.Replace("{", "").Replace("}", "").Split(",");
+                                        //remove comments to remove the type things
+            var searchType = array[0];  //.Split(":")[1].Replace('"', ' ');
+            var expression = array[1];  //.Split(":")[1].Replace('"', ' ');
+            var results = array[2];     //.Split(":")[1].Replace('"', ' ');
+            var errorMessage = array[3];//.Split(":")[1].Replace('"', ' ');
+            Console.WriteLine(searchType);
+            Console.WriteLine(expression);
+            Console.WriteLine(results);
+            Console.WriteLine(errorMessage);
             //await ctx.RespondAsync(embed).ConfigureAwait(false);
-
             return;
         }
 
@@ -94,92 +108,33 @@ namespace DootBot2.Commands
 
             var message = await interactivity.WaitForMessageAsync(x => x.Channel == ctx.Channel).ConfigureAwait(false);
 
+            int playerChoice;
+            string playerChoiceStr;
+            switch (message.Result.Content.ToLower()) {
+                case "rock":
+                    playerChoice = 1;
+                    break;
+                case "paper":
+                    playerChoice = 2;
+                    break;
+                case "scissors":
+                    playerChoice = 3;
+                    break;
+                default:
+                    await ctx.Channel.SendMessageAsync("Invalid response").ConfigureAwait(false);
+                    return;
+            }
             Random r = new Random();
             int computerChoice = r.Next(4);
-
-            if (computerChoice == 1)
-            {
-                if (message.Result.Content.ToLower().Contains("rock")) 
-                {
-                    await ctx.Channel.SendMessageAsync("i chose Rock");
-                    await ctx.Channel.SendMessageAsync("its a tie");
-                    return;
-                }
-
-                else if (message.Result.Content.ToLower().Contains("paper"))
-                {
-                    await ctx.Channel.SendMessageAsync("i chose Paper");
-                    await ctx.Channel.SendMessageAsync("Its a tie ");
-                    return;
-                }
-                else if (message.Result.Content.ToLower().Contains("scissors"))
-                {
-                    await ctx.Channel.SendMessageAsync("i chose Scissors");
-                    await ctx.Channel.SendMessageAsync("Its a tie ");
-                    return;
-                }
-                else
-                {
-                    await ctx.Channel.SendMessageAsync("You must choose Rock, Paper or Scissors! Please try again!");
-                }
-            };
-
-            if (computerChoice == 2) 
-            {
-                if (message.Result.Content.ToLower().Contains("rock"))
-                {
-                    await ctx.Channel.SendMessageAsync("i chose Paper");
-                    await ctx.Channel.SendMessageAsync("You lose dumbass");
-                    return;
-                }
-
-                else if (message.Result.Content.ToLower().Contains("paper"))
-                {
-                    await ctx.Channel.SendMessageAsync("i chose Scissors");
-                    await ctx.Channel.SendMessageAsync("You lose dumbass");
-                    return;
-
-                }
-                else if (message.Result.Content.ToLower().Contains("scissors"))
-                {
-                    await ctx.Channel.SendMessageAsync("i chose Rock");
-                    await ctx.Channel.SendMessageAsync("you lose dumbass");
-                    return;
-                }
-                else
-                {
-                    await ctx.Channel.SendMessageAsync("You must choose Rock, Paper or Scissors! Please try again!");
-                }
-            };
-
-            if (computerChoice == 3) 
-            {
-                if (message.Result.Content.ToLower().Contains("rock"))
-                {
-                    await ctx.Channel.SendMessageAsync("i chose scissors");
-                    await ctx.Channel.SendMessageAsync("God fucking damn it you won");
-                    return;
-                }
-
-
-                else if (message.Result.Content.ToLower().Contains("paper"))
-                {
-                    await ctx.Channel.SendMessageAsync("i chose Rock");
-                    await ctx.Channel.SendMessageAsync("God fucking damn it you won");
-                    return;
-
-                }
-                else if (message.Result.Content.ToLower().Contains ("scissors"))
-                {
-                    await ctx.Channel.SendMessageAsync("i chose Paper");
-                    await ctx.Channel.SendMessageAsync("God fucking damn it you won");
-                    return;
-                }
-                else
-                {
-                    await ctx.Channel.SendMessageAsync("You must choose Rock, Paper or Scissors! Please try again!");
-                }
-            };
+            if (computerChoice == playerChoice) {
+                await ctx.Channel.SendMessageAsync("It's a tie!").ConfigureAwait(false);
+                return;
+            }
+            if (computerChoice == 1 && playerChoice == 2 || computerChoice == 2 && playerChoice == 3 || computerChoice == 3 && playerChoice == 1) {
+                await ctx.Channel.SendMessageAsync("You win!").ConfigureAwait(false);
+                return;
+            }
+            await ctx.Channel.SendMessageAsync("I win!").ConfigureAwait(false);
         }
 
         [Command("Poll")]
