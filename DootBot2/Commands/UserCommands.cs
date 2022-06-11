@@ -39,32 +39,37 @@ namespace DootBot2.Commands
             //creates a new field which displays the id
             embed.AddField("UserID", member.Id.ToString());
 
-            //checks if the user is offline (doesnt work)
-            if (member.Presence.Status == UserStatus.Offline)
-            {
-                Console.WriteLine("it works");
+            String status;
+
+            //checks which status the user has and displays it
+            try {switch (member.Presence.Status) {
+                    case DiscordUserStatus.Online:
+                        status = "Online";
+                        break;
+                    case DiscordUserStatus.Idle:
+                        status = "Idle";
+                        break;
+                    case DiscordUserStatus.DoNotDisturb:
+                        status = "Do Not Disturb";
+                        break;
+                    case DiscordUserStatus.Offline:
+                        status = "Offline";
+                        break;
+                    case DiscordUserStatus.Invisible:
+                        status = "Invisible";
+                        break;
+                    default:
+                        status = "Unknown (idfk how this happened)";
+                        break;
+                }
             }
-            //check if the user is online then adds it to the embed
-            else if (member.Presence.Status == UserStatus.Online)
-            {
-                embed.AddField("Status", "Online");
-            }
-            //check if the user is idle then adds it to the embed
-            else if (member.Presence.Status == UserStatus.Idle)
-            {
-                embed.AddField("Status", "Idle");
-            }
-            //check if the user is in do not disturb then adds it to the embed
-            else if (member.Presence.Status == UserStatus.DoNotDisturb)
-            {
-                embed.AddField("Status", "Do Not Disturb");
-            }
-            //check if the user is invisible then adds it to the embed
-            else if (member.Presence.Status == UserStatus.Invisible)
-            {
-                embed.AddField("Status", "Invisible");
+            //status failsafe 
+            catch (Exception) {
+                status = "Error occured when getting status";
             }
 
+            //creates a new field which displays the status, which cannot be null by this point
+            embed.AddField("Status", status);
 
             string test = string.Empty;
 
