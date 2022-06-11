@@ -61,11 +61,11 @@ namespace DootBot2.Commands
             return;
         }
 
-        static readonly HttpClient httpClient = new HttpClient();
         [Command("Movie")]
         [Description("Displays a movie")]
         public async Task Movie(CommandContext ctx, params string[]message)
         {
+            HttpClient httpClient = new HttpClient();
             await ctx.TriggerTypingAsync();
 
             //to remove whitespace from the message
@@ -126,7 +126,7 @@ namespace DootBot2.Commands
 
 
 
-         [Command("Arebirdsreal")]
+        [Command("Arebirdsreal")]
         [Description("Tells you if birds are real or not")]
         public async Task Birb(CommandContext ctx)
         {
@@ -163,14 +163,17 @@ namespace DootBot2.Commands
             }
             Random r = new Random();
             int computerChoice = r.Next(4);
+            //if both players choose the same thing, it's a tie
             if (computerChoice == playerChoice) {
                 await ctx.Channel.SendMessageAsync("It's a tie!").ConfigureAwait(false);
                 return;
             }
+            //if computer chooses losing choice compared to player, player winds
             if (computerChoice == 1 && playerChoice == 2 || computerChoice == 2 && playerChoice == 3 || computerChoice == 3 && playerChoice == 1) {
                 await ctx.Channel.SendMessageAsync("You win!").ConfigureAwait(false);
                 return;
             }
+            //all other scenarios are a loss for the player
             await ctx.Channel.SendMessageAsync("I win!").ConfigureAwait(false);
         }
 
