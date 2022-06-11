@@ -60,58 +60,6 @@ namespace DootBot2.Commands
             return;
         }
 
-        [Command("User")]
-        [Description("Displays a users information")]
-        public async Task User(CommandContext ctx, DiscordMember member)
-        {
-            await ctx.Channel.TriggerTypingAsync();
-
-            var roles = member.Roles;
-
-            var embed = new DiscordEmbedBuilder
-            {
-                Title = $"{member.Username}#{member.Discriminator}",
-                Url = "https://www.youtube.com/watch?v=xvFZjo5PgG0",
-                Description = $"aka: {member.Nickname}", 
-                Color = member.Color,
-
-                Thumbnail = new DiscordEmbedBuilder.EmbedThumbnail
-                {
-                    Url = member.AvatarUrl
-                }
-            };
-
-            embed.AddField("UserID", member.Id.ToString());
-
-            string Result;
-            foreach(var userRoles in roles)
-            {
-                Result = userRoles.Name;
-
-                embed.AddField("Roles", Result);
-                break;
-            }
-
-            embed.AddField("Hypesquad", member.Flags.ToString());
-            embed.AddField("Is a Bot?", member.IsBot.ToString());
-            embed.AddField("Created", member.CreationTimestamp.DateTime.ToLongDateString());
-            embed.AddField("Joined this server at", member.Guild.JoinedAt.DateTime.ToLongDateString());
-            embed.AddField("Bitches", "0");
-
-            await ctx.Channel.SendMessageAsync(embed);
-            return;
-        }
-
-        [Command("Avatar")]
-        [Description("Displays a users avatar")]
-        public async Task Avatar(CommandContext ctx, DiscordMember member)
-        {
-            await ctx.Channel.TriggerTypingAsync();
-
-            await ctx.Channel.SendMessageAsync(member.AvatarUrl).ConfigureAwait(false);
-            return;
-        }
-
         [Command("Changenick")]
         [Description("Changes the nickname of a member (must be a moderator or higher)")]
         [RequireRoles(RoleCheckMode.Any, "Moderator", "Admin", "Owner")]

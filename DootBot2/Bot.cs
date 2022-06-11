@@ -230,6 +230,7 @@ namespace Dootbot2
             Commands.RegisterCommands<Memes>();
             Commands.RegisterCommands<VoiceCommands>();
             Commands.RegisterCommands<Management>();
+            Commands.RegisterCommands<UserCommands>();
             //Commands.RegisterCommands<RedditStuff>();
 
             await Client.ConnectAsync();
