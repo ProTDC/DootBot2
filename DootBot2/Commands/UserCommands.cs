@@ -27,7 +27,7 @@ namespace DootBot2.Commands
             {
                 Title = $"{member.Username}#{member.Discriminator}",
                 Url = "https://www.youtube.com/watch?v=xvFZjo5PgG0",
-                Description = $"aka: {member.Nickname}",
+                Description = member.Nickname == "" ? "No server nickname" : $"aka: {member.Nickname}",
                 Color = member.Color,
 
                 Thumbnail = new DiscordEmbedBuilder.EmbedThumbnail
