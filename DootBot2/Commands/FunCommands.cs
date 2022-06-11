@@ -145,92 +145,33 @@ namespace DootBot2.Commands
 
             var message = await interactivity.WaitForMessageAsync(x => x.Channel == ctx.Channel).ConfigureAwait(false);
 
+            int playerChoice;
+            string playerChoiceStr;
+            switch (message.Result.Content.ToLower()) {
+                case "rock":
+                    playerChoice = 1;
+                    break;
+                case "paper":
+                    playerChoice = 2;
+                    break;
+                case "scissors":
+                    playerChoice = 3;
+                    break;
+                default:
+                    await ctx.Channel.SendMessageAsync("Invalid response").ConfigureAwait(false);
+                    return;
+            }
             Random r = new Random();
             int computerChoice = r.Next(4);
-
-            if (computerChoice == 1)
-            {
-                if (message.Result.Content.ToLower().Contains("rock")) 
-                {
-                    await ctx.Channel.SendMessageAsync("i chose Rock");
-                    await ctx.Channel.SendMessageAsync("its a tie");
-                    return;
-                }
-
-                else if (message.Result.Content.ToLower().Contains("paper"))
-                {
-                    await ctx.Channel.SendMessageAsync("i chose Paper");
-                    await ctx.Channel.SendMessageAsync("Its a tie ");
-                    return;
-                }
-                else if (message.Result.Content.ToLower().Contains("scissors"))
-                {
-                    await ctx.Channel.SendMessageAsync("i chose Scissors");
-                    await ctx.Channel.SendMessageAsync("Its a tie ");
-                    return;
-                }
-                else
-                {
-                    await ctx.Channel.SendMessageAsync("You must choose Rock, Paper or Scissors! Please try again!");
-                }
-            };
-
-            if (computerChoice == 2) 
-            {
-                if (message.Result.Content.ToLower().Contains("rock"))
-                {
-                    await ctx.Channel.SendMessageAsync("i chose Paper");
-                    await ctx.Channel.SendMessageAsync("You lose dumbass");
-                    return;
-                }
-
-                else if (message.Result.Content.ToLower().Contains("paper"))
-                {
-                    await ctx.Channel.SendMessageAsync("i chose Scissors");
-                    await ctx.Channel.SendMessageAsync("You lose dumbass");
-                    return;
-
-                }
-                else if (message.Result.Content.ToLower().Contains("scissors"))
-                {
-                    await ctx.Channel.SendMessageAsync("i chose Rock");
-                    await ctx.Channel.SendMessageAsync("you lose dumbass");
-                    return;
-                }
-                else
-                {
-                    await ctx.Channel.SendMessageAsync("You must choose Rock, Paper or Scissors! Please try again!");
-                }
-            };
-
-            if (computerChoice == 3) 
-            {
-                if (message.Result.Content.ToLower().Contains("rock"))
-                {
-                    await ctx.Channel.SendMessageAsync("i chose scissors");
-                    await ctx.Channel.SendMessageAsync("God fucking damn it you won");
-                    return;
-                }
-
-
-                else if (message.Result.Content.ToLower().Contains("paper"))
-                {
-                    await ctx.Channel.SendMessageAsync("i chose Rock");
-                    await ctx.Channel.SendMessageAsync("God fucking damn it you won");
-                    return;
-
-                }
-                else if (message.Result.Content.ToLower().Contains ("scissors"))
-                {
-                    await ctx.Channel.SendMessageAsync("i chose Paper");
-                    await ctx.Channel.SendMessageAsync("God fucking damn it you won");
-                    return;
-                }
-                else
-                {
-                    await ctx.Channel.SendMessageAsync("You must choose Rock, Paper or Scissors! Please try again!");
-                }
-            };
+            if (computerChoice == playerChoice) {
+                await ctx.Channel.SendMessageAsync("It's a tie!").ConfigureAwait(false);
+                return;
+            }
+            if (computerChoice == 1 && playerChoice == 2 || computerChoice == 2 && playerChoice == 3 || computerChoice == 3 && playerChoice == 1) {
+                await ctx.Channel.SendMessageAsync("You win!").ConfigureAwait(false);
+                return;
+            }
+            await ctx.Channel.SendMessageAsync("I win!").ConfigureAwait(false);
         }
 
         [Command("Poll")]
