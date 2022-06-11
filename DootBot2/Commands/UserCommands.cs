@@ -26,6 +26,8 @@ namespace DootBot2.Commands
             var embed = new DiscordEmbedBuilder
             {
                 Title = $"{member.Username}#{member.Discriminator}",
+                //oh wow ok
+                //guess i deserve it after what i did
                 Url = "https://www.youtube.com/watch?v=xvFZjo5PgG0",
                 //if member has a nickname, display it, otherwise display "No server nickname"
                 Description = member.Nickname == "" ? "No server nickname" : $"aka: {member.Nickname}",
