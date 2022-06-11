@@ -27,6 +27,7 @@ namespace DootBot2.Commands
             {
                 Title = $"{member.Username}#{member.Discriminator}",
                 Url = "https://www.youtube.com/watch?v=xvFZjo5PgG0",
+                //if member has a nickname, display it, otherwise display "No server nickname"
                 Description = member.Nickname == "" ? "No server nickname" : $"aka: {member.Nickname}",
                 Color = member.Color,
 
