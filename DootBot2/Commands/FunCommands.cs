@@ -68,6 +68,7 @@ namespace DootBot2.Commands
         {
             await ctx.TriggerTypingAsync();
 
+            //to remove whitespace from the message
             var combinedMessage = "";
             foreach (string word in message)
             {
@@ -82,13 +83,6 @@ namespace DootBot2.Commands
             HttpResponseMessage response = await httpClient.GetAsync($"http://www.imdb-api.com/en/API/{type}/{key}/{title}");
             var content = await response.Content.ReadAsStringAsync();
 
-            var array = content.Replace("{", "").Replace("}", "").Split(",");
-            
-            var searchType = array[0];  
-            var expression = array[1];  
-            var results = array[2];     
-            var errorMessage = array[3];
-
             var id = content.Split("id\":\"")[1].Split("\"")[0];
 
             var apiLib = new ApiLib(key);
@@ -101,17 +95,23 @@ namespace DootBot2.Commands
                 Description = movieData.Plot,
                 ImageUrl = movieData.Image,
             };
+
+            //define empty string to add actors to the embed
+            String actorsStr = "";
+            foreach (var actor in movieData.Actors)
+            {
+                actorsStr += actor.Name + ", ";
+            }
+            //remove last comma and space
+            actorsStr = actorsStr.Substring(0, actorsStr.Length - 2);
+
             embed.AddField("Director", movieData.Directors);
-            embed.AddField("Actors", movieData.ActorList.ToString());
+            embed.AddField("Actors", actorsStr);
             embed.AddField("Genres", movieData.Genres);
             embed.AddField("IMDB ", ratingData.IMDb + "/10");
             embed.AddField("Metacritic ", ratingData.Metacritic + "%");
             embed.AddField("Rotten Tomatoes ", ratingData.RottenTomatoes + "%");
 
-            Console.WriteLine(searchType);
-            Console.WriteLine(expression);
-            Console.WriteLine(results);
-            Console.WriteLine(errorMessage);
             await ctx.RespondAsync(embed).ConfigureAwait(false);
             return;
         }
