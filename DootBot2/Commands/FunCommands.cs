@@ -76,7 +76,7 @@ namespace DootBot2.Commands
 
             Console.WriteLine(combinedMessage);
 
-            var key = "keyhere";
+            var key = "k_0w44lid6";
             var title = combinedMessage;
             var type = "SearchTitle";
             HttpResponseMessage response = await httpClient.GetAsync($"http://www.imdb-api.com/en/API/{type}/{key}/{title}");
@@ -102,10 +102,11 @@ namespace DootBot2.Commands
                 ImageUrl = movieData.Image,
             };
             embed.AddField("Director", movieData.Directors);
+            embed.AddField("Actors", movieData.ActorList.ToString());
             embed.AddField("Genres", movieData.Genres);
-            embed.AddField("IMDB ", ratingData.IMDb);
-            embed.AddField("Metacritic ", ratingData.Metacritic);
-            embed.AddField("Rotten Tomatoes ", ratingData.RottenTomatoes);
+            embed.AddField("IMDB ", ratingData.IMDb + "/10");
+            embed.AddField("Metacritic ", ratingData.Metacritic + "%");
+            embed.AddField("Rotten Tomatoes ", ratingData.RottenTomatoes + "%");
 
             Console.WriteLine(searchType);
             Console.WriteLine(expression);
