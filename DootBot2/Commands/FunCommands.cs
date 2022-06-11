@@ -102,8 +102,16 @@ namespace DootBot2.Commands
             {
                 actorsStr += actor.Name + ", ";
             }
-            //remove last comma and space
-            actorsStr = actorsStr.Substring(0, actorsStr.Length - 2);
+            //remove last comma and space (if there were actors)
+            if (actorsStr.Length > 0)
+            {
+                actorsStr = actorsStr.Substring(0, actorsStr.Length - 2);
+            }
+            //if there were no actors, add "No actors" (idk)
+            if (actorsStr == "")
+            {
+                actorsStr = "No actors (idk why)";
+            }
 
             embed.AddField("Director", movieData.Directors);
             embed.AddField("Actors", actorsStr);
