@@ -21,7 +21,7 @@ namespace Dootbot2
     {
         public DiscordClient Client { get; private set; }
         public CommandsNextExtension Commands { get; private set; }
-        public VoiceNextExtension Voice { get; set; }
+        public VoiceNextExtension voice { get; set; }
 
         public async Task RunAsync()
         {
@@ -222,7 +222,7 @@ namespace Dootbot2
 
             Commands = Client.UseCommandsNext(commandsConfig);
 
-            Voice = Client.UseVoiceNext();
+            Client.UseVoiceNext();
 
             Commands.SetHelpFormatter<CustomHelpFormatter>();
 

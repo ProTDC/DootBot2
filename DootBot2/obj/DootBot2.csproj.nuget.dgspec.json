@@ -47,23 +47,23 @@
           "dependencies": {
             "DSharpPlus": {
               "target": "Package",
-              "version": "[4.3.0-nightly-01141, )"
+              "version": "[4.3.0-nightly-01142, )"
             },
             "DSharpPlus.CommandsNext": {
               "target": "Package",
-              "version": "[4.3.0-nightly-01141, )"
+              "version": "[4.3.0-nightly-01142, )"
             },
             "DSharpPlus.Interactivity": {
               "target": "Package",
-              "version": "[4.3.0-nightly-01141, )"
+              "version": "[4.3.0-nightly-01142, )"
             },
             "DSharpPlus.Lavalink": {
               "target": "Package",
-              "version": "[4.3.0-nightly-01141, )"
+              "version": "[4.3.0-nightly-01142, )"
             },
             "DSharpPlus.VoiceNext": {
               "target": "Package",
-              "version": "[4.3.0-nightly-01141, )"
+              "version": "[4.3.0-nightly-01142, )"
             },
             "HtmlAgilityPack": {
               "target": "Package",
