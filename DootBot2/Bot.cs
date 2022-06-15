@@ -231,6 +231,7 @@ namespace Dootbot2
             Commands.RegisterCommands<VoiceCommands>();
             Commands.RegisterCommands<Management>();
             Commands.RegisterCommands<UserCommands>();
+            Commands.RegisterCommands<IMDbCommands>();
             //Commands.RegisterCommands<RedditStuff>();
 
             await Client.ConnectAsync();

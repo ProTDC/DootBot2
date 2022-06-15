@@ -61,64 +61,7 @@ namespace DootBot2.Commands
             return;
         }
 
-        static readonly HttpClient httpClient = new HttpClient();
-        [Command("Movie")]
-        [Description("Displays a movie")]
-        public async Task Movie(CommandContext ctx, params string[]message)
-        {
-            await ctx.TriggerTypingAsync();
-
-            var combinedMessage = "";
-            foreach (string word in message)
-            {
-                combinedMessage += word;
-            }
-
-            Console.WriteLine(combinedMessage);
-
-            var key = "k_0w44lid6";
-            var title = combinedMessage;
-            var type = "SearchTitle";
-            HttpResponseMessage response = await httpClient.GetAsync($"http://www.imdb-api.com/en/API/{type}/{key}/{title}");
-            var content = await response.Content.ReadAsStringAsync();
-
-            var array = content.Replace("{", "").Replace("}", "").Split(",");
-            
-            var searchType = array[0];  
-            var expression = array[1];  
-            var results = array[2];     
-            var errorMessage = array[3];
-
-            var id = content.Split("id\":\"")[1].Split("\"")[0];
-
-            var apiLib = new ApiLib(key);
-            var ratingData = await apiLib.RatingsAsync(id);
-            var movieData = await apiLib.TitleAsync(id);
-
-            var embed = new DiscordEmbedBuilder
-            {
-                Title = ratingData.FullTitle,
-                Description = movieData.Plot,
-                ImageUrl = movieData.Image,
-            };
-            embed.AddField("Director", movieData.Directors);
-            embed.AddField("Actors", movieData.ActorList.ToString());
-            embed.AddField("Genres", movieData.Genres);
-            embed.AddField("IMDB ", ratingData.IMDb + "/10");
-            embed.AddField("Metacritic ", ratingData.Metacritic + "%");
-            embed.AddField("Rotten Tomatoes ", ratingData.RottenTomatoes + "%");
-
-            Console.WriteLine(searchType);
-            Console.WriteLine(expression);
-            Console.WriteLine(results);
-            Console.WriteLine(errorMessage);
-            await ctx.RespondAsync(embed).ConfigureAwait(false);
-            return;
-        }
-
-
-
-         [Command("Arebirdsreal")]
+        [Command("Arebirdsreal")]
         [Description("Tells you if birds are real or not")]
         public async Task Birb(CommandContext ctx)
         {

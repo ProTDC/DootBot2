@@ -36,39 +36,8 @@ namespace DootBot2.Commands
                 }
             };
 
-            string status;
-
-            //checks which status the user has and displays it
-            if (member.Presence.Status == 0)
-            {
-                status = "Offline";
-                Console.WriteLine("The user is offline");
-            }
-            else
-            {
-                try
-                {
-                    status = member.Presence.Status switch
-                    {
-                        UserStatus.Online => "Online",
-                        UserStatus.Idle => "Idle",
-                        UserStatus.DoNotDisturb => "Do Not Disturb",
-                        UserStatus.Invisible => "Invisible",
-                        _ => "Unknown (idfk how this happened)",
-                    };
-                }
-
-                //status failsafe 
-                catch (NullReferenceException)
-                {
-                    status = "Error occured when getting status";
-                }
-            }
-
-            embed.AddField("Status", status);
-
-
-            string test = string.Empty;
+            //gets the users roles for the current server and displays them
+            string role = string.Empty;
 
             if (roles.Count() == 0)
             {
@@ -78,10 +47,10 @@ namespace DootBot2.Commands
             {
                 foreach (var userRole in roles)
                 {
-                    test += userRole.Mention + " ";
+                    role += userRole.Mention + " ";
                 }
 
-                embed.AddField("Roles", test);
+                embed.AddField("Roles", role);
             }
 
             //gets the hypesquad the user is a part of
@@ -90,7 +59,7 @@ namespace DootBot2.Commands
             //checks if the mentioned user is a bot
             embed.AddField("Is a Bot?", member.IsBot.ToString());
 
-            //gets< the creation date of the user
+            //gets the creation date of the user
             embed.AddField("Created", member.CreationTimestamp.DateTime.ToLongDateString());
 
             //gets the date in which the user joined the current server
