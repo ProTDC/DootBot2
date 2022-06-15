@@ -52,6 +52,8 @@ namespace DootBot2.Commands
                 Description = movieData.Plot,
                 ImageUrl = movieData.Image,
             };
+            embed.AddField("ID", movieData.Id);
+
             embed.AddField("Director", movieData.Directors);
 
             string actstr = string.Empty;
@@ -60,10 +62,24 @@ namespace DootBot2.Commands
             {
                 actstr += act.Name + ", ";
             }
+
             embed.AddField("Actors", actstr);
 
+            embed.AddField("Writers", movieData.Writers);
+
             embed.AddField("Genres", movieData.Genres);
-            embed.AddField("IMDB ", ratingData.IMDb + "/10");
+
+            embed.AddField("Runtime", movieData.RuntimeStr);
+
+            embed.AddField("Budget", movieData.BoxOffice.Budget);
+
+            embed.AddField("Box office", movieData.BoxOffice.CumulativeWorldwideGross);
+
+            embed.AddField("Rating", movieData.ContentRating);
+
+            embed.AddField("Awards", movieData.Awards);
+
+            embed.AddField("IMDB Rating ", ratingData.IMDb + "/10");
             embed.AddField("Metacritic ", ratingData.Metacritic + "%");
             embed.AddField("Rotten Tomatoes ", ratingData.RottenTomatoes + "%");
 
