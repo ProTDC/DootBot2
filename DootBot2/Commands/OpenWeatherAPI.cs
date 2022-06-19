@@ -8,33 +8,33 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using OpenWeatherMap;
+using Newtonsoft.Json.Linq;
 
 namespace DootBot2.Commands
 {
     class OpenWeatherAPI : BaseCommandModule
     {
+        static readonly HttpClient httpClient = new HttpClient();
+
         [Command("Test")]
         [Description("Displays the weather")]
         public async Task Weather(CommandContext ctx)
         {
             await ctx.TriggerTypingAsync();
 
-            var client = new HttpClient();
-            var request = new HttpRequestMessage
-            {
-                Method = HttpMethod.Get,
-                RequestUri = new Uri("https://community-open-weather-map.p.rapidapi.com/weather?q=London%2Cuk"),
-                Headers =
-    {
-        { "X-RapidAPI-Key", "63c9ed964amsh68af60425a81dc8p1db100jsn132acf8d498f" },
-        { "X-RapidAPI-Host", "community-open-weather-map.p.rapidapi.com" },
-    },
-            };
+            var api_key = "9d188c20db14b2c172229bafe1db9d9c";
+            var city = "Oslo";
+            HttpResponseMessage response = await httpClient.GetAsync($"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}");
+            var content = await response.Content.ReadAsStringAsync();
 
-            using var response = await client.SendAsync(request);
-            response.EnsureSuccessStatusCode();
-            var body = await response.Content.ReadAsStringAsync();
-            await ctx.RespondAsync(body);
+            JObject json = JObject.Parse(content);
+
+            foreach(var e in json)
+            {
+                Console.WriteLine(e);
+            }
+
+            return;
 
         }
     }
