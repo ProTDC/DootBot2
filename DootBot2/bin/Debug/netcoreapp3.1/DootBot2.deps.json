@@ -8,11 +8,11 @@
     ".NETCoreApp,Version=v3.1": {
       "DootBot2/1.0.0": {
         "dependencies": {
-          "DSharpPlus": "4.3.0-nightly-01142",
-          "DSharpPlus.CommandsNext": "4.3.0-nightly-01142",
-          "DSharpPlus.Interactivity": "4.3.0-nightly-01142",
-          "DSharpPlus.Lavalink": "4.3.0-nightly-01142",
-          "DSharpPlus.VoiceNext": "4.3.0-nightly-01142",
+          "DSharpPlus": "4.3.0-nightly-01145",
+          "DSharpPlus.CommandsNext": "4.3.0-nightly-01145",
+          "DSharpPlus.Interactivity": "4.3.0-nightly-01145",
+          "DSharpPlus.Lavalink": "4.3.0-nightly-01145",
+          "DSharpPlus.VoiceNext": "4.3.0-nightly-01145",
           "HtmlAgilityPack": "1.11.43",
           "IMDbApiLib": "1.8.1",
           "Lavalink4NET.DSharpPlus": "2.1.1",
@@ -31,7 +31,7 @@
           }
         }
       },
-      "DSharpPlus/4.3.0-nightly-01142": {
+      "DSharpPlus/4.3.0-nightly-01145": {
         "dependencies": {
           "Emzi0767.Common": "2.6.2",
           "Microsoft.Extensions.Logging.Abstractions": "5.0.0",
@@ -45,56 +45,56 @@
         },
         "runtime": {
           "lib/netstandard2.0/DSharpPlus.dll": {
-            "assemblyVersion": "4.3.0.1142",
-            "fileVersion": "4.3.0.1142"
+            "assemblyVersion": "4.3.0.1145",
+            "fileVersion": "4.3.0.1145"
           }
         }
       },
-      "DSharpPlus.CommandsNext/4.3.0-nightly-01142": {
+      "DSharpPlus.CommandsNext/4.3.0-nightly-01145": {
         "dependencies": {
-          "DSharpPlus": "4.3.0-nightly-01142",
+          "DSharpPlus": "4.3.0-nightly-01145",
           "Microsoft.Extensions.DependencyInjection": "5.0.1"
         },
         "runtime": {
           "lib/netstandard2.0/DSharpPlus.CommandsNext.dll": {
-            "assemblyVersion": "4.3.0.1142",
-            "fileVersion": "4.3.0.1142"
+            "assemblyVersion": "4.3.0.1145",
+            "fileVersion": "4.3.0.1145"
           }
         }
       },
-      "DSharpPlus.Interactivity/4.3.0-nightly-01142": {
+      "DSharpPlus.Interactivity/4.3.0-nightly-01145": {
         "dependencies": {
           "ConcurrentHashSet": "1.1.0",
-          "DSharpPlus": "4.3.0-nightly-01142"
+          "DSharpPlus": "4.3.0-nightly-01145"
         },
         "runtime": {
           "lib/netstandard2.0/DSharpPlus.Interactivity.dll": {
-            "assemblyVersion": "4.3.0.1142",
-            "fileVersion": "4.3.0.1142"
+            "assemblyVersion": "4.3.0.1145",
+            "fileVersion": "4.3.0.1145"
           }
         }
       },
-      "DSharpPlus.Lavalink/4.3.0-nightly-01142": {
+      "DSharpPlus.Lavalink/4.3.0-nightly-01145": {
         "dependencies": {
-          "DSharpPlus": "4.3.0-nightly-01142"
+          "DSharpPlus": "4.3.0-nightly-01145"
         },
         "runtime": {
           "lib/netstandard2.0/DSharpPlus.Lavalink.dll": {
-            "assemblyVersion": "4.3.0.1142",
-            "fileVersion": "4.3.0.1142"
+            "assemblyVersion": "4.3.0.1145",
+            "fileVersion": "4.3.0.1145"
           }
         }
       },
-      "DSharpPlus.VoiceNext/4.3.0-nightly-01142": {
+      "DSharpPlus.VoiceNext/4.3.0-nightly-01145": {
         "dependencies": {
-          "DSharpPlus": "4.3.0-nightly-01142",
+          "DSharpPlus": "4.3.0-nightly-01145",
           "DSharpPlus.VoiceNext.Natives": "1.0.0",
           "System.Threading.Channels": "5.0.0"
         },
         "runtime": {
           "lib/netstandard2.0/DSharpPlus.VoiceNext.dll": {
-            "assemblyVersion": "4.3.0.1142",
-            "fileVersion": "4.3.0.1142"
+            "assemblyVersion": "4.3.0.1145",
+            "fileVersion": "4.3.0.1145"
           }
         }
       },
@@ -169,7 +169,7 @@
       },
       "Lavalink4NET.DSharpPlus/2.1.1": {
         "dependencies": {
-          "DSharpPlus": "4.3.0-nightly-01142",
+          "DSharpPlus": "4.3.0-nightly-01145",
           "Lavalink4NET": "2.1.1"
         },
         "runtime": {
@@ -878,40 +878,40 @@
       "path": "concurrenthashset/1.1.0",
       "hashPath": "concurrenthashset.1.1.0.nupkg.sha512"
     },
-    "DSharpPlus/4.3.0-nightly-01142": {
+    "DSharpPlus/4.3.0-nightly-01145": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-bWC+aHuXssl5obgF8N7Sb8vDJf3I3YPtGfcXM5cE9e1l3tCu4ZHJivSRQD7XoLPjQclODZ5mxITM5ePSOiMJKA==",
-      "path": "dsharpplus/4.3.0-nightly-01142",
-      "hashPath": "dsharpplus.4.3.0-nightly-01142.nupkg.sha512"
+      "sha512": "sha512-9ILnCIRkN70Eejn/Vce40e7pu5squxAsZcvCo7GgdbO1iqxATPUN5BjfjxgSxNkQUUibL2Uh/sTMkIGgDdCWMA==",
+      "path": "dsharpplus/4.3.0-nightly-01145",
+      "hashPath": "dsharpplus.4.3.0-nightly-01145.nupkg.sha512"
     },
-    "DSharpPlus.CommandsNext/4.3.0-nightly-01142": {
+    "DSharpPlus.CommandsNext/4.3.0-nightly-01145": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-wJS3Z20TQT4hDVafDSmRgBHTUsyutwqzf2u45penw5Wtq0xTvBCIZkCduwrnvx1upnPbgzgDvTAr+t7dFThPDQ==",
-      "path": "dsharpplus.commandsnext/4.3.0-nightly-01142",
-      "hashPath": "dsharpplus.commandsnext.4.3.0-nightly-01142.nupkg.sha512"
+      "sha512": "sha512-xtNchZ1pCiS04osdzuZQO2b31mIOZ/xYu8ky+ct7p6+FZTcBtBImIUnQLH8yZ5mMxsxxeGd7HwoYjtPTOX2ErA==",
+      "path": "dsharpplus.commandsnext/4.3.0-nightly-01145",
+      "hashPath": "dsharpplus.commandsnext.4.3.0-nightly-01145.nupkg.sha512"
     },
-    "DSharpPlus.Interactivity/4.3.0-nightly-01142": {
+    "DSharpPlus.Interactivity/4.3.0-nightly-01145": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-jD9r3eIo41hJoVZX3gQK/Sba33f6zmwGtilz8ARubWWfJOrqyTkCl7noinoc7wfqmGNLL6DcOQKKCGM/3ZRudQ==",
-      "path": "dsharpplus.interactivity/4.3.0-nightly-01142",
-      "hashPath": "dsharpplus.interactivity.4.3.0-nightly-01142.nupkg.sha512"
+      "sha512": "sha512-oeHC3RUpd317UbRzDTA8ntQmUwwu9G/a6C5lKLNTPTnB5FCab7vwQVaPRbqzsFrVxXWRFUAMAbs7pMFyH1sHFg==",
+      "path": "dsharpplus.interactivity/4.3.0-nightly-01145",
+      "hashPath": "dsharpplus.interactivity.4.3.0-nightly-01145.nupkg.sha512"
     },
-    "DSharpPlus.Lavalink/4.3.0-nightly-01142": {
+    "DSharpPlus.Lavalink/4.3.0-nightly-01145": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-KoDuOEPPhPyFue0IC4RCwxYsycPoVkv1UAD/zFiYYwcdXWrE+xU53fnKSd6qNDPEjp+e85BqasUKJKE2EcAS5g==",
-      "path": "dsharpplus.lavalink/4.3.0-nightly-01142",
-      "hashPath": "dsharpplus.lavalink.4.3.0-nightly-01142.nupkg.sha512"
+      "sha512": "sha512-9O4tciUQWnJCSWR4ObrpMmXtDBSV+xF614kpu0NB6h+s21cYvXqkfttQ+CXD/k7OkNjBLTMbAtoc7UJ1kdwSKw==",
+      "path": "dsharpplus.lavalink/4.3.0-nightly-01145",
+      "hashPath": "dsharpplus.lavalink.4.3.0-nightly-01145.nupkg.sha512"
     },
-    "DSharpPlus.VoiceNext/4.3.0-nightly-01142": {
+    "DSharpPlus.VoiceNext/4.3.0-nightly-01145": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-AxokEzQCIPPqGp4Mi6d1AzzLpPhYJTEzpqAxHV+7otJV2fQlk/fWJIEkR0AoLfY0a2qC3lHDvMIhbR1IzwB9OA==",
-      "path": "dsharpplus.voicenext/4.3.0-nightly-01142",
-      "hashPath": "dsharpplus.voicenext.4.3.0-nightly-01142.nupkg.sha512"
+      "sha512": "sha512-XJQbrMC99f6eKISgmWhkG0thF4cUgT9pZlaylhI/iH9WrkXIeSkhDqHmwEK2RPcONjwb/ucbkxpoexWVOzGMcg==",
+      "path": "dsharpplus.voicenext/4.3.0-nightly-01145",
+      "hashPath": "dsharpplus.voicenext.4.3.0-nightly-01145.nupkg.sha512"
     },
     "DSharpPlus.VoiceNext.Natives/1.0.0": {
       "type": "package",

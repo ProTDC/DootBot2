@@ -15,7 +15,7 @@ namespace DootBot2.Commands
         static readonly HttpClient httpClient = new HttpClient();
         [Command("Movie")]
         [Description("Displays a movie")]
-        public async Task Movie(CommandContext ctx, params string[] message)
+        public async Task Movies(CommandContext ctx, params string[] message)
         {
             await ctx.TriggerTypingAsync();
 
@@ -62,7 +62,6 @@ namespace DootBot2.Commands
             {
                 actstr += act.Name + ", ";
             }
-
             embed.AddField("Actors", actstr);
 
             embed.AddField("Writers", movieData.Writers);

@@ -7,9 +7,9 @@ using System.Text;
 
 namespace DootBot2.Commands
 {
-    class CustomHelpFormatter : DefaultHelpFormatter
+    class HelpFormatter : DefaultHelpFormatter
     {
-        public CustomHelpFormatter(CommandContext ctx) : base(ctx) { }
+        public HelpFormatter(CommandContext ctx) : base(ctx) { }
 
         public override CommandHelpMessage Build()
         {

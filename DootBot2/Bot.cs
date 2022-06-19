@@ -224,7 +224,7 @@ namespace Dootbot2
 
             Client.UseVoiceNext();
 
-            Commands.SetHelpFormatter<CustomHelpFormatter>();
+            Commands.SetHelpFormatter<HelpFormatter>();
 
             Commands.RegisterCommands<FunCommands>();
             Commands.RegisterCommands<Memes>();
@@ -232,6 +232,7 @@ namespace Dootbot2
             Commands.RegisterCommands<Management>();
             Commands.RegisterCommands<UserCommands>();
             Commands.RegisterCommands<IMDbCommands>();
+            Commands.RegisterCommands<OpenWeatherAPI>();
             //Commands.RegisterCommands<RedditStuff>();
 
             await Client.ConnectAsync();
