@@ -27,7 +27,7 @@ namespace DootBot2.Commands
 
             Console.WriteLine(combinedMessage);
 
-            var key = "k_0w44lid6";
+            var key = API_keys.IMDbKey;
             var title = combinedMessage;
             var type = "SearchTitle";
             HttpResponseMessage response = await httpClient.GetAsync($"http://www.imdb-api.com/en/API/{type}/{key}/{title}");
