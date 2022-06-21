@@ -22,7 +22,7 @@ namespace DootBot2.Commands
         {
             await ctx.TriggerTypingAsync();
 
-            var api_key = "4204d71793361bcaddcc8fae4886012a";
+            var api_key = API_keys.WeatherKey;
             var city = message;
             HttpResponseMessage response = await httpClient.GetAsync($"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}");
             var content = await response.Content.ReadAsStringAsync();
@@ -34,14 +34,27 @@ namespace DootBot2.Commands
                 Console.WriteLine(e);
             }
 
-            var embed = new DiscordEmbedBuilder()
+            if (response.IsSuccessStatusCode == false)
             {
-                Title = json["name"].ToString(),
-                Description = "Country: " + json["sys"]["country"].ToString() 
-            };
-            embed.AddField("Weather", json["weather"][0]["main"].ToString());
+                await ctx.RespondAsync("Please provide a valid city").ConfigureAwait(false);
+                return;
+            }
+            else
+            {
+                var embed = new DiscordEmbedBuilder()
+                {
+                    Title = json["name"].ToString(),
+                    Description = "Country: " + json["sys"]["country"].ToString()
+                };
+                embed.AddField("Weather: " + json["weather"][0]["main"].ToString(), json["weather"][0]["description"].ToString());
+                embed.AddField("Wind", json["wind"]["speed"].ToString() + "m/s");
+                embed.AddField("Humidity", json["main"]["humidity"].ToString() + "%");
+                embed.AddField("Coordinates", $"{json["coord"]["lon"].ToString()}, {json["coord"]["lat"].ToString()}");
 
-            await ctx.RespondAsync(embed).ConfigureAwait(false);
+                await ctx.RespondAsync(embed).ConfigureAwait(false);
+                return;
+            }
+
         }
     }
 }

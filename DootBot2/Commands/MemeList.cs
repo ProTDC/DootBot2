@@ -321,7 +321,18 @@ namespace DootBot2.Commands
        "https://cdn.discordapp.com/attachments/955458213397016596/981797226160459826/real_and_true.mp4",
        "https://cdn.discordapp.com/attachments/775715874623455262/829052047558311936/2pb4v4hhw2r61.jpg",
        "https://cdn.discordapp.com/attachments/326055605963980800/838109317873270864/image0.jpg,",
-       "https://cdn.discordapp.com/attachments/402503641938001943/835115828521205780/hotdog.mp4"
+       "https://cdn.discordapp.com/attachments/402503641938001943/835115828521205780/hotdog.mp4",
+       "https://media.discordapp.net/attachments/484398542539194398/987527751844110366/unknown.png",
+       "https://cdn.discordapp.com/attachments/955511932809510973/986515133842993182/y2mate.com_-_Batman_fortnite_meme_360p.mp4",
+       "https://media.discordapp.net/attachments/484398542539194398/988529836484071494/IMG_1142.png",
+       "https://media.discordapp.net/attachments/956994953727336448/988077893471068180/IMG_4329.jpg?width=468&height=670",
+       "https://cdn.discordapp.com/attachments/956994953727336448/986907238583107614/sick_spins.mp4",
+       "https://media.discordapp.net/attachments/956994953727336448/988096233115619328/IMG_4331.jpg?width=673&height=670",
+       "https://cdn.discordapp.com/attachments/956994953727336448/986937299889692702/californian_air.mp4",
+       "https://media.discordapp.net/attachments/956994953727336448/988043494721478696/IMG_4326.jpg?width=513&height=669",
+       "https://cdn.discordapp.com/attachments/956994953727336448/987250053762670602/IMG_4296.jpg",
+       "https://media.discordapp.net/attachments/956994953727336448/987710449304875048/IMG_4323.png?width=723&height=670",
+       "https://cdn.discordapp.com/attachments/956994953727336448/986878051826671656/redditsave.com_why_it_was_perfect_measure-lgxnyc89le591.mp4"
 
         };
 

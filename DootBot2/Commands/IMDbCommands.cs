@@ -14,7 +14,7 @@ namespace DootBot2.Commands
     {
         static readonly HttpClient httpClient = new HttpClient();
         [Command("Movie")]
-        [Description("Displays a movie")]
+        [Description("Displays information about a movie from IMDb")]
         public async Task Movies(CommandContext ctx, params string[] message)
         {
             await ctx.TriggerTypingAsync();
@@ -24,8 +24,6 @@ namespace DootBot2.Commands
             {
                 combinedMessage += word;
             }
-
-            Console.WriteLine(combinedMessage);
 
             var key = API_keys.IMDbKey;
             var title = combinedMessage;
@@ -46,48 +44,59 @@ namespace DootBot2.Commands
             var ratingData = await apiLib.RatingsAsync(id);
             var movieData = await apiLib.TitleAsync(id);
 
-            var embed = new DiscordEmbedBuilder
+            if (response.IsSuccessStatusCode == false)
             {
-                Title = ratingData.FullTitle,
-                Description = movieData.Plot,
-                ImageUrl = movieData.Image,
-            };
-            embed.AddField("ID", movieData.Id);
-
-            embed.AddField("Director", movieData.Directors);
-
-            string actstr = string.Empty;
-            var acting = movieData.ActorList;
-            foreach (var act in acting)
-            {
-                actstr += act.Name + ", ";
+                await ctx.RespondAsync("Please provide a valid movie").ConfigureAwait(false);
+                return;
             }
-            embed.AddField("Actors", actstr);
+            else
+            {
+                var embed = new DiscordEmbedBuilder
+                {
+                    Title = ratingData.FullTitle,
+                    Description = movieData.Plot,
+                    ImageUrl = movieData.Image,
+                };
+                embed.AddField("ID", movieData.Id);
 
-            embed.AddField("Writers", movieData.Writers);
+                embed.AddField("Director", movieData.Directors);
 
-            embed.AddField("Genres", movieData.Genres);
+                string actstr = string.Empty;
+                var acting = movieData.ActorList;
+                foreach (var act in acting)
+                {
+                    actstr += act.Name + ", ";
+                }
+                embed.AddField("Actors", actstr);
 
-            embed.AddField("Runtime", movieData.RuntimeStr);
+                embed.AddField("Writers", movieData.Writers);
 
-            embed.AddField("Budget", movieData.BoxOffice.Budget);
+                embed.AddField("Genres", movieData.Genres);
 
-            embed.AddField("Box office", movieData.BoxOffice.CumulativeWorldwideGross);
+                embed.AddField("Runtime", movieData.RuntimeStr);
 
-            embed.AddField("Rating", movieData.ContentRating);
+                embed.AddField("Budget", movieData.BoxOffice.Budget);
 
-            embed.AddField("Awards", movieData.Awards);
+                embed.AddField("Box office", movieData.BoxOffice.CumulativeWorldwideGross);
 
-            embed.AddField("IMDB Rating ", ratingData.IMDb + "/10");
-            embed.AddField("Metacritic ", ratingData.Metacritic + "%");
-            embed.AddField("Rotten Tomatoes ", ratingData.RottenTomatoes + "%");
+                embed.AddField("Rating", movieData.ContentRating);
 
-            Console.WriteLine(searchType);
-            Console.WriteLine(expression);
-            Console.WriteLine(results);
-            Console.WriteLine(errorMessage);
-            await ctx.RespondAsync(embed).ConfigureAwait(false);
-            return;
+                embed.AddField("Awards", movieData.Awards);
+
+                embed.AddField("IMDB Rating ", ratingData.IMDb + "/10");
+                embed.AddField("Metacritic ", ratingData.Metacritic + "%");
+                embed.AddField("Rotten Tomatoes ", ratingData.RottenTomatoes + "%");
+
+                await ctx.RespondAsync(embed).ConfigureAwait(false);
+
+                Console.WriteLine(searchType);
+                Console.WriteLine(expression);
+                Console.WriteLine(results);
+                Console.WriteLine(errorMessage);
+                return;
+            }
+
+
         }
     }
 }
