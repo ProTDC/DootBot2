@@ -11,7 +11,7 @@
           "lib/netstandard2.0/ConcurrentCollections.dll": {}
         }
       },
-      "DSharpPlus/4.3.0-nightly-01145": {
+      "DSharpPlus/4.3.0-nightly-01146": {
         "type": "package",
         "dependencies": {
           "Emzi0767.Common": "2.6.2",
@@ -31,10 +31,10 @@
           "lib/netstandard2.0/DSharpPlus.dll": {}
         }
       },
-      "DSharpPlus.CommandsNext/4.3.0-nightly-01145": {
+      "DSharpPlus.CommandsNext/4.3.0-nightly-01146": {
         "type": "package",
         "dependencies": {
-          "DSharpPlus": "4.3.0-nightly-01145",
+          "DSharpPlus": "4.3.0-nightly-01146",
           "Microsoft.Extensions.DependencyInjection": "5.0.1"
         },
         "compile": {
@@ -44,11 +44,11 @@
           "lib/netstandard2.0/DSharpPlus.CommandsNext.dll": {}
         }
       },
-      "DSharpPlus.Interactivity/4.3.0-nightly-01145": {
+      "DSharpPlus.Interactivity/4.3.0-nightly-01146": {
         "type": "package",
         "dependencies": {
           "ConcurrentHashSet": "1.1.0",
-          "DSharpPlus": "4.3.0-nightly-01145"
+          "DSharpPlus": "4.3.0-nightly-01146"
         },
         "compile": {
           "lib/netstandard2.0/DSharpPlus.Interactivity.dll": {}
@@ -57,10 +57,10 @@
           "lib/netstandard2.0/DSharpPlus.Interactivity.dll": {}
         }
       },
-      "DSharpPlus.Lavalink/4.3.0-nightly-01145": {
+      "DSharpPlus.Lavalink/4.3.0-nightly-01146": {
         "type": "package",
         "dependencies": {
-          "DSharpPlus": "4.3.0-nightly-01145"
+          "DSharpPlus": "4.3.0-nightly-01146"
         },
         "compile": {
           "lib/netstandard2.0/DSharpPlus.Lavalink.dll": {}
@@ -69,10 +69,10 @@
           "lib/netstandard2.0/DSharpPlus.Lavalink.dll": {}
         }
       },
-      "DSharpPlus.VoiceNext/4.3.0-nightly-01145": {
+      "DSharpPlus.VoiceNext/4.3.0-nightly-01146": {
         "type": "package",
         "dependencies": {
-          "DSharpPlus": "4.3.0-nightly-01145",
+          "DSharpPlus": "4.3.0-nightly-01146",
           "DSharpPlus.VoiceNext.Natives": "1.0.0",
           "System.Threading.Channels": "5.0.0"
         },
@@ -264,6 +264,20 @@
         },
         "runtime": {
           "lib/netstandard2.0/Reddit.NET.dll": {}
+        }
+      },
+      "Reddit.AuthTokenRetrieverLib/1.5.1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.1",
+          "RestSharp": "106.6.9",
+          "uhttpsharp.Standard": "8.0.30703.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/AuthTokenRetrieverLib.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/AuthTokenRetrieverLib.dll": {}
         }
       },
       "RestSharp/106.6.9": {
@@ -1383,6 +1397,19 @@
         "runtime": {
           "lib/netcoreapp2.0/_._": {}
         }
+      },
+      "uhttpsharp.Standard/8.0.30703.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CSharp": "4.5.0",
+          "Newtonsoft.Json": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/uhttpsharp.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/uhttpsharp.dll": {}
+        }
       }
     }
   },
@@ -1404,71 +1431,71 @@
         "lib/netstandard2.0/ConcurrentCollections.xml"
       ]
     },
-    "DSharpPlus/4.3.0-nightly-01145": {
-      "sha512": "9ILnCIRkN70Eejn/Vce40e7pu5squxAsZcvCo7GgdbO1iqxATPUN5BjfjxgSxNkQUUibL2Uh/sTMkIGgDdCWMA==",
+    "DSharpPlus/4.3.0-nightly-01146": {
+      "sha512": "PiiXuJ+uBC8XEq5PNK0t/foTB/MbWklce2+D3ZstcQ+aT24jfrZyeXy1gekKZvCq/U6cWxTWl+RcVrn9Wq7Jgg==",
       "type": "package",
-      "path": "dsharpplus/4.3.0-nightly-01145",
+      "path": "dsharpplus/4.3.0-nightly-01146",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "dsharpplus.4.3.0-nightly-01145.nupkg.sha512",
+        "dsharpplus.4.3.0-nightly-01146.nupkg.sha512",
         "dsharpplus.nuspec",
         "dsharpplus.png",
         "lib/netstandard2.0/DSharpPlus.dll",
         "lib/netstandard2.0/DSharpPlus.xml"
       ]
     },
-    "DSharpPlus.CommandsNext/4.3.0-nightly-01145": {
-      "sha512": "xtNchZ1pCiS04osdzuZQO2b31mIOZ/xYu8ky+ct7p6+FZTcBtBImIUnQLH8yZ5mMxsxxeGd7HwoYjtPTOX2ErA==",
+    "DSharpPlus.CommandsNext/4.3.0-nightly-01146": {
+      "sha512": "mNgjBa7l69ni5xeaktu09O+XCRVlOzXF6wLNdVqei8Eiv6k6cYLNQ8+n2LCwghrOiq+hp86IGbfViuWWk5IYQw==",
       "type": "package",
-      "path": "dsharpplus.commandsnext/4.3.0-nightly-01145",
+      "path": "dsharpplus.commandsnext/4.3.0-nightly-01146",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "dsharpplus.commandsnext.4.3.0-nightly-01145.nupkg.sha512",
+        "dsharpplus.commandsnext.4.3.0-nightly-01146.nupkg.sha512",
         "dsharpplus.commandsnext.nuspec",
         "dsharpplus.png",
         "lib/netstandard2.0/DSharpPlus.CommandsNext.dll",
         "lib/netstandard2.0/DSharpPlus.CommandsNext.xml"
       ]
     },
-    "DSharpPlus.Interactivity/4.3.0-nightly-01145": {
-      "sha512": "oeHC3RUpd317UbRzDTA8ntQmUwwu9G/a6C5lKLNTPTnB5FCab7vwQVaPRbqzsFrVxXWRFUAMAbs7pMFyH1sHFg==",
+    "DSharpPlus.Interactivity/4.3.0-nightly-01146": {
+      "sha512": "Vdo+6Z1kGxn5OFhIgGhC6Q+Mo2lOpxclQkJgyaO9zH2SZA5m8+Dt893lPb2J76upPz3MSipH4kooV3ffVarNuA==",
       "type": "package",
-      "path": "dsharpplus.interactivity/4.3.0-nightly-01145",
+      "path": "dsharpplus.interactivity/4.3.0-nightly-01146",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "dsharpplus.interactivity.4.3.0-nightly-01145.nupkg.sha512",
+        "dsharpplus.interactivity.4.3.0-nightly-01146.nupkg.sha512",
         "dsharpplus.interactivity.nuspec",
         "dsharpplus.png",
         "lib/netstandard2.0/DSharpPlus.Interactivity.dll",
         "lib/netstandard2.0/DSharpPlus.Interactivity.xml"
       ]
     },
-    "DSharpPlus.Lavalink/4.3.0-nightly-01145": {
-      "sha512": "9O4tciUQWnJCSWR4ObrpMmXtDBSV+xF614kpu0NB6h+s21cYvXqkfttQ+CXD/k7OkNjBLTMbAtoc7UJ1kdwSKw==",
+    "DSharpPlus.Lavalink/4.3.0-nightly-01146": {
+      "sha512": "iIb0n/m/WjGdPzf267kpIfJsJkRQWVgu/OKyfgehKza3hfyQd7bV/NMUaj+kczPe3QMlSFQ8cLEsYWXaj9spKg==",
       "type": "package",
-      "path": "dsharpplus.lavalink/4.3.0-nightly-01145",
+      "path": "dsharpplus.lavalink/4.3.0-nightly-01146",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "dsharpplus.lavalink.4.3.0-nightly-01145.nupkg.sha512",
+        "dsharpplus.lavalink.4.3.0-nightly-01146.nupkg.sha512",
         "dsharpplus.lavalink.nuspec",
         "dsharpplus.png",
         "lib/netstandard2.0/DSharpPlus.Lavalink.dll",
         "lib/netstandard2.0/DSharpPlus.Lavalink.xml"
       ]
     },
-    "DSharpPlus.VoiceNext/4.3.0-nightly-01145": {
-      "sha512": "XJQbrMC99f6eKISgmWhkG0thF4cUgT9pZlaylhI/iH9WrkXIeSkhDqHmwEK2RPcONjwb/ucbkxpoexWVOzGMcg==",
+    "DSharpPlus.VoiceNext/4.3.0-nightly-01146": {
+      "sha512": "uB9kTQBhdGfAzWLPMA5VxP/jT3M03qjMtW61/vkdcpMKwHBCwzblybP9Usqj1oloZHVi1bVqNXPENzIU+hQbhA==",
       "type": "package",
-      "path": "dsharpplus.voicenext/4.3.0-nightly-01145",
+      "path": "dsharpplus.voicenext/4.3.0-nightly-01146",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "dsharpplus.png",
-        "dsharpplus.voicenext.4.3.0-nightly-01145.nupkg.sha512",
+        "dsharpplus.voicenext.4.3.0-nightly-01146.nupkg.sha512",
         "dsharpplus.voicenext.nuspec",
         "lib/netstandard2.0/DSharpPlus.VoiceNext.dll",
         "lib/netstandard2.0/DSharpPlus.VoiceNext.xml"
@@ -1850,6 +1877,18 @@
         "lib/netstandard2.0/Reddit.NET.xml",
         "reddit.1.5.0.nupkg.sha512",
         "reddit.nuspec"
+      ]
+    },
+    "Reddit.AuthTokenRetrieverLib/1.5.1": {
+      "sha512": "xcDwFV+vRvbAXHfYMsAmOMzTfm5jgSX433fq7LeWAnsv+1WoLznAWveA58Mg5QKHwk+2K3OFd1py1J7uffAKsw==",
+      "type": "package",
+      "path": "reddit.authtokenretrieverlib/1.5.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/AuthTokenRetrieverLib.dll",
+        "reddit.authtokenretrieverlib.1.5.1.nupkg.sha512",
+        "reddit.authtokenretrieverlib.nuspec"
       ]
     },
     "RestSharp/106.6.9": {
@@ -4764,20 +4803,34 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "uhttpsharp.Standard/8.0.30703.1": {
+      "sha512": "37cm93avVmnSH8n8W2YzXyhS0U4rfyAwTvwxSEeWp+uvsdegfCpK8gf7apENUymCgNnBbrYPRNsww84pM2dWKw==",
+      "type": "package",
+      "path": "uhttpsharp.standard/8.0.30703.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "lib/netstandard2.0/uhttpsharp.dll",
+        "uhttpsharp.standard.8.0.30703.1.nupkg.sha512",
+        "uhttpsharp.standard.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "DSharpPlus >= 4.3.0-nightly-01145",
-      "DSharpPlus.CommandsNext >= 4.3.0-nightly-01145",
-      "DSharpPlus.Interactivity >= 4.3.0-nightly-01145",
-      "DSharpPlus.Lavalink >= 4.3.0-nightly-01145",
-      "DSharpPlus.VoiceNext >= 4.3.0-nightly-01145",
+      "DSharpPlus >= 4.3.0-nightly-01146",
+      "DSharpPlus.CommandsNext >= 4.3.0-nightly-01146",
+      "DSharpPlus.Interactivity >= 4.3.0-nightly-01146",
+      "DSharpPlus.Lavalink >= 4.3.0-nightly-01146",
+      "DSharpPlus.VoiceNext >= 4.3.0-nightly-01146",
       "HtmlAgilityPack >= 1.11.43",
       "IMDbApiLib >= 1.8.1",
       "Lavalink4NET.DSharpPlus >= 2.1.1",
       "OpenWeatherMap >= 1.1.0",
-      "Reddit >= 1.5.0"
+      "Reddit >= 1.5.0",
+      "Reddit.AuthTokenRetrieverLib >= 1.5.1"
     ]
   },
   "packageFolders": {
@@ -4807,7 +4860,7 @@
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {},
-        "https://www.nuget.org/packages/DSharpPlus/4.3.0-nightly-01135": {}
+        "https://www.nuget.org/packages/Microsoft.NETCore.App/2.1.0": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
@@ -4827,23 +4880,23 @@
         "dependencies": {
           "DSharpPlus": {
             "target": "Package",
-            "version": "[4.3.0-nightly-01145, )"
+            "version": "[4.3.0-nightly-01146, )"
           },
           "DSharpPlus.CommandsNext": {
             "target": "Package",
-            "version": "[4.3.0-nightly-01145, )"
+            "version": "[4.3.0-nightly-01146, )"
           },
           "DSharpPlus.Interactivity": {
             "target": "Package",
-            "version": "[4.3.0-nightly-01145, )"
+            "version": "[4.3.0-nightly-01146, )"
           },
           "DSharpPlus.Lavalink": {
             "target": "Package",
-            "version": "[4.3.0-nightly-01145, )"
+            "version": "[4.3.0-nightly-01146, )"
           },
           "DSharpPlus.VoiceNext": {
             "target": "Package",
-            "version": "[4.3.0-nightly-01145, )"
+            "version": "[4.3.0-nightly-01146, )"
           },
           "HtmlAgilityPack": {
             "target": "Package",
@@ -4864,6 +4917,10 @@
           "Reddit": {
             "target": "Package",
             "version": "[1.5.0, )"
+          },
+          "Reddit.AuthTokenRetrieverLib": {
+            "target": "Package",
+            "version": "[1.5.1, )"
           }
         },
         "imports": [

@@ -39,3 +39,5 @@ C:\Users\protd\source\repos\DootBot2\DootBot2\bin\Debug\netcoreapp3.1\Lavalink4N
 C:\Users\protd\source\repos\DootBot2\DootBot2\bin\Debug\netcoreapp3.1\Lavalink4NET.DSharpPlus.dll
 C:\Users\protd\source\repos\DootBot2\DootBot2\bin\Debug\netcoreapp3.1\IMDbApiLib.dll
 C:\Users\protd\source\repos\DootBot2\DootBot2\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
+C:\Users\protd\source\repos\DootBot2\DootBot2\bin\Debug\netcoreapp3.1\AuthTokenRetrieverLib.dll
+C:\Users\protd\source\repos\DootBot2\DootBot2\bin\Debug\netcoreapp3.1\uhttpsharp.dll

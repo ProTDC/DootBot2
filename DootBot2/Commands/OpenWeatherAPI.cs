@@ -47,7 +47,7 @@ namespace DootBot2.Commands
                     Description = "Country: " + json["sys"]["country"].ToString()
                 };
                 embed.AddField("Weather: " + json["weather"][0]["main"].ToString(), json["weather"][0]["description"].ToString());
-                embed.AddField("Wind", json["wind"]["speed"].ToString() + "m/s");
+                embed.AddField("Wind", json["wind"]["speed"].ToString() + " m/s");
                 embed.AddField("Humidity", json["main"]["humidity"].ToString() + "%");
                 embed.AddField("Coordinates", $"{json["coord"]["lon"].ToString()}, {json["coord"]["lat"].ToString()}");
 

@@ -207,6 +207,7 @@ namespace Dootbot2
                 else
                 {
                     await e.Channel.TriggerTypingAsync();
+
                     await e.Message.RespondAsync($"{e.Message.Author.Mention} Edited this message, the original content was: {e.MessageBefore.Content}").ConfigureAwait(false);
                     return;
                 }
@@ -233,7 +234,7 @@ namespace Dootbot2
             Commands.RegisterCommands<UserCommands>();
             Commands.RegisterCommands<IMDbCommands>();
             Commands.RegisterCommands<OpenWeatherAPI>();
-            //Commands.RegisterCommands<RedditStuff>();
+            Commands.RegisterCommands<RedditStuff>();
 
             await Client.ConnectAsync();
             await Task.Delay(-1);

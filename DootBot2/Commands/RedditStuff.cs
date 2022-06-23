@@ -7,19 +7,35 @@ using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using Reddit;
+using Reddit.Controllers;
+using Reddit.Controllers.EventArgs;
 
 namespace DootBot2.Commands
 {
     class RedditStuff : BaseCommandModule
     {
-        //public RedditClient Reddit { get; private set;}
+        [Command("Cats")]
+        [Description("Cats")]
+        public async Task Reddit(CommandContext ctx)
+        {
+            await ctx.TriggerTypingAsync();
 
-        //[Command("Cats")]
-        //[Description("Displays a picture of a cat")]
-        //public async Task Cats(CommandContext ctx)
-        //{
-        //    var cats = Reddit.subre
-        //    await ctx.Channel.SendMessageAsync().ConfigureAwait(false);
-        //}
+            var reddit = new RedditClient(appId: API_keys.redditAppID, appSecret: API_keys.redditAppSecret, refreshToken: API_keys.redditRefreshToken);
+
+            var postStr = "";
+            var cats = reddit.Subreddit("cats").About();
+            var catposts = cats.Posts.Top;
+
+            foreach (var posts in catposts)
+            {
+                postStr += posts;
+            }
+
+            Console.WriteLine(catposts);
+
+            await ctx.RespondAsync("Command Worked!").ConfigureAwait(false);
+
+        }
+
     }
 }
