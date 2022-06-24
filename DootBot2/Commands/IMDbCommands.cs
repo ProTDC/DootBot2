@@ -117,11 +117,6 @@ namespace DootBot2.Commands
 
             var array = content.Replace("{", "").Replace("}", "").Split(",");
 
-            var searchType = array[0];
-            var expression = array[1];
-            var results = array[2];
-            var errorMessage = array[3];
-
             var id = content.Split("id\":\"")[1].Split("\"")[0];
 
             var apiLib = new ApiLib(key);
@@ -144,7 +139,7 @@ namespace DootBot2.Commands
             embed.AddField("Metacritic", ratingData.RottenTomatoes + "%");
 
             await ctx.RespondAsync(embed).ConfigureAwait(false);
-
+            
             //Console.WriteLine(searchType);
             //Console.WriteLine(expression);
             //Console.WriteLine(results);
