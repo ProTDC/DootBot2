@@ -19,7 +19,6 @@ namespace DootBot2.Commands
             int index = random.Next(memelist.meamea.Count);
 
             await ctx.RespondAsync(memelist.meamea[index]).ConfigureAwait(false);
-            Console.WriteLine("Command worked");
             return;
         }
 
