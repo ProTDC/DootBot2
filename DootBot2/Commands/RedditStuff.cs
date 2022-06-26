@@ -26,7 +26,7 @@ namespace DootBot2.Commands
             var url = new List<string> { "" };
 
             IDictionary<string, IList<Post>> Posts = new Dictionary<string, IList<Post>>();
-            foreach (Post post in reddit.Subreddit("cats").Posts.New)
+            foreach (Post post in reddit.Subreddit("cats").Posts.Top)
             {
                 if (!Posts.ContainsKey(post.Subreddit))
                 {
@@ -34,15 +34,13 @@ namespace DootBot2.Commands
                 }
                 Posts[post.Subreddit].Add(post);
 
-                url.Add(post.Listing.URL + " ");
+                url.Add(post.Listing.Thumbnail + " ");
             }
 
             int index = random.Next(url.Count);
             Console.WriteLine(url[index]);
 
             await ctx.RespondAsync(url[index]).ConfigureAwait(false);
-
-
         }
 
     }
