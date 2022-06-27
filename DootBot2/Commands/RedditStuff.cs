@@ -39,9 +39,11 @@ namespace DootBot2.Commands
             }
 
             int index = random.Next(url.Count);
-            var final = url[index];
+            string urlString = url[index];
+            var json = JObject.Parse(urlString);
 
-            Console.WriteLine(final);
+            await ctx.RespondAsync(json["images"][0]["source"]["url"].ToString()).ConfigureAwait(false);
+
         }
 
     }
