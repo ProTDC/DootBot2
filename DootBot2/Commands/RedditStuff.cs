@@ -18,8 +18,8 @@ namespace DootBot2.Commands
     {
         [Command("Cats")]
         [Aliases("Cat")]
-        [Description("Displays a picture of cats picked from r/cats")]
-        public async Task Reddit(CommandContext ctx)
+        [Description("Displays a picture of cats picked from r/catpics")]
+        public async Task Cat(CommandContext ctx)
         {
             await ctx.TriggerTypingAsync();
 
@@ -28,7 +28,7 @@ namespace DootBot2.Commands
             var url = new List<string> { "" };
 
             IDictionary<string, IList<Post>> Posts = new Dictionary<string, IList<Post>>();
-            foreach (Post post in reddit.Subreddit("cats").Posts.Top)
+            foreach (Post post in reddit.Subreddit("catpics").Posts.Top)
             {
                 if (!Posts.ContainsKey(post.Subreddit))
                 {
@@ -46,9 +46,10 @@ namespace DootBot2.Commands
             await ctx.RespondAsync(json["images"][0]["source"]["url"].ToString()).ConfigureAwait(false);
         }
 
-        [Command("Test")]
-        [Description("This is a test")]
-        public async Task Test(CommandContext ctx)
+        [Command("Dogs")]
+        [Aliases("Dog")]
+        [Description("Displays a picture of dog picked from r/dogpictures")]
+        public async Task Dog(CommandContext ctx)
         {
             await ctx.TriggerTypingAsync();
 
@@ -57,7 +58,7 @@ namespace DootBot2.Commands
             var url = new List<string> { "" };
 
             IDictionary<string, IList<Post>> Posts = new Dictionary<string, IList<Post>>();
-            foreach (Post post in reddit.Subreddit("whenthe").Posts.Top)
+            foreach (Post post in reddit.Subreddit("dogpictures").Posts.Top)
             {
                 if (!Posts.ContainsKey(post.Subreddit))
                 {
@@ -72,12 +73,9 @@ namespace DootBot2.Commands
             string urlString = url[index];
             var json = JObject.Parse(urlString);
 
-            var gif = json["images"][0]["variants"]["gif"]["source"]["url"];
-
-            //Console.WriteLine(json["images"][0]["variants"]["mp4"].ToString());
-
-            await ctx.RespondAsync(gif.ToString()).ConfigureAwait(false);
+            await ctx.RespondAsync(json["images"][0]["source"]["url"].ToString()).ConfigureAwait(false);
         }
+
 
     }
 }
