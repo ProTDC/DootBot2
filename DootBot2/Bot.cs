@@ -162,14 +162,6 @@ namespace Dootbot2
                     return;
                 }
 
-                //if (e.Message.Content.ToLower().Contains("wa"))
-                //{
-                //    await e.Channel.TriggerTypingAsync();
-
-                //    await e.Message.RespondAsync("Wa").ConfigureAwait(false);
-                //    return;
-                //}
-
                 if (e.Message.Content.ToLower().Contains("bitch"))
                 {
                     await e.Channel.TriggerTypingAsync();

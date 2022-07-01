@@ -26,9 +26,9 @@ namespace DootBot2.Commands
             Random rand = new Random();
 
             if (rand.Next() > (Int32.MaxValue / 2))
-                await ctx.Channel.SendMessageAsync("https://cdn.discordapp.com/attachments/424874562082045962/811358442786390056/Motivational_Lizard.mp4").ConfigureAwait(false);
+                await ctx.RespondAsync("https://cdn.discordapp.com/attachments/424874562082045962/811358442786390056/Motivational_Lizard.mp4").ConfigureAwait(false);
             else
-                await ctx.Channel.SendMessageAsync("https://cdn.discordapp.com/attachments/967031855985590383/971717012978036796/kys.mov").ConfigureAwait(false);
+                await ctx.RespondAsync("https://cdn.discordapp.com/attachments/967031855985590383/971717012978036796/kys.mov").ConfigureAwait(false);
             return;
         }
 
@@ -39,7 +39,7 @@ namespace DootBot2.Commands
         {
             await ctx.Channel.TriggerTypingAsync();
 
-            await ctx.Channel.SendMessageAsync("https://cdn.discordapp.com/attachments/634063767466147840/971711431902908496/trim.E9946223-78D6-454C-867F-627BBF29429B.mov").ConfigureAwait(false);
+            await ctx.RespondAsync("https://cdn.discordapp.com/attachments/634063767466147840/971711431902908496/trim.E9946223-78D6-454C-867F-627BBF29429B.mov").ConfigureAwait(false);
             return;
         }
 
@@ -56,7 +56,7 @@ namespace DootBot2.Commands
 
             foreach (var content in datalist)
             {
-                await ctx.Channel.SendMessageAsync(content.InnerText).ConfigureAwait(false);
+                await ctx.RespondAsync(content.InnerText).ConfigureAwait(false);
             }
             return;
         }
@@ -67,7 +67,7 @@ namespace DootBot2.Commands
         {
             await ctx.Channel.TriggerTypingAsync();
 
-            await ctx.Channel.SendMessageAsync("No").ConfigureAwait(false);
+            await ctx.RespondAsync("No").ConfigureAwait(false);
         }
 
         [Command("RPS")]
@@ -76,7 +76,7 @@ namespace DootBot2.Commands
         {
             var interactivity = ctx.Client.GetInteractivity();
 
-            await ctx.Channel.SendMessageAsync("Respond with either Rock, Paper or Scissors").ConfigureAwait(false);
+            await ctx.RespondAsync("Respond with either Rock, Paper or Scissors").ConfigureAwait(false);
 
             var message = await interactivity.WaitForMessageAsync(x => x.Channel == ctx.Channel).ConfigureAwait(false);
 
@@ -87,26 +87,26 @@ namespace DootBot2.Commands
             {
                 if (message.Result.Content.ToLower().Contains("rock")) 
                 {
-                    await ctx.Channel.SendMessageAsync("i chose Rock");
-                    await ctx.Channel.SendMessageAsync("its a tie");
+                    await ctx.RespondAsync("i chose Rock");
+                    await ctx.RespondAsync("its a tie");
                     return;
                 }
 
                 else if (message.Result.Content.ToLower().Contains("paper"))
                 {
-                    await ctx.Channel.SendMessageAsync("i chose Paper");
-                    await ctx.Channel.SendMessageAsync("Its a tie ");
+                    await ctx.RespondAsync("i chose Paper");
+                    await ctx.RespondAsync("Its a tie ");
                     return;
                 }
                 else if (message.Result.Content.ToLower().Contains("scissors"))
                 {
-                    await ctx.Channel.SendMessageAsync("i chose Scissors");
-                    await ctx.Channel.SendMessageAsync("Its a tie ");
+                    await ctx.RespondAsync("i chose Scissors");
+                    await ctx.RespondAsync("Its a tie ");
                     return;
                 }
                 else
                 {
-                    await ctx.Channel.SendMessageAsync("You must choose Rock, Paper or Scissors! Please try again!");
+                    await ctx.RespondAsync("You must choose Rock, Paper or Scissors! Please try again!");
                 }
             };
 
@@ -114,27 +114,27 @@ namespace DootBot2.Commands
             {
                 if (message.Result.Content.ToLower().Contains("rock"))
                 {
-                    await ctx.Channel.SendMessageAsync("i chose Paper");
-                    await ctx.Channel.SendMessageAsync("You lose dumbass");
+                    await ctx.RespondAsync("i chose Paper");
+                    await ctx.RespondAsync("You lose dumbass");
                     return;
                 }
 
                 else if (message.Result.Content.ToLower().Contains("paper"))
                 {
-                    await ctx.Channel.SendMessageAsync("i chose Scissors");
-                    await ctx.Channel.SendMessageAsync("You lose dumbass");
+                    await ctx.RespondAsync("i chose Scissors");
+                    await ctx.RespondAsync("You lose dumbass");
                     return;
 
                 }
                 else if (message.Result.Content.ToLower().Contains("scissors"))
                 {
-                    await ctx.Channel.SendMessageAsync("i chose Rock");
-                    await ctx.Channel.SendMessageAsync("you lose dumbass");
+                    await ctx.RespondAsync("i chose Rock");
+                    await ctx.RespondAsync("you lose dumbass");
                     return;
                 }
                 else
                 {
-                    await ctx.Channel.SendMessageAsync("You must choose Rock, Paper or Scissors! Please try again!");
+                    await ctx.RespondAsync("You must choose Rock, Paper or Scissors! Please try again!");
                 }
             };
 
@@ -142,28 +142,28 @@ namespace DootBot2.Commands
             {
                 if (message.Result.Content.ToLower().Contains("rock"))
                 {
-                    await ctx.Channel.SendMessageAsync("i chose scissors");
-                    await ctx.Channel.SendMessageAsync("God fucking damn it you won");
+                    await ctx.RespondAsync("i chose scissors");
+                    await ctx.RespondAsync("God fucking damn it you won");
                     return;
                 }
 
 
                 else if (message.Result.Content.ToLower().Contains("paper"))
                 {
-                    await ctx.Channel.SendMessageAsync("i chose Rock");
-                    await ctx.Channel.SendMessageAsync("God fucking damn it you won");
+                    await ctx.RespondAsync("i chose Rock");
+                    await ctx.RespondAsync("God fucking damn it you won");
                     return;
 
                 }
                 else if (message.Result.Content.ToLower().Contains ("scissors"))
                 {
-                    await ctx.Channel.SendMessageAsync("i chose Paper");
-                    await ctx.Channel.SendMessageAsync("God fucking damn it you won");
+                    await ctx.RespondAsync("i chose Paper");
+                    await ctx.RespondAsync("God fucking damn it you won");
                     return;
                 }
                 else
                 {
-                    await ctx.Channel.SendMessageAsync("You must choose Rock, Paper or Scissors! Please try again!");
+                    await ctx.RespondAsync("You must choose Rock, Paper or Scissors! Please try again!");
                 }
             };
         }
@@ -182,7 +182,7 @@ namespace DootBot2.Commands
                 Description = string.Join("", options)
             };
 
-            var pollMessage = await ctx.Channel.SendMessageAsync(embed: embed).ConfigureAwait(false);
+            var pollMessage = await ctx.RespondAsync(embed: embed).ConfigureAwait(false);
 
             foreach (DiscordEmoji option in emojiOptions)
             {
@@ -194,7 +194,7 @@ namespace DootBot2.Commands
             var results = distinctResult.Select(x => $"{x.Emoji}: {x.Total}");
 
 
-            await ctx.Channel.SendMessageAsync(string.Join("\n", results)).ConfigureAwait(false);
+            await ctx.RespondAsync(string.Join("\n", results)).ConfigureAwait(false);
         }
 
         [Hidden]

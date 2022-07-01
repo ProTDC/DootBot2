@@ -12,7 +12,7 @@ namespace DootBot2.Commands
     class Management : BaseCommandModule
     {
         [Hidden]
-        [Command("setact")]
+        [Command("s")]
         private async Task Setact(CommandContext ctx)
         {
             if (ctx.User.Id == 461446979155918859)
@@ -21,7 +21,7 @@ namespace DootBot2.Commands
 
                 DiscordActivity activity = new DiscordActivity();
                 DiscordClient discord = ctx.Client;
-                string input = "Doot";
+                string input = $"Currently in {discord.Guilds.Count()} servers";
                 activity.Name = input;
                 await discord.UpdateStatusAsync(activity);
                 await ctx.Channel.SendMessageAsync("https://media.discordapp.net/attachments/956994953727336448/980798142343675934/unknown.png").ConfigureAwait(false);
