@@ -88,6 +88,10 @@
             "Reddit.AuthTokenRetrieverLib": {
               "target": "Package",
               "version": "[1.5.1, )"
+            },
+            "SteamWebAPI2": {
+              "target": "Package",
+              "version": "[4.3.2, )"
             }
           },
           "imports": [

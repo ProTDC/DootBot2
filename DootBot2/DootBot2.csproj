@@ -17,6 +17,7 @@
     <PackageReference Include="OpenWeatherMap" Version="1.1.0" />
     <PackageReference Include="Reddit" Version="1.5.0" />
     <PackageReference Include="Reddit.AuthTokenRetrieverLib" Version="1.5.1" />
+    <PackageReference Include="SteamWebAPI2" Version="4.3.2" />
   </ItemGroup>
 
   <ItemGroup>

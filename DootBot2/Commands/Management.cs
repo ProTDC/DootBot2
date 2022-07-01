@@ -21,7 +21,7 @@ namespace DootBot2.Commands
 
                 DiscordActivity activity = new DiscordActivity();
                 DiscordClient discord = ctx.Client;
-                string input = $"Currently in {discord.Guilds.Count()} servers";
+                string input = $"Doot || {discord.Guilds.Count()} Guilds";
                 activity.Name = input;
                 await discord.UpdateStatusAsync(activity);
                 await ctx.Channel.SendMessageAsync("https://media.discordapp.net/attachments/956994953727336448/980798142343675934/unknown.png").ConfigureAwait(false);
