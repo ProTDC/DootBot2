@@ -47,23 +47,23 @@
           "dependencies": {
             "DSharpPlus": {
               "target": "Package",
-              "version": "[4.3.0-nightly-01146, )"
+              "version": "[4.3.0-nightly-01151, )"
             },
             "DSharpPlus.CommandsNext": {
               "target": "Package",
-              "version": "[4.3.0-nightly-01146, )"
+              "version": "[4.3.0-nightly-01151, )"
             },
             "DSharpPlus.Interactivity": {
               "target": "Package",
-              "version": "[4.3.0-nightly-01146, )"
+              "version": "[4.3.0-nightly-01151, )"
             },
             "DSharpPlus.Lavalink": {
               "target": "Package",
-              "version": "[4.3.0-nightly-01146, )"
+              "version": "[4.3.0-nightly-01151, )"
             },
             "DSharpPlus.VoiceNext": {
               "target": "Package",
-              "version": "[4.3.0-nightly-01146, )"
+              "version": "[4.3.0-nightly-01151, )"
             },
             "HtmlAgilityPack": {
               "target": "Package",
@@ -75,7 +75,7 @@
             },
             "Lavalink4NET.DSharpPlus": {
               "target": "Package",
-              "version": "[2.1.1, )"
+              "version": "[3.0.0-preview.10, )"
             },
             "OpenWeatherMap": {
               "target": "Package",
@@ -83,11 +83,11 @@
             },
             "Reddit": {
               "target": "Package",
-              "version": "[1.5.0, )"
+              "version": "[1.5.2, )"
             },
             "Reddit.AuthTokenRetrieverLib": {
               "target": "Package",
-              "version": "[1.5.1, )"
+              "version": "[1.5.2, )"
             },
             "SteamWebAPI2": {
               "target": "Package",

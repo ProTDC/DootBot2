@@ -8,17 +8,17 @@
     ".NETCoreApp,Version=v3.1": {
       "DootBot2/1.0.0": {
         "dependencies": {
-          "DSharpPlus": "4.3.0-nightly-01146",
-          "DSharpPlus.CommandsNext": "4.3.0-nightly-01146",
-          "DSharpPlus.Interactivity": "4.3.0-nightly-01146",
-          "DSharpPlus.Lavalink": "4.3.0-nightly-01146",
-          "DSharpPlus.VoiceNext": "4.3.0-nightly-01146",
+          "DSharpPlus": "4.3.0-nightly-01151",
+          "DSharpPlus.CommandsNext": "4.3.0-nightly-01151",
+          "DSharpPlus.Interactivity": "4.3.0-nightly-01151",
+          "DSharpPlus.Lavalink": "4.3.0-nightly-01151",
+          "DSharpPlus.VoiceNext": "4.3.0-nightly-01151",
           "HtmlAgilityPack": "1.11.43",
           "IMDbApiLib": "1.8.1",
-          "Lavalink4NET.DSharpPlus": "2.1.1",
+          "Lavalink4NET.DSharpPlus": "3.0.0-preview.10",
           "OpenWeatherMap": "1.1.0",
-          "Reddit": "1.5.0",
-          "Reddit.AuthTokenRetrieverLib": "1.5.1",
+          "Reddit": "1.5.2",
+          "Reddit.AuthTokenRetrieverLib": "1.5.2",
           "SteamWebAPI2": "4.3.2"
         },
         "runtime": {
@@ -45,7 +45,7 @@
           }
         }
       },
-      "DSharpPlus/4.3.0-nightly-01146": {
+      "DSharpPlus/4.3.0-nightly-01151": {
         "dependencies": {
           "Emzi0767.Common": "2.6.2",
           "Microsoft.Extensions.Logging.Abstractions": "5.0.0",
@@ -59,56 +59,56 @@
         },
         "runtime": {
           "lib/netstandard2.0/DSharpPlus.dll": {
-            "assemblyVersion": "4.3.0.1146",
-            "fileVersion": "4.3.0.1146"
+            "assemblyVersion": "4.3.0.1151",
+            "fileVersion": "4.3.0.1151"
           }
         }
       },
-      "DSharpPlus.CommandsNext/4.3.0-nightly-01146": {
+      "DSharpPlus.CommandsNext/4.3.0-nightly-01151": {
         "dependencies": {
-          "DSharpPlus": "4.3.0-nightly-01146",
+          "DSharpPlus": "4.3.0-nightly-01151",
           "Microsoft.Extensions.DependencyInjection": "5.0.1"
         },
         "runtime": {
           "lib/netstandard2.0/DSharpPlus.CommandsNext.dll": {
-            "assemblyVersion": "4.3.0.1146",
-            "fileVersion": "4.3.0.1146"
+            "assemblyVersion": "4.3.0.1151",
+            "fileVersion": "4.3.0.1151"
           }
         }
       },
-      "DSharpPlus.Interactivity/4.3.0-nightly-01146": {
+      "DSharpPlus.Interactivity/4.3.0-nightly-01151": {
         "dependencies": {
           "ConcurrentHashSet": "1.1.0",
-          "DSharpPlus": "4.3.0-nightly-01146"
+          "DSharpPlus": "4.3.0-nightly-01151"
         },
         "runtime": {
           "lib/netstandard2.0/DSharpPlus.Interactivity.dll": {
-            "assemblyVersion": "4.3.0.1146",
-            "fileVersion": "4.3.0.1146"
+            "assemblyVersion": "4.3.0.1151",
+            "fileVersion": "4.3.0.1151"
           }
         }
       },
-      "DSharpPlus.Lavalink/4.3.0-nightly-01146": {
+      "DSharpPlus.Lavalink/4.3.0-nightly-01151": {
         "dependencies": {
-          "DSharpPlus": "4.3.0-nightly-01146"
+          "DSharpPlus": "4.3.0-nightly-01151"
         },
         "runtime": {
           "lib/netstandard2.0/DSharpPlus.Lavalink.dll": {
-            "assemblyVersion": "4.3.0.1146",
-            "fileVersion": "4.3.0.1146"
+            "assemblyVersion": "4.3.0.1151",
+            "fileVersion": "4.3.0.1151"
           }
         }
       },
-      "DSharpPlus.VoiceNext/4.3.0-nightly-01146": {
+      "DSharpPlus.VoiceNext/4.3.0-nightly-01151": {
         "dependencies": {
-          "DSharpPlus": "4.3.0-nightly-01146",
+          "DSharpPlus": "4.3.0-nightly-01151",
           "DSharpPlus.VoiceNext.Natives": "1.0.0",
           "System.Threading.Channels": "5.0.0"
         },
         "runtime": {
           "lib/netstandard2.0/DSharpPlus.VoiceNext.dll": {
-            "assemblyVersion": "4.3.0.1146",
-            "fileVersion": "4.3.0.1146"
+            "assemblyVersion": "4.3.0.1151",
+            "fileVersion": "4.3.0.1151"
           }
         }
       },
@@ -140,7 +140,7 @@
         "dependencies": {
           "System.Collections.Immutable": "5.0.0",
           "System.Memory": "4.5.4",
-          "System.Runtime.CompilerServices.Unsafe": "5.0.0",
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0",
           "System.ValueTuple": "4.5.0"
         },
         "runtime": {
@@ -170,26 +170,26 @@
           }
         }
       },
-      "Lavalink4NET/2.1.1": {
+      "Lavalink4NET/3.0.0-preview.10": {
         "dependencies": {
-          "Newtonsoft.Json": "13.0.1"
+          "System.Net.Http.Json": "6.0.0"
         },
         "runtime": {
           "lib/netstandard2.1/Lavalink4NET.dll": {
-            "assemblyVersion": "2.1.1.0",
-            "fileVersion": "2.1.1.0"
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.0.0.0"
           }
         }
       },
-      "Lavalink4NET.DSharpPlus/2.1.1": {
+      "Lavalink4NET.DSharpPlus/3.0.0-preview.10": {
         "dependencies": {
-          "DSharpPlus": "4.3.0-nightly-01146",
-          "Lavalink4NET": "2.1.1"
+          "DSharpPlus": "4.3.0-nightly-01151",
+          "Lavalink4NET": "3.0.0-preview.10"
         },
         "runtime": {
           "lib/netstandard2.1/Lavalink4NET.DSharpPlus.dll": {
-            "assemblyVersion": "2.1.1.0",
-            "fileVersion": "2.1.1.0"
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.0.0.0"
           }
         }
       },
@@ -266,7 +266,7 @@
           }
         }
       },
-      "Reddit/1.5.0": {
+      "Reddit/1.5.2": {
         "dependencies": {
           "Microsoft.CSharp": "4.7.0",
           "Newtonsoft.Json": "13.0.1",
@@ -274,12 +274,12 @@
         },
         "runtime": {
           "lib/netstandard2.0/Reddit.NET.dll": {
-            "assemblyVersion": "1.5.0.0",
-            "fileVersion": "1.5.0.0"
+            "assemblyVersion": "1.5.2.0",
+            "fileVersion": "1.5.2.0"
           }
         }
       },
-      "Reddit.AuthTokenRetrieverLib/1.5.1": {
+      "Reddit.AuthTokenRetrieverLib/1.5.2": {
         "dependencies": {
           "Newtonsoft.Json": "13.0.1",
           "RestSharp": "106.6.9",
@@ -287,8 +287,8 @@
         },
         "runtime": {
           "lib/netstandard2.0/AuthTokenRetrieverLib.dll": {
-            "assemblyVersion": "1.5.1.0",
-            "fileVersion": "1.5.1.0"
+            "assemblyVersion": "1.5.2.0",
+            "fileVersion": "1.5.2.0"
           }
         }
       },
@@ -366,6 +366,7 @@
           }
         }
       },
+      "System.Buffers/4.5.1": {},
       "System.Collections/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.1",
@@ -515,6 +516,20 @@
           "runtime.native.System": "4.3.0",
           "runtime.native.System.Net.Http": "4.3.0",
           "runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2"
+        }
+      },
+      "System.Net.Http.Json/6.0.0": {
+        "dependencies": {
+          "System.Buffers": "4.5.1",
+          "System.Memory": "4.5.4",
+          "System.Text.Json": "6.0.0",
+          "System.Threading.Tasks.Extensions": "4.5.4"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Net.Http.Json.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
         }
       },
       "System.Net.NameResolution/4.3.0": {
@@ -671,11 +686,11 @@
           "Microsoft.NETCore.Targets": "1.1.0"
         }
       },
-      "System.Runtime.CompilerServices.Unsafe/5.0.0": {
+      "System.Runtime.CompilerServices.Unsafe/6.0.0": {
         "runtime": {
-          "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll": {
-            "assemblyVersion": "5.0.0.0",
-            "fileVersion": "5.0.20.51904"
+          "lib/netcoreapp3.1/System.Runtime.CompilerServices.Unsafe.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
           }
         }
       },
@@ -894,6 +909,29 @@
           "System.Text.Encoding": "4.3.0"
         }
       },
+      "System.Text.Encodings.Web/6.0.0": {
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/System.Text.Encodings.Web.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
+        }
+      },
+      "System.Text.Json/6.0.0": {
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0",
+          "System.Text.Encodings.Web": "6.0.0"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/System.Text.Json.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
+        }
+      },
       "System.Threading/4.3.0": {
         "dependencies": {
           "System.Runtime": "4.3.0",
@@ -915,6 +953,7 @@
           "System.Runtime": "4.3.0"
         }
       },
+      "System.Threading.Tasks.Extensions/4.5.4": {},
       "System.Threading.ThreadPool/4.3.0": {
         "dependencies": {
           "System.Runtime": "4.3.0",
@@ -963,40 +1002,40 @@
       "path": "concurrenthashset/1.1.0",
       "hashPath": "concurrenthashset.1.1.0.nupkg.sha512"
     },
-    "DSharpPlus/4.3.0-nightly-01146": {
+    "DSharpPlus/4.3.0-nightly-01151": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-PiiXuJ+uBC8XEq5PNK0t/foTB/MbWklce2+D3ZstcQ+aT24jfrZyeXy1gekKZvCq/U6cWxTWl+RcVrn9Wq7Jgg==",
-      "path": "dsharpplus/4.3.0-nightly-01146",
-      "hashPath": "dsharpplus.4.3.0-nightly-01146.nupkg.sha512"
+      "sha512": "sha512-j1EB2pEUO6AyJqsNhyS+CeKVFWwZlJFDoTpp02T5vgmHCSwfEoG8n5sNla84sJgAWBbldJF+BIRaGUSrmViqZg==",
+      "path": "dsharpplus/4.3.0-nightly-01151",
+      "hashPath": "dsharpplus.4.3.0-nightly-01151.nupkg.sha512"
     },
-    "DSharpPlus.CommandsNext/4.3.0-nightly-01146": {
+    "DSharpPlus.CommandsNext/4.3.0-nightly-01151": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-mNgjBa7l69ni5xeaktu09O+XCRVlOzXF6wLNdVqei8Eiv6k6cYLNQ8+n2LCwghrOiq+hp86IGbfViuWWk5IYQw==",
-      "path": "dsharpplus.commandsnext/4.3.0-nightly-01146",
-      "hashPath": "dsharpplus.commandsnext.4.3.0-nightly-01146.nupkg.sha512"
+      "sha512": "sha512-zgyXl0oiuJ17GgN5c5zQ/JfhBIh/lPl2QkdQ9IXDtENPQAj1QEvv2qhJDNuYFx/RYsZspR/C96ozaGxDFC/pBg==",
+      "path": "dsharpplus.commandsnext/4.3.0-nightly-01151",
+      "hashPath": "dsharpplus.commandsnext.4.3.0-nightly-01151.nupkg.sha512"
     },
-    "DSharpPlus.Interactivity/4.3.0-nightly-01146": {
+    "DSharpPlus.Interactivity/4.3.0-nightly-01151": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Vdo+6Z1kGxn5OFhIgGhC6Q+Mo2lOpxclQkJgyaO9zH2SZA5m8+Dt893lPb2J76upPz3MSipH4kooV3ffVarNuA==",
-      "path": "dsharpplus.interactivity/4.3.0-nightly-01146",
-      "hashPath": "dsharpplus.interactivity.4.3.0-nightly-01146.nupkg.sha512"
+      "sha512": "sha512-4Cjah/ZUwcFHaS8NQkKlDVx9W3zCIJF6zHt/3E0YTkPTJwZN6hpFMJtalXzzP0HHrzw9pmpMHxdpFpuHH96dMA==",
+      "path": "dsharpplus.interactivity/4.3.0-nightly-01151",
+      "hashPath": "dsharpplus.interactivity.4.3.0-nightly-01151.nupkg.sha512"
     },
-    "DSharpPlus.Lavalink/4.3.0-nightly-01146": {
+    "DSharpPlus.Lavalink/4.3.0-nightly-01151": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-iIb0n/m/WjGdPzf267kpIfJsJkRQWVgu/OKyfgehKza3hfyQd7bV/NMUaj+kczPe3QMlSFQ8cLEsYWXaj9spKg==",
-      "path": "dsharpplus.lavalink/4.3.0-nightly-01146",
-      "hashPath": "dsharpplus.lavalink.4.3.0-nightly-01146.nupkg.sha512"
+      "sha512": "sha512-uCs61YCtM92svAKbuYseHKmp2bN6oeYxmHf9EP4ya+liizstELH/OS0JEMh3/lUbEeW6avyqS0i6viZOADdr7A==",
+      "path": "dsharpplus.lavalink/4.3.0-nightly-01151",
+      "hashPath": "dsharpplus.lavalink.4.3.0-nightly-01151.nupkg.sha512"
     },
-    "DSharpPlus.VoiceNext/4.3.0-nightly-01146": {
+    "DSharpPlus.VoiceNext/4.3.0-nightly-01151": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-uB9kTQBhdGfAzWLPMA5VxP/jT3M03qjMtW61/vkdcpMKwHBCwzblybP9Usqj1oloZHVi1bVqNXPENzIU+hQbhA==",
-      "path": "dsharpplus.voicenext/4.3.0-nightly-01146",
-      "hashPath": "dsharpplus.voicenext.4.3.0-nightly-01146.nupkg.sha512"
+      "sha512": "sha512-hikcFOsVRTUOJ5OAkp2Pdw7AXp8PXafYJ8BB1umy4r9XNqmrMIm7Xp83W0TyUqtjsc8ZuThylWFR/BcL3I6rZg==",
+      "path": "dsharpplus.voicenext/4.3.0-nightly-01151",
+      "hashPath": "dsharpplus.voicenext.4.3.0-nightly-01151.nupkg.sha512"
     },
     "DSharpPlus.VoiceNext.Natives/1.0.0": {
       "type": "package",
@@ -1026,19 +1065,19 @@
       "path": "imdbapilib/1.8.1",
       "hashPath": "imdbapilib.1.8.1.nupkg.sha512"
     },
-    "Lavalink4NET/2.1.1": {
+    "Lavalink4NET/3.0.0-preview.10": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-pa0honczCKERulNxgUl7GJfACr8tYdXE0sWN0+yroVPhLvgwOZQ6pxSUX1jqpWIKS+TZqD91KRsjggm0JiEj8w==",
-      "path": "lavalink4net/2.1.1",
-      "hashPath": "lavalink4net.2.1.1.nupkg.sha512"
+      "sha512": "sha512-+akkAsBXe4q0PmZW7sUEfAzLoFv3eUdkp0UdOIChqb5Sv51L5GtJmhw0CsJMMsluzPl7qt/O/FJCsjuCkOX28w==",
+      "path": "lavalink4net/3.0.0-preview.10",
+      "hashPath": "lavalink4net.3.0.0-preview.10.nupkg.sha512"
     },
-    "Lavalink4NET.DSharpPlus/2.1.1": {
+    "Lavalink4NET.DSharpPlus/3.0.0-preview.10": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-TpyPWcmpCzU+LCxtlK4Y7bNV8yKJRj1sQHr+Hwdr/0rmI1zU+Ky7gQPUSm8VG60pqyc6L/TgV2dBGiNxG+ptfQ==",
-      "path": "lavalink4net.dsharpplus/2.1.1",
-      "hashPath": "lavalink4net.dsharpplus.2.1.1.nupkg.sha512"
+      "sha512": "sha512-WIH56nZDfvt7uypM8knJenT2WA8Q0zq7y/EcAxYHQhTbkXqtQCb6sitZIG9vrio2/4vObC6heJwSEcIvto7E1g==",
+      "path": "lavalink4net.dsharpplus/3.0.0-preview.10",
+      "hashPath": "lavalink4net.dsharpplus.3.0.0-preview.10.nupkg.sha512"
     },
     "Microsoft.CSharp/4.7.0": {
       "type": "package",
@@ -1117,19 +1156,19 @@
       "path": "openweathermap/1.1.0",
       "hashPath": "openweathermap.1.1.0.nupkg.sha512"
     },
-    "Reddit/1.5.0": {
+    "Reddit/1.5.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-/Z5vx6As9AIuiorpPsF7TXdnofoiTlNeDNdUCZAVTpyW6o1ff/4l5PhyOMw397CmkF+jg6ixlGvw8ZYZ2b7C3w==",
-      "path": "reddit/1.5.0",
-      "hashPath": "reddit.1.5.0.nupkg.sha512"
+      "sha512": "sha512-a8fLFxuSBG/NANlcdj6tmeAS1gnZNV+0HesL3bEvnVBimiE7+MQGi9AMcIq8AFAGY2Kv21p369NZgadD2HEMKA==",
+      "path": "reddit/1.5.2",
+      "hashPath": "reddit.1.5.2.nupkg.sha512"
     },
-    "Reddit.AuthTokenRetrieverLib/1.5.1": {
+    "Reddit.AuthTokenRetrieverLib/1.5.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-xcDwFV+vRvbAXHfYMsAmOMzTfm5jgSX433fq7LeWAnsv+1WoLznAWveA58Mg5QKHwk+2K3OFd1py1J7uffAKsw==",
-      "path": "reddit.authtokenretrieverlib/1.5.1",
-      "hashPath": "reddit.authtokenretrieverlib.1.5.1.nupkg.sha512"
+      "sha512": "sha512-i4XY6tXhsXCCJ89FiYLqttAjwIOHiiF74361d5jUkRCGnSOHav02gtJfoMbbB4tiREOcf3u+Aca5wUCKsxoGmg==",
+      "path": "reddit.authtokenretrieverlib/1.5.2",
+      "hashPath": "reddit.authtokenretrieverlib.1.5.2.nupkg.sha512"
     },
     "RestSharp/106.6.9": {
       "type": "package",
@@ -1257,6 +1296,13 @@
       "path": "steamwebapi2/4.3.2",
       "hashPath": "steamwebapi2.4.3.2.nupkg.sha512"
     },
+    "System.Buffers/4.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Rw7ijyl1qqRS0YQD/WycNst8hUUMgrMH4FCn1nNm27M4VxchZ1js3fVjQaANHO5f3sN4isvP4a+Met9Y4YomAg==",
+      "path": "system.buffers/4.5.1",
+      "hashPath": "system.buffers.4.5.1.nupkg.sha512"
+    },
     "System.Collections/4.3.0": {
       "type": "package",
       "serviceable": true,
@@ -1369,6 +1415,13 @@
       "path": "system.net.http/4.3.4",
       "hashPath": "system.net.http.4.3.4.nupkg.sha512"
     },
+    "System.Net.Http.Json/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-GbIV4y344kGOKjshAKCIDCMUTTW/hyUC42wV0Y5SXEdIbaKBIHBUxZ2MOe4/ZiV2svUAGfQ0c8LGtUExpOI8tg==",
+      "path": "system.net.http.json/6.0.0",
+      "hashPath": "system.net.http.json.6.0.0.nupkg.sha512"
+    },
     "System.Net.NameResolution/4.3.0": {
       "type": "package",
       "serviceable": true,
@@ -1460,12 +1513,12 @@
       "path": "system.runtime/4.3.0",
       "hashPath": "system.runtime.4.3.0.nupkg.sha512"
     },
-    "System.Runtime.CompilerServices.Unsafe/5.0.0": {
+    "System.Runtime.CompilerServices.Unsafe/6.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ZD9TMpsmYJLrxbbmdvhwt9YEgG5WntEnZ/d1eH8JBX9LBp+Ju8BSBhUGbZMNVHHomWo2KVImJhTDl2hIgw/6MA==",
-      "path": "system.runtime.compilerservices.unsafe/5.0.0",
-      "hashPath": "system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
+      "sha512": "sha512-/iUeP3tq1S0XdNNoMz5C9twLSrM/TH+qElHkXWaPvuNOt+99G75NrV0OS2EqHx5wMN7popYjpc8oTjC1y16DLg==",
+      "path": "system.runtime.compilerservices.unsafe/6.0.0",
+      "hashPath": "system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
     },
     "System.Runtime.Extensions/4.3.0": {
       "type": "package",
@@ -1586,6 +1639,20 @@
       "path": "system.text.encoding.extensions/4.3.0",
       "hashPath": "system.text.encoding.extensions.4.3.0.nupkg.sha512"
     },
+    "System.Text.Encodings.Web/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Vg8eB5Tawm1IFqj4TVK1czJX89rhFxJo9ELqc/Eiq0eXy13RK00eubyU6TJE6y+GQXjyV5gSfiewDUZjQgSE0w==",
+      "path": "system.text.encodings.web/6.0.0",
+      "hashPath": "system.text.encodings.web.6.0.0.nupkg.sha512"
+    },
+    "System.Text.Json/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zaJsHfESQvJ11vbXnNlkrR46IaMULk/gHxYsJphzSF+07kTjPHv+Oc14w6QEOfo3Q4hqLJgStUaYB9DBl0TmWg==",
+      "path": "system.text.json/6.0.0",
+      "hashPath": "system.text.json.6.0.0.nupkg.sha512"
+    },
     "System.Threading/4.3.0": {
       "type": "package",
       "serviceable": true,
@@ -1606,6 +1673,13 @@
       "sha512": "sha512-LbSxKEdOUhVe8BezB/9uOGGppt+nZf6e1VFyw6v3DN6lqitm0OSn2uXMOdtP0M3W4iMcqcivm2J6UgqiwwnXiA==",
       "path": "system.threading.tasks/4.3.0",
       "hashPath": "system.threading.tasks.4.3.0.nupkg.sha512"
+    },
+    "System.Threading.Tasks.Extensions/4.5.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zteT+G8xuGu6mS+mzDzYXbzS7rd3K6Fjb9RiZlYlJPam2/hU7JCBZBVEcywNuR+oZ1ncTvc/cq0faRr3P01OVg==",
+      "path": "system.threading.tasks.extensions/4.5.4",
+      "hashPath": "system.threading.tasks.extensions.4.5.4.nupkg.sha512"
     },
     "System.Threading.ThreadPool/4.3.0": {
       "type": "package",

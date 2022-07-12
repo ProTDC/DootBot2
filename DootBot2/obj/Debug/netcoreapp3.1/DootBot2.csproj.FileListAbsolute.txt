@@ -46,3 +46,6 @@ C:\Users\protd\source\repos\DootBot2\DootBot2\bin\Debug\netcoreapp3.1\Microsoft.
 C:\Users\protd\source\repos\DootBot2\DootBot2\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
 C:\Users\protd\source\repos\DootBot2\DootBot2\bin\Debug\netcoreapp3.1\Steam.Models.dll
 C:\Users\protd\source\repos\DootBot2\DootBot2\bin\Debug\netcoreapp3.1\SteamWebAPI2.dll
+C:\Users\protd\source\repos\DootBot2\DootBot2\bin\Debug\netcoreapp3.1\System.Net.Http.Json.dll
+C:\Users\protd\source\repos\DootBot2\DootBot2\bin\Debug\netcoreapp3.1\System.Text.Encodings.Web.dll
+C:\Users\protd\source\repos\DootBot2\DootBot2\bin\Debug\netcoreapp3.1\System.Text.Json.dll

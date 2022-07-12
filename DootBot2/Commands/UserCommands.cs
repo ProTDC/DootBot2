@@ -36,49 +36,6 @@ namespace DootBot2.Commands
                 }
             };
 
-            //String activity;
-            ////checks which status the user has and displays it
-            //try
-            //{
-            //    activity = member.Presence.Activity.ActivityType switch
-            //    {
-            //        ActivityType.Playing => "Playing",
-            //        ActivityType.ListeningTo => "Listening to",
-            //        _ => "Unknown (idfk how this happened)",
-            //    };
-            //}
-            ////status failsafe 
-            //catch (Exception)
-            //{
-            //    activity = "Error occured when getting status";
-            //}
-
-            ////creates a new field which displays the status, which cannot be null by this point
-            //embed.AddField("Status", activity);
-
-            //String status;
-            ////checks which status the user has and displays it
-            //try
-            //{
-            //    status = member.Presence.Status switch
-            //    {
-            //        UserStatus.Online => "Online",
-            //        UserStatus.Idle => "Idle",
-            //        UserStatus.DoNotDisturb => "Do Not Disturb",
-            //        UserStatus.Offline => "Offline",
-            //        UserStatus.Invisible => "Invisible",
-            //        _ => "Unknown (idfk how this happened)",
-            //    };
-            //}
-            ////status failsafe 
-            //catch (Exception)
-            //{
-            //    status = "Error occured when getting status";
-            //}
-
-            ////creates a new field which displays the status, which cannot be null by this point
-            //embed.AddField("Status", status);
-
             //gets the users roles for the current server and displays them
             string role = string.Empty;
 
