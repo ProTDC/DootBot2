@@ -66,21 +66,13 @@ namespace DootBot2.Commands
                 actstr += act.Name + ", ";
             }
             embed.AddField("Actors", actstr);
-
             embed.AddField("Writers", movieData.Writers);
-
             embed.AddField("Genres", movieData.Genres);
-
             embed.AddField("Runtime", movieData.RuntimeStr);
-
             embed.AddField("Budget", movieData.BoxOffice.Budget);
-
             embed.AddField("Box office", movieData.BoxOffice.CumulativeWorldwideGross);
-
             embed.AddField("Rating", movieData.ContentRating);
-
             embed.AddField("Awards", movieData.Awards);
-
             embed.AddField("IMDB Rating ", ratingData.IMDb + "/10");
             embed.AddField("Metacritic ", ratingData.Metacritic + "%");
             embed.AddField("Rotten Tomatoes ", ratingData.RottenTomatoes + "%");
@@ -114,7 +106,6 @@ namespace DootBot2.Commands
 
             Console.WriteLine(response.StatusCode);
 
-
             var array = content.Replace("{", "").Replace("}", "").Split(",");
 
             var id = content.Split("id\":\"")[1].Split("\"")[0];
@@ -131,6 +122,14 @@ namespace DootBot2.Commands
             };
 
             embed.AddField("Creators", seriesData.TvSeriesInfo.Creators);
+
+            string actstr = string.Empty;
+            var acting = seriesData.ActorList;
+            foreach (var act in acting)
+            {
+                actstr += act.Name + ", ";
+            }
+            embed.AddField("Actors", actstr);
             embed.AddField("Seasons", seriesData.TvSeriesInfo.Seasons.Count.ToString());
             embed.AddField("Ended in", seriesData.TvSeriesInfo.YearEnd);
             embed.AddField("Awards", seriesData.Awards);
@@ -139,11 +138,6 @@ namespace DootBot2.Commands
             embed.AddField("Rotten Tomatoes", ratingData.RottenTomatoes + "%");
 
             await ctx.RespondAsync(embed).ConfigureAwait(false);
-            
-            //Console.WriteLine(searchType);
-            //Console.WriteLine(expression);
-            //Console.WriteLine(results);
-            //Console.WriteLine(errorMessage);
             return;
         }
     }

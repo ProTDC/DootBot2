@@ -36,25 +36,38 @@ namespace DootBot2.Commands
             HttpResponseMessage gameResponse = await httpClient.GetAsync($"https://api.isthereanydeal.com/v01/game/info/?key={api_key}&plains={title}&optional=metacritic");
             var gameContent = await gameResponse.Content.ReadAsStringAsync();
             JObject json = JObject.Parse(gameContent);
-            Console.WriteLine(json);
+            //Console.WriteLine(json);
 
             HttpResponseMessage priceResponse = await httpClient.GetAsync($"https://api.isthereanydeal.com/v01/game/prices/?key={api_key}&plains={title}&region=us&country=us&shops=steam");
             var priceContent = await priceResponse.Content.ReadAsStringAsync();
             JObject json2 = JObject.Parse(priceContent);
-            Console.WriteLine(json2);
+            //Console.WriteLine(json2);
 
-            var embed = new DiscordEmbedBuilder()
+            Console.WriteLine(gameResponse.StatusCode);
+            Console.WriteLine(priceResponse.StatusCode);
+
+            if (gameResponse.IsSuccessStatusCode == false)
             {
-                Title = json["data"][title]["title"].ToString(),
-                Description = json["data"][title]["metacritic"]["summary"].ToString(),
-                ImageUrl = json["data"][title]["image"].ToString()
-            };
+                await ctx.RespondAsync("Please provide a valid game").ConfigureAwait(false);
+                return;
+            }
+            else
+            {
+                var embed = new DiscordEmbedBuilder()
+                {
+                    Title = json["data"][title]["title"].ToString(),
+                    Description = json["data"][title]["metacritic"]["summary"].ToString(),
+                    ImageUrl = json["data"][title]["image"].ToString()
+                };
 
-            embed.AddField("Steam Score", json["data"][title]["reviews"]["steam"]["text"].ToString());
-            embed.AddField("Metacritic", json["data"][title]["metacritic"]["critic_score"].ToString() + "%");
-            embed.AddField("Price", json2["data"][title]["list"][0]["price_new"].ToString() + "£");
+                embed.AddField("Steam Score", json["data"][title]["reviews"]["steam"]["text"].ToString());
+                embed.AddField("Metacritic", json["data"][title]["metacritic"]["critic_score"].ToString() + "%");
+                embed.AddField("Price", json2["data"][title]["list"][0]["price_new"].ToString() + "£");
 
-            await ctx.RespondAsync(embed).ConfigureAwait(false);
+                await ctx.RespondAsync(embed).ConfigureAwait(false);
+                return;
+            }
+
 
         }
     }

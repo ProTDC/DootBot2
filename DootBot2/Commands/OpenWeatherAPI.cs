@@ -37,7 +37,7 @@ namespace DootBot2.Commands
             {
                 var embed = new DiscordEmbedBuilder()
                 {
-                    Title = json["name"].ToString(),
+                    Title = "Current weather in " + json["name"].ToString(),
                     Description = "Country: " + json["sys"]["country"].ToString()
                 };
                 embed.AddField("Weather: " + json["weather"][0]["main"].ToString(), json["weather"][0]["description"].ToString());
