@@ -236,6 +236,7 @@ namespace Dootbot2
             Commands.RegisterCommands<OpenWeatherAPI>();
             Commands.RegisterCommands<RedditStuff>();
             Commands.RegisterCommands<SteamStuff>();
+            Commands.RegisterCommands<Oljefondet>();
 
             await Client.ConnectAsync();
             await Task.Delay(-1);

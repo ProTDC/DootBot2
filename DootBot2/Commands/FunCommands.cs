@@ -43,24 +43,6 @@ namespace DootBot2.Commands
             return;
         }
 
-        [Command("Oljefondet")]
-        [Description("Displays the market value of Oljefondet")]
-        public async Task Oljefondet(CommandContext ctx)
-        {
-            await ctx.Channel.TriggerTypingAsync();
-
-            using WebClient web1 = new WebClient();
-            HtmlAgilityPack.HtmlWeb website = new HtmlAgilityPack.HtmlWeb();
-            HtmlAgilityPack.HtmlDocument document = website.Load("https://www.nbim.no/no");
-            var datalist = document.DocumentNode.SelectNodes("//div[@class='page-title']");
-
-            foreach (var content in datalist)
-            {
-                await ctx.RespondAsync(content.InnerText).ConfigureAwait(false);
-            }
-            return;
-        }
-
         [Command("Arebirdsreal")]
         [Description("Tells you if birds are real or not")]
         public async Task Birb(CommandContext ctx)
