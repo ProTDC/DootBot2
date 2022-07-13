@@ -136,7 +136,7 @@ namespace DootBot2.Commands
             embed.AddField("Awards", seriesData.Awards);
             embed.AddField("IMDb rating", seriesData.IMDbRating + "/10");
             embed.AddField("Metacritic", ratingData.Metacritic + "%");
-            embed.AddField("Metacritic", ratingData.RottenTomatoes + "%");
+            embed.AddField("Rotten Tomatoes", ratingData.RottenTomatoes + "%");
 
             await ctx.RespondAsync(embed).ConfigureAwait(false);
             

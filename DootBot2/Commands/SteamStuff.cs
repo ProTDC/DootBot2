@@ -19,6 +19,7 @@ namespace DootBot2.Commands
         static readonly HttpClient httpClient = new HttpClient();
 
         [Command("Game")]
+        [Description("Displays information about a game from steam")]
         public async Task Games(CommandContext ctx, params string[] message)
         {
             await ctx.TriggerTypingAsync();

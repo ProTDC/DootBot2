@@ -26,13 +26,7 @@ namespace DootBot2.Commands
             var city = message;
             HttpResponseMessage response = await httpClient.GetAsync($"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric");
             var content = await response.Content.ReadAsStringAsync();
-
             JObject json = JObject.Parse(content);
-
-            foreach(var e in json)
-            {
-                Console.WriteLine(e);
-            }
 
             if (response.IsSuccessStatusCode == false)
             {
