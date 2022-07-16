@@ -36,9 +36,26 @@ namespace DootBot2.Commands
                 }
             };
 
+            //gets the current activity of the user
+            var activity = member.Presence.Activities;
+            var actString = string.Empty;
+            var current = member.Presence.Activity.ActivityType.ToString();
+
+            if (activity.Count() == 0)
+            {
+                embed.AddField("Activity", "No activity");
+            }
+            else
+            {
+                foreach (var act in activity)
+                {
+                    actString += act.Name;
+                }
+                embed.AddField(current, actString.Replace("Custom Status", ""));
+            }
+
             //gets the users roles for the current server and displays them
             string role = string.Empty;
-
             if (roles.Count() == 0)
             {
                 embed.AddField("Roles", "No roles");

@@ -1,13 +1,8 @@
 ﻿using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Attributes;
-using DSharpPlus.Entities;
-using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
-using OpenWeatherMap;
 using Newtonsoft.Json.Linq;
 
 namespace DootBot2.Commands 
@@ -18,7 +13,7 @@ namespace DootBot2.Commands
 
         [Command("Oljefondet")]
         [Description("Displays the market value of Oljefondet")]
-        public async Task OljefondetButBetter(CommandContext ctx)
+        public async Task OljefondetVerdi(CommandContext ctx)
         {
             await ctx.Channel.TriggerTypingAsync();
 
@@ -28,7 +23,6 @@ namespace DootBot2.Commands
             Console.WriteLine(Response.StatusCode);
 
             await ctx.RespondAsync($"Oljefondets markedsverdi er {json["Value"].ToString()}kr").ConfigureAwait(false);
-
-        }
+        } 
     }
 }

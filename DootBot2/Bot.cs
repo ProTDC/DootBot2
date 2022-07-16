@@ -39,19 +39,7 @@ namespace Dootbot2
                 TokenType = TokenType.Bot,
                 AutoReconnect = true,
                 MinimumLogLevel = LogLevel.Debug,
-                Intents = DiscordIntents.DirectMessageReactions
-                | DiscordIntents.DirectMessages
-                | DiscordIntents.GuildBans
-                | DiscordIntents.GuildEmojis
-                | DiscordIntents.GuildInvites
-                | DiscordIntents.GuildMembers
-                | DiscordIntents.GuildMessages
-                | DiscordIntents.GuildMessageReactions
-                | DiscordIntents.GuildPresences
-                | DiscordIntents.Guilds
-                | DiscordIntents.GuildVoiceStates
-                | DiscordIntents.GuildWebhooks
-                | DiscordIntents.GuildVoiceStates
+                Intents = DiscordIntents.All
             };
 
             Client = new DiscordClient(config);
@@ -198,20 +186,20 @@ namespace Dootbot2
                 await e.Message.CreateReactionAsync(e.Emoji);
             };
 
-            Client.MessageUpdated += async (s, e) =>
-            {
-                if (e.Message.Author.IsBot || e.Message.Author.Id.Equals(461446979155918859))
-                {
-                    return;
-                }
-                else
-                {
-                    await e.Channel.TriggerTypingAsync();
+            //Client.MessageUpdated += async (s, e) =>
+            //{
+            //    if (e.Message.Author.IsBot || e.Message.Author.Id.Equals(461446979155918859))
+            //    {
+            //        return;
+            //    }
+            //    else
+            //    {
+            //        await e.Channel.TriggerTypingAsync();
 
-                    await e.Message.RespondAsync($"{e.Message.Author.Mention} Edited this message, the original content was: {e.MessageBefore.Content}").ConfigureAwait(false);
-                    return;
-                }
-            };
+            //        await e.Message.RespondAsync($"{e.Message.Author.Mention} Edited this message, the original content was: {e.MessageBefore.Content}").ConfigureAwait(false);
+            //        return;
+            //    }
+            //};
 
             Client.MessageDeleted += async (s, e) =>
             {

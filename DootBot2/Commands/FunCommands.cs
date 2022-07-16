@@ -197,6 +197,28 @@ namespace DootBot2.Commands
             await ctx.Channel.DeleteMessageAsync(message.Result);
         }
 
+        //[Command("test")]
+        //public async Task Test(CommandContext ctx, DiscordMember member)
+        //{
+        //    var activity = member.Presence.Activities;
+        //    var activityString = string.Empty;
+
+        //    //Console.WriteLine(member.Presence.Activity.ActivityType.ToString());
+
+        //    //foreach(var act in activity)
+        //    //{
+        //    //    Console.WriteLine(act);
+        //    //}
+
+        //    foreach(var act in activity)
+        //    {
+        //        Console.WriteLine(act.Name);
+        //    }
+
+        //    await ctx.RespondAsync("it worked (i think)").ConfigureAwait(false);
+
+        //}
+
     }
 
 }
