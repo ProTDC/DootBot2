@@ -25,9 +25,8 @@ namespace DootBot2.Commands
             //creates a new embed which will have the information
             var embed = new DiscordEmbedBuilder
             {
-                Title = $"{member.Username}#{member.Discriminator}",
+                Title = $"{member.Username} #{member.Discriminator}",
                 Url = "https://www.youtube.com/watch?v=xvFZjo5PgG0",
-                Description = $"aka: {member.Nickname}",
                 Color = member.Color,
 
                 Thumbnail = new DiscordEmbedBuilder.EmbedThumbnail
@@ -38,21 +37,32 @@ namespace DootBot2.Commands
 
             //gets the current activity of the user
             var activity = member.Presence.Activities;
-            var actString = string.Empty;
-            var current = member.Presence.Activity.ActivityType.ToString();
 
-            if (activity.Count() == 0)
+            //sets the users currently activity and displays it
+            string actString = string.Empty;
+            string actType = string.Empty;
+            //string actCustom = string.Empty;
+
+            foreach (DiscordActivity act in activity)
+            {
+                actString += act.Name;
+                actType += act.ActivityType;
+                //actCustom += act.CustomStatus.Name;
+            }
+
+            bool check = string.IsNullOrEmpty(actString);
+
+            if (check == true)
             {
                 embed.AddField("Activity", "No activity");
             }
             else
             {
-                foreach (var act in activity)
-                {
-                    actString += act.Name;
-                }
-                embed.AddField(current, actString.Replace("Custom Status", ""));
+                embed.AddField(actType.Replace("Custom", "Currently "), actString.Replace("Custom Status", "'") + "'");
             }
+
+            Console.WriteLine(check.ToString());
+            //embed.WithDescription(actCustom);
 
             //gets the users roles for the current server and displays them
             string role = string.Empty;
