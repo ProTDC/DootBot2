@@ -21,10 +21,10 @@ namespace DootBot2.Commands
 
                 DiscordActivity activity = new DiscordActivity();
                 DiscordClient discord = ctx.Client;
-                string input = $"Doot || {discord.Guilds.Count()} Guilds";
+                string input = $"Doot || {discord.Guilds.Count()} Guilds+";
                 activity.Name = input;
                 await discord.UpdateStatusAsync(activity);
-                await ctx.Channel.SendMessageAsync("https://media.discordapp.net/attachments/956994953727336448/980798142343675934/unknown.png").ConfigureAwait(false);
+                await ctx.RespondAsync("https://media.discordapp.net/attachments/956994953727336448/980798142343675934/unknown.png").ConfigureAwait(false);
                 return;
             }
             else
@@ -49,15 +49,21 @@ namespace DootBot2.Commands
                     Url = ctx.Guild.IconUrl
                 }
             };
-
             embed.AddField("ServerID", ctx.Guild.Id.ToString());
             embed.AddField("Owner", ctx.Guild.Owner.Username);
             embed.AddField("Total members", ctx.Guild.MemberCount.ToString());
             embed.AddField("Serverboost", ctx.Guild.PremiumTier.ToString());
             embed.AddField("Creation date", ctx.Guild.CreationTimestamp.UtcDateTime.ToShortDateString());
 
-            await ctx.Channel.SendMessageAsync(embed);
+            await ctx.RespondAsync(embed);
             return;
+        }
+
+        [Command("Serverpic")]
+        [Description("Displays the current servers picture")]
+        public async Task ServerPic(CommandContext ctx)
+        {
+            await ctx.RespondAsync(ctx.Guild.IconUrl);
         }
 
         [Command("Changenick")]

@@ -269,6 +269,18 @@
           "ref/netstandard1.3/_._": {}
         }
       },
+      "NETCore.Encrypt/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.1/NETCore.Encrypt.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/NETCore.Encrypt.dll": {}
+        }
+      },
       "Newtonsoft.Json/13.0.1": {
         "type": "package",
         "compile": {
@@ -493,6 +505,18 @@
             "assetType": "native",
             "rid": "ubuntu.16.10-x64"
           }
+        }
+      },
+      "SpotifyAPI.Web/6.2.2": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.1/SpotifyAPI.Web.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/SpotifyAPI.Web.dll": {}
         }
       },
       "SteamWebAPI2/4.3.2": {
@@ -2023,6 +2047,18 @@
         "ref/xamarinwatchos10/_._"
       ]
     },
+    "NETCore.Encrypt/2.1.0": {
+      "sha512": "ympQvdmUOTEzV21FG3iU+UikClN4wCZ/CLjdxDBNfNn1Jr4Nr9yrPoYyCMNYU0KIgsGTnrcIA8m0sS+ocf2YdA==",
+      "type": "package",
+      "path": "netcore.encrypt/2.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.1/NETCore.Encrypt.dll",
+        "netcore.encrypt.2.1.0.nupkg.sha512",
+        "netcore.encrypt.nuspec"
+      ]
+    },
     "Newtonsoft.Json/13.0.1": {
       "sha512": "ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
       "type": "package",
@@ -2324,6 +2360,23 @@
         "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
         "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.nuspec",
         "runtimes/ubuntu.16.10-x64/native/System.Security.Cryptography.Native.OpenSsl.so"
+      ]
+    },
+    "SpotifyAPI.Web/6.2.2": {
+      "sha512": "WNAqhQYg1xXNCPZ4QKavwFl05wXZ8XiHT89u3SrMeGlPPpJETzKmfozk5BoLaTCRV2HyceGERRrHOvK/BNtC2A==",
+      "type": "package",
+      "path": "spotifyapi.web/6.2.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net5.0/SpotifyAPI.Web.dll",
+        "lib/net5.0/SpotifyAPI.Web.xml",
+        "lib/netstandard2.0/SpotifyAPI.Web.dll",
+        "lib/netstandard2.0/SpotifyAPI.Web.xml",
+        "lib/netstandard2.1/SpotifyAPI.Web.dll",
+        "lib/netstandard2.1/SpotifyAPI.Web.xml",
+        "spotifyapi.web.6.2.2.nupkg.sha512",
+        "spotifyapi.web.nuspec"
       ]
     },
     "SteamWebAPI2/4.3.2": {
@@ -5258,9 +5311,11 @@
       "HtmlAgilityPack >= 1.11.43",
       "IMDbApiLib >= 1.8.1",
       "Lavalink4NET.DSharpPlus >= 3.0.0-preview.10",
+      "NETCore.Encrypt >= 2.1.0",
       "OpenWeatherMap >= 1.1.0",
       "Reddit >= 1.5.2",
       "Reddit.AuthTokenRetrieverLib >= 1.5.2",
+      "SpotifyAPI.Web >= 6.2.2",
       "SteamWebAPI2 >= 4.3.2"
     ]
   },
@@ -5341,6 +5396,10 @@
             "target": "Package",
             "version": "[3.0.0-preview.10, )"
           },
+          "NETCore.Encrypt": {
+            "target": "Package",
+            "version": "[2.1.0, )"
+          },
           "OpenWeatherMap": {
             "target": "Package",
             "version": "[1.1.0, )"
@@ -5352,6 +5411,10 @@
           "Reddit.AuthTokenRetrieverLib": {
             "target": "Package",
             "version": "[1.5.2, )"
+          },
+          "SpotifyAPI.Web": {
+            "target": "Package",
+            "version": "[6.2.2, )"
           },
           "SteamWebAPI2": {
             "target": "Package",

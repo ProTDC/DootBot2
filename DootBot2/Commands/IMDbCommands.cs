@@ -36,7 +36,6 @@ namespace DootBot2.Commands
 
 
             var array = content.Replace("{", "").Replace("}", "").Split(",");
-
             var searchType = array[0];
             var expression = array[1];
             var results = array[2];

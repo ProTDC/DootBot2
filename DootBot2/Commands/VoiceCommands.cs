@@ -2,6 +2,7 @@
 using DSharpPlus.CommandsNext.Attributes;
 using DSharpPlus.Entities;
 using DSharpPlus.VoiceNext;
+using SpotifyAPI.Web;
 using System;
 using System.Diagnostics;
 using System.IO;
@@ -11,136 +12,50 @@ namespace DootBot2.Commands
 {
     class VoiceCommands : BaseCommandModule
     {
-        [Command("join"), Description("Joins a voice channel.")]
-        public async Task Join(CommandContext ctx, DiscordChannel chn = null)
+        [Command("join")]
+        [Description("joins the current voice chat the author is connected to")]
+        public async Task JoinCommand(CommandContext ctx, DiscordChannel channel = null)
         {
-            // check whether VNext is enabled
-            var vnext = ctx.Client.GetVoiceNext();
-            if (vnext == null)
-            {
-                // not enabled
-                await ctx.RespondAsync("VNext is not enabled or configured.");
-                return;
-            }
-
-            // check whether we aren't already connected
-            var vnc = vnext.GetConnection(ctx.Guild);
-            if (vnc != null)
-            {
-                // already connected
-                await ctx.RespondAsync("Already connected in this guild.");
-                return;
-            }
-
-            // get member's voice state
-            var vstat = ctx.Member?.VoiceState;
-            if (vstat?.Channel == null && chn == null)
-            {
-                // they did not specify a channel and are not in one
-                await ctx.RespondAsync("You are not in a voice channel.");
-                return;
-            }
-
-            // channel not specified, use user's
-            if (chn == null)
-                chn = vstat.Channel;
-
-            // connect
-            vnc = await vnext.ConnectAsync(chn);
-            await ctx.RespondAsync($"Connected to `{chn.Name}`");
+            channel ??= ctx.Member.VoiceState?.Channel;
+            await channel.ConnectAsync();
         }
 
-        [Command("leave"), Description("Leaves a voice channel.")]
-        public async Task Leave(CommandContext ctx)
+        [Command("play")]
+        [Description("plays music to the connected voice chat")]
+        public async Task PlayCommand(CommandContext ctx, string input)
         {
-            // check whether VNext is enabled
+            string path = @"C:\Users\protd\Pictures\music\" + input;
             var vnext = ctx.Client.GetVoiceNext();
-            if (vnext == null)
-            {
-                // not enabled
-                await ctx.RespondAsync("VNext is not enabled or configured.");
-                return;
-            }
+            var connection = vnext.GetConnection(ctx.Guild);
 
-            // check whether we are connected
-            var vnc = vnext.GetConnection(ctx.Guild);
-            if (vnc == null)
-            {
-                // not connected
-                await ctx.RespondAsync("Not connected in this guild.");
-                return;
-            }
+            var transmit = connection.GetTransmitSink();
 
-            // disconnect
-            vnc.Disconnect();
-            await ctx.RespondAsync("Disconnected");
+            var pcm = ConvertAudioToPcm(path);
+            await pcm.CopyToAsync(transmit);
+            await pcm.DisposeAsync();
         }
 
-        [Command("play"), Description("Plays an audio file.")]
-        public async Task Play(CommandContext ctx, [RemainingText, Description("Full path to the file to play.")] string filename)
+        [Command("leave")]
+        [Description("leaves the current voice chat")]
+        public async Task LeaveCommand(CommandContext ctx)
         {
-            // check whether VNext is enabled
             var vnext = ctx.Client.GetVoiceNext();
-            if (vnext == null)
+            var connection = vnext.GetConnection(ctx.Guild);
+
+            connection.Disconnect();
+        }
+
+        private Stream ConvertAudioToPcm(string filePath)
+        {
+            var ffmpeg = Process.Start(new ProcessStartInfo
             {
-                // not enabled
-                await ctx.RespondAsync("VNext is not enabled or configured.");
-                return;
-            }
+                FileName = "ffmpeg",
+                Arguments = $@"-i ""{filePath}"" -ac 2 -f s16le -ar 48000 pipe:1",
+                RedirectStandardOutput = true,
+                UseShellExecute = false
+            });
 
-            // check whether we aren't already connected
-            var vnc = vnext.GetConnection(ctx.Guild);
-            if (vnc == null)
-            {
-                // already connected
-                await ctx.RespondAsync("Not connected in this guild.");
-                return;
-            }
-
-            // check if file exists
-            if (!File.Exists(filename))
-            {
-                // file does not exist
-                await ctx.RespondAsync($"File `{filename}` does not exist.");
-                return;
-            }
-
-            // wait for current playback to finish
-            while (vnc.IsPlaying)
-                await vnc.WaitForPlaybackFinishAsync();
-
-            // play
-            Exception exc = null;
-            await ctx.Message.RespondAsync($"Playing `{filename}`");
-
-            try
-            {
-                await vnc.SendSpeakingAsync(true);
-
-                var psi = new ProcessStartInfo
-                {
-                    FileName = "ffmpeg.exe",
-                    Arguments = $@"-i ""{filename}"" -ac 2 -f s16le -ar 48000 pipe:1 -loglevel quiet",
-                    RedirectStandardOutput = true,
-                    UseShellExecute = false
-                };
-                var ffmpeg = Process.Start(psi);
-                var ffout = ffmpeg.StandardOutput.BaseStream;
-
-                var txStream = vnc.GetTransmitSink();
-                await ffout.CopyToAsync(txStream);
-                await txStream.FlushAsync();
-                await vnc.WaitForPlaybackFinishAsync();
-            }
-            catch (Exception ex) { exc = ex; }
-            finally
-            {
-                await vnc.SendSpeakingAsync(false);
-                await ctx.Message.RespondAsync($"Finished playing `{filename}`");
-            }
-
-            if (exc != null)
-                await ctx.RespondAsync($"An exception occured during playback: `{exc.GetType()}: {exc.Message}`");
+            return ffmpeg.StandardOutput.BaseStream;
         }
     }
 }

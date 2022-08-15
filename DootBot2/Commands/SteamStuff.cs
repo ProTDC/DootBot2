@@ -24,7 +24,7 @@ namespace DootBot2.Commands
         {
             await ctx.TriggerTypingAsync();
 
-            var combinedMessage = "";
+            string combinedMessage = "";
             foreach (string word in message)
             {
                 combinedMessage += word;

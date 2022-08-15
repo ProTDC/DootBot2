@@ -179,6 +179,13 @@ namespace DootBot2.Commands
             await ctx.RespondAsync(string.Join("\n", results)).ConfigureAwait(false);
         }
 
+        //[Command("Return")]
+        //[Description("Leaves then returns to server")]
+        //public async Task Return(CommandContext ctx)
+        //{
+        //}
+
+
         [Hidden]
         [Command("Repeat")]
         [Description("Classified")]

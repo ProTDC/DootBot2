@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "k682v9E2s7T/a4uueg4FUef6biihPl1kDGSja3DqDD9FuYVVitYIyUr7NvvjlBgLlziMk2FViWdDVPuzhGMqyA==",
+  "dgSpecHash": "rjrsSP0FauGSoIV/yOhy55/9V/pL0wIj1sA3Is69N6t6/GpTKGjllaJF7ag2wVAjnkT+bWaugLQbWlS+x7d9dg==",
   "success": true,
   "projectFilePath": "C:\\Users\\protd\\source\\repos\\DootBot2\\DootBot2\\DootBot2.csproj",
   "expectedPackageFiles": [
@@ -26,6 +26,7 @@
     "C:\\Users\\protd\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.1\\microsoft.netcore.platforms.1.1.1.nupkg.sha512",
     "C:\\Users\\protd\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\protd\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
+    "C:\\Users\\protd\\.nuget\\packages\\netcore.encrypt\\2.1.0\\netcore.encrypt.2.1.0.nupkg.sha512",
     "C:\\Users\\protd\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\protd\\.nuget\\packages\\openweathermap\\1.1.0\\openweathermap.1.1.0.nupkg.sha512",
     "C:\\Users\\protd\\.nuget\\packages\\reddit\\1.5.2\\reddit.1.5.2.nupkg.sha512",
@@ -47,6 +48,7 @@
     "C:\\Users\\protd\\.nuget\\packages\\runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
     "C:\\Users\\protd\\.nuget\\packages\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
     "C:\\Users\\protd\\.nuget\\packages\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
+    "C:\\Users\\protd\\.nuget\\packages\\spotifyapi.web\\6.2.2\\spotifyapi.web.6.2.2.nupkg.sha512",
     "C:\\Users\\protd\\.nuget\\packages\\steamwebapi2\\4.3.2\\steamwebapi2.4.3.2.nupkg.sha512",
     "C:\\Users\\protd\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\protd\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",

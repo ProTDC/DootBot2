@@ -49,3 +49,5 @@ C:\Users\protd\source\repos\DootBot2\DootBot2\bin\Debug\netcoreapp3.1\SteamWebAP
 C:\Users\protd\source\repos\DootBot2\DootBot2\bin\Debug\netcoreapp3.1\System.Net.Http.Json.dll
 C:\Users\protd\source\repos\DootBot2\DootBot2\bin\Debug\netcoreapp3.1\System.Text.Encodings.Web.dll
 C:\Users\protd\source\repos\DootBot2\DootBot2\bin\Debug\netcoreapp3.1\System.Text.Json.dll
+C:\Users\protd\source\repos\DootBot2\DootBot2\bin\Debug\netcoreapp3.1\SpotifyAPI.Web.dll
+C:\Users\protd\source\repos\DootBot2\DootBot2\bin\Debug\netcoreapp3.1\NETCore.Encrypt.dll

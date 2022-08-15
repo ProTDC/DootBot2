@@ -44,7 +44,6 @@ namespace DootBot2.Commands
                 embed.AddField("Temperature", json["main"]["temp"].ToString() + "℃");
                 embed.AddField("Wind", json["wind"]["speed"].ToString() + " m/s");
                 embed.AddField("Humidity", json["main"]["humidity"].ToString() + "%");
-                embed.AddField("Coordinates", $"{json["coord"]["lon"].ToString()}, {json["coord"]["lat"].ToString()}");
 
                 await ctx.RespondAsync(embed).ConfigureAwait(false);
                 return;

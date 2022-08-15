@@ -51,6 +51,7 @@ namespace DootBot2.Commands
             }
 
             bool check = string.IsNullOrEmpty(actString);
+            //bool check2 = string.IsNullOrEmpty(actCustom);
 
             if (check == true)
             {
@@ -60,8 +61,16 @@ namespace DootBot2.Commands
             {
                 embed.AddField(actType.Replace("Custom", "Currently "), actString.Replace("Custom Status", "'") + "'");
             }
-
             Console.WriteLine(check.ToString());
+
+            //if(check2 == true)
+            //{
+
+            //}
+            //else
+            //{
+
+            //}
             //embed.WithDescription(actCustom);
 
             //gets the users roles for the current server and displays them

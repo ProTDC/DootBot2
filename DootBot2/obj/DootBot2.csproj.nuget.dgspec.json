@@ -77,6 +77,10 @@
               "target": "Package",
               "version": "[3.0.0-preview.10, )"
             },
+            "NETCore.Encrypt": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
             "OpenWeatherMap": {
               "target": "Package",
               "version": "[1.1.0, )"
@@ -88,6 +92,10 @@
             "Reddit.AuthTokenRetrieverLib": {
               "target": "Package",
               "version": "[1.5.2, )"
+            },
+            "SpotifyAPI.Web": {
+              "target": "Package",
+              "version": "[6.2.2, )"
             },
             "SteamWebAPI2": {
               "target": "Package",

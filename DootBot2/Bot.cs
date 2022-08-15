@@ -21,7 +21,7 @@ namespace Dootbot2
     {
         public DiscordClient Client { get; private set; }
         public CommandsNextExtension Commands { get; private set; }
-        public VoiceNextExtension voice { get; set; }
+        public VoiceNextExtension Voice { get; set; }
 
         public async Task RunAsync()
         {
@@ -95,7 +95,7 @@ namespace Dootbot2
                 }
                 else
                 {
-                    await e.Guild.SystemChannel.SendMessageAsync($"Who the fuck are you {e.Member.Mention}?").ConfigureAwait(false);
+                    await e.Guild.SystemChannel.SendMessageAsync($"Hello {e.Member.Mention}, welcome").ConfigureAwait(false);
                     return;
                 }
             };
@@ -201,13 +201,20 @@ namespace Dootbot2
             //    }
             //};
 
-            Client.MessageDeleted += async (s, e) =>
-            {
-                await e.Channel.TriggerTypingAsync();
+            //Client.MessageDeleted += async (s, e) =>
+            //{ 
+            //    if (e.Message.Author.IsBot == true)
+            //    {
+            //        return;
+            //    }
+            //    else
+            //    {
+            //        await e.Channel.TriggerTypingAsync();
 
-                await e.Message.RespondAsync($"{e.Message.Author.Mention} DELETED A MESSAGE!! The deleted message was: {e.Message.Content}").ConfigureAwait(false);
-                return;
-            };
+            //        await e.Message.RespondAsync($"{e.Message.Author.Mention} DELETED A MESSAGE!! The deleted message was: {e.Message.Content}").ConfigureAwait(false);
+            //        return;
+            //    }
+            //};
 
             Commands = Client.UseCommandsNext(commandsConfig);
 
@@ -225,6 +232,8 @@ namespace Dootbot2
             Commands.RegisterCommands<RedditStuff>();
             Commands.RegisterCommands<SteamStuff>();
             Commands.RegisterCommands<Oljefondet>();
+            Commands.RegisterCommands<Spotify_test>();
+            Commands.RegisterCommands<Encryption>();
 
             await Client.ConnectAsync();
             await Task.Delay(-1);
