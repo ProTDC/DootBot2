@@ -24,7 +24,7 @@ namespace DootBot2.Commands
         [Description("plays music to the connected voice chat")]
         public async Task PlayCommand(CommandContext ctx, string input)
         {
-            string path = @"C:\Users\protd\Pictures\music\" + input;
+            string path = @"C:\Users\protd\Pictures\music\" + input + ".mp3";
             var vnext = ctx.Client.GetVoiceNext();
             var connection = vnext.GetConnection(ctx.Guild);
 
