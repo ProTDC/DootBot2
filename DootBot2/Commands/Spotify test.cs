@@ -33,11 +33,11 @@ namespace DootBot2.Commands
             //var config = SpotifyClientConfig.CreateDefault().WithAuthenticator(new ClientCredentialsAuthenticator("e352f0b13dff4a798d52df0d28f447e5", "0acfaf58cbc149938eef3a8dae3915eb"));
             //var spotify = new SpotifyClient(config);
 
-            HttpResponseMessage gameResponse = await httpClient.GetAsync($"https://api.spotify.com/v1/search?type=track&include_external=audio");
-            var gameContent = await gameResponse.Content.ReadAsStringAsync();
-            JObject json = JObject.Parse(gameContent);
+            HttpResponseMessage Response = await httpClient.GetAsync($"https://api.spotify.com/v1/search?type=track&include_external=audio");
+            var Content = await Response.Content.ReadAsStringAsync();
+            JObject json = JObject.Parse(Content);
 
-            Console.WriteLine(gameResponse);
+            Console.WriteLine(Response);
 
             return;
         }

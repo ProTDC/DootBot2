@@ -186,6 +186,7 @@ namespace Dootbot2
                 await e.Message.CreateReactionAsync(e.Emoji);
             };
 
+
             //Client.MessageUpdated += async (s, e) =>
             //{
             //    if (e.Message.Author.IsBot || e.Message.Author.Id.Equals(461446979155918859))

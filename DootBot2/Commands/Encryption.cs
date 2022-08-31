@@ -49,8 +49,6 @@ namespace DootBot2.Commands
                 combinedMessage += word;
             }
 
-            await ctx.Message.DeleteAsync();
-
             var decrypted = EncryptProvider.Base64Decrypt(combinedMessage);
 
             await ctx.RespondAsync(decrypted.ToString());
