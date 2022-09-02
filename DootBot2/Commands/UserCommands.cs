@@ -121,5 +121,34 @@ namespace DootBot2.Commands
             return;
         }
 
+        [Command("Activity")]
+        [Description("Displays a users activity")]
+        public async Task Activity(CommandContext ctx, DiscordMember member)
+        {
+            var activity = member.Presence.Activities;
+        }
+
+        [Command("Roles")]
+        [Description("Displays a users roles")]
+        public async Task Roles(CommandContext ctx, DiscordMember member)
+        {
+            var roles = member.Roles;
+
+            string role = string.Empty;
+            if (roles.Count() == 0)
+            {
+                await ctx.RespondAsync("this user has no roles").ConfigureAwait(false);
+            }
+            else
+            {
+                foreach (var userRole in roles)
+                {
+                    role += userRole.Mention + ", ";
+                }
+
+                await ctx.RespondAsync($"This user has the roles: {role}").ConfigureAwait(false);
+            }
+        }
+
     }
 }
