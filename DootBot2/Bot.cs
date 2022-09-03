@@ -142,6 +142,13 @@ namespace Dootbot2
                     return;
                 }
 
+                if (e.Message.Content.ToLower().Contains("potato u") || e.Message.Content.ToLower().Contains("potato you"))
+                {
+                    await e.Channel.TriggerTypingAsync();
+
+                    await e.Message.RespondAsync("potato u too").ConfigureAwait(false);
+                }
+
                 if (e.Message.Content.ToLower().Contains("love you bot"))
                 {
                     await e.Channel.TriggerTypingAsync();

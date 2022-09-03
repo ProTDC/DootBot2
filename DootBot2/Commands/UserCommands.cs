@@ -125,7 +125,17 @@ namespace DootBot2.Commands
         [Description("Displays a users activity")]
         public async Task Activity(CommandContext ctx, DiscordMember member)
         {
+            string actString = string.Empty;
+            string actType = string.Empty;
             var activity = member.Presence.Activities;
+
+            foreach (var act in activity)
+            {
+                actString += act.Name;
+                actType += act.ActivityType;
+            }
+
+            await ctx.RespondAsync($"{member.DisplayName} is currently {actType.ToString()} {actString}");
         }
 
         [Command("Roles")]
