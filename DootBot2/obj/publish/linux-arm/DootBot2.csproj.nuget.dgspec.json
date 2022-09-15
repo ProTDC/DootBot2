@@ -1,0 +1,144 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\protd\\source\\repos\\DootBot2\\DootBot2\\DootBot2.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\protd\\source\\repos\\DootBot2\\DootBot2\\DootBot2.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\protd\\source\\repos\\DootBot2\\DootBot2\\DootBot2.csproj",
+        "projectName": "DootBot2",
+        "projectPath": "C:\\Users\\protd\\source\\repos\\DootBot2\\DootBot2\\DootBot2.csproj",
+        "packagesPath": "C:\\Users\\protd\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\protd\\source\\repos\\DootBot2\\DootBot2\\obj\\publish\\linux-arm\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\protd\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://www.nuget.org/packages/Microsoft.NETCore.App/2.1.0": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "DSharpPlus": {
+              "target": "Package",
+              "version": "[4.3.0-nightly-01151, )"
+            },
+            "DSharpPlus.CommandsNext": {
+              "target": "Package",
+              "version": "[4.3.0-nightly-01151, )"
+            },
+            "DSharpPlus.Interactivity": {
+              "target": "Package",
+              "version": "[4.3.0-nightly-01151, )"
+            },
+            "DSharpPlus.Lavalink": {
+              "target": "Package",
+              "version": "[4.3.0-nightly-01151, )"
+            },
+            "DSharpPlus.VoiceNext": {
+              "target": "Package",
+              "version": "[4.3.0-nightly-01151, )"
+            },
+            "HtmlAgilityPack": {
+              "target": "Package",
+              "version": "[1.11.43, )"
+            },
+            "IMDbApiLib": {
+              "target": "Package",
+              "version": "[1.8.1, )"
+            },
+            "Lavalink4NET.DSharpPlus": {
+              "target": "Package",
+              "version": "[3.0.0-preview.10, )"
+            },
+            "NETCore.Encrypt": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "OpenWeatherMap": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "Reddit": {
+              "target": "Package",
+              "version": "[1.5.2, )"
+            },
+            "Reddit.AuthTokenRetrieverLib": {
+              "target": "Package",
+              "version": "[1.5.2, )"
+            },
+            "SpotifyAPI.Web": {
+              "target": "Package",
+              "version": "[6.2.2, )"
+            },
+            "SteamWebAPI2": {
+              "target": "Package",
+              "version": "[4.3.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Runtime.linux-arm",
+              "version": "[3.1.24, 3.1.24]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.linux-arm",
+              "version": "[3.1.24, 3.1.24]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Runtime.linux-arm",
+              "version": "[3.1.24, 3.1.24]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "linux-arm": {
+          "#import": []
+        }
+      }
+    }
+  }
+}
