@@ -51,3 +51,4 @@ C:\Users\protd\source\repos\DootBot2\DootBot2\bin\Debug\netcoreapp3.1\System.Tex
 C:\Users\protd\source\repos\DootBot2\DootBot2\bin\Debug\netcoreapp3.1\System.Text.Json.dll
 C:\Users\protd\source\repos\DootBot2\DootBot2\bin\Debug\netcoreapp3.1\SpotifyAPI.Web.dll
 C:\Users\protd\source\repos\DootBot2\DootBot2\bin\Debug\netcoreapp3.1\NETCore.Encrypt.dll
+C:\Users\protd\source\repos\DootBot2\DootBot2\bin\Debug\netcoreapp3.1\config.json
