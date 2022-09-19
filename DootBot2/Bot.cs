@@ -186,12 +186,22 @@ namespace Dootbot2
                     return;
                 }
 
+                if (e.Message.MentionEveryone)
+                {
+                    await e.Message.RespondAsync("Wow, mentioned everyone").ConfigureAwait(false);
+                }
+
+                if (e.Message.Content.Contains("@Doot"))
+                {
+                    await e.Message.RespondAsync("SOMEONE CALLED!?").ConfigureAwait(false);
+                }
+
             };
 
-            Client.MessageReactionAdded += async (s, e) =>
-            {
-                await e.Message.CreateReactionAsync(e.Emoji);
-            };
+            //Client.MessageReactionAdded += async (s, e) =>
+            //{
+            //    await e.Message.CreateReactionAsync(e.Emoji);
+            //};
 
 
             //Client.MessageUpdated += async (s, e) =>
